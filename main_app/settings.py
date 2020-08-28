@@ -5,7 +5,7 @@ Django settings for oh_app_demo project.
 import os
 from django.utils.translation import ugettext_lazy
 
-# import django_heroku
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -186,9 +186,9 @@ STATICFILES_DIRS = [
         os.path.join(BASE_DIR, 'static'),
 ]
 
-# if ON_HEROKU:
-#     SECURE_SSL_REDIRECT = True
-#     django_heroku.settings(locals())
+if ON_HEROKU:
+     SECURE_SSL_REDIRECT = True
+     django_heroku.settings(locals())
 
 # REMOVE IN PROD
 X_FRAME_OPTIONS = 'ALLOWALL'
