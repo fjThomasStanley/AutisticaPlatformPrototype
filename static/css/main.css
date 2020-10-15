@@ -54,6 +54,10 @@ body {
     color: var(--autistica-blue-primary-font) !important;
 }
 
+.selected{
+    color:red;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: #1b77db !important;
     padding: 10px;
@@ -77,18 +81,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .indexView {
-    width: 100%;
+   /* width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-evenly;*/
 }
 
 .indexLeft {
-    flex-basis: 49%;
+    /*
+    flex-basis: 49%;*/
+    position: absolute;
+    left: 0px;
+    width: 50%;
 }
 
 .indexRight {
-    flex-basis: 49%;
+    /*
+    flex-basis: 49%;*/
+    position: absolute;
+    right: 0px;
+    width: 50%;
 }
 
 #galleryBanner {
