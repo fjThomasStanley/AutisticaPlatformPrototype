@@ -12,19 +12,29 @@
         left: 0;
     }
     .ui-outerdiv {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: #00b9ff5c;
+   }
+   .ui-highdiv {
         border-style: solid;
         border-width: 2px;
         border-radius: 5px;
         width: 685px;
         height: 450px;
-        display: none;
         position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
+        top: 50%;
+        left: 50%;
+        margin-top: -225px;
+        margin-left: -342px;
         background-color: white;
    }
-    .ui-topdiv {
+   .ui-topdiv {
         border-bottom: 2px solid;
         width: 685px;
         height: 90px;
@@ -33,6 +43,10 @@
         font-size: 20px;
         margin-left: 30px;
         color: #0070d1;
+    }
+    .ui-span-icon-close {
+        display: inline-block;
+        float: right;
     }
     .ui-icon-close {
         display: flex;
@@ -122,12 +136,18 @@
 </head>
 <body>
 <div class="ui-master-div">
-<div>
-    <button onclick="showImageUpload()">Upload</button>
+    <div>
+        <button onclick="showImageUpload()">Upload</button>
+    </div>
 </div>
 <div class="ui-outerdiv" id="upload">
+   <div class="ui-highdiv">
      <div class="ui-topdiv">
-         <i class="icon-close ui-icon-close" onclick="hideImageUpload()"></i>
+         <div style="height: 30px;">
+             <span class="ui-span-icon-close">
+                <i class="icon-close ui-icon-close" onclick="hideImageUpload()"></i>
+             </span>
+         </div>
          <div class="ui-toptext">Upload Media (Photo or Sound)</div>
      </div>
      <div class="ui-upload">
@@ -155,7 +175,8 @@
                  <i class="icon-check_circle ui-image-tickbox"></i>
          </div>
      </div>
-</div>
+   </div>
+   </div>
 </div>
 </body>
 </html>
