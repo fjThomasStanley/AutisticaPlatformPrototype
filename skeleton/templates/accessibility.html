@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     {% load static %}
+    <title>Accessibility</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+<style>
+    .a-icon-accessibility {
+        font-size: 40px;
+    }
+    .a-sliding-panel {
+        width: 400px;
+        height: 600px;
+        margin-left: 1500px;
+        background-color: grey;
+    }
+    .a-slide-left {
+        transform: translate(-700px, 0);
+        transition: transform 0.5s ease-in-out;
+    }
+    .a-slide-right {
+        transform: translate(700px, 0);
+        transition: transform 0.5s ease-in-out;
+    }
+    .a-icon-close {
+        margin-left: 380px;
+    }
+</style>
+<script>
+    function movePanelLeft()
+    {
+        var ssidepanel = document.getElementById("sidepanel");
+
+        if (ssidepanel.classList.contains("a-slide-right"))
+        {
+            ssidepanel.classList.remove("a-slide-right");
+        }
+        ssidepanel.classList.add("a-slide-left");
+    }
+    function movePanelRight()
+    {
+        var ssidepanel = document.getElementById("sidepanel");
+
+        if (!ssidepanel.classList.contains("a-slide-right"))
+        {
+            ssidepanel.classList.add("a-slide-right");
+            ssidepanel.classList.remove("a-slide-left");
+        }
+    }
+</script>
+</head>
+<body>
+<div class="a-button-div">
+    <i class="icon-accessibility-button-blue a-icon-accessibility" onclick="movePanelLeft()"><i class="path1"></i><i class="path2"></i></i>
+</div>
+<div class="a-sliding-panel" id="sidepanel">
+    <i class="icon-close a-icon-close" onclick="movePanelRight()"></i>
+</div>
+</body>
+</html>
