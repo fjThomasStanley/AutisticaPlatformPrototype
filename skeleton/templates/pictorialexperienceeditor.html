@@ -7,12 +7,20 @@
     <title>Pi</title>
     <link rel="stylesheet" href="{% static "css/ico-style.css" %}">
     <style>
-        .peed-outerdiv {
-/*             display: flex;
+       /*   .peed-outerdiv {
+                       display: flex;
             flex-direction: row; */
-            background-color: #fcfcfc;
             /* width: 620px; */
-            /* margin-left: 30px; */
+            /* margin-left: 30px; 
+        }*/
+
+        .card-button:hover{
+            cursor: pointer;
+        }
+
+        .icon-button:hover{
+            cursor: pointer;
+            color: #515151;
         }
 
         .peed-div-home {
@@ -25,11 +33,14 @@
             font-size: 48px;
         }
 
-/*         .peed-text-home {
-            padding-left: 10px;
-        } */
+        .peed-text-home {
+            color: grey;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+        }
 
-        .peed-clear {
+        * .peed-clear {
             display: inline-block;
             width: 100%;
         }
@@ -53,11 +64,11 @@
         .peed-span-clear {
             position: absolute;
             right: 0px;
-            top:0px;
+            top: 0px;
             bottom: 0px;
         }
 
-/*         .peed-exp-div {
+        /*         .peed-exp-div {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -77,7 +88,7 @@
         }
 
         .peed-play {
-/*             display: flex;
+            /*             display: flex;
             flex-direction: column;
             justify-content: flex-end; */
             margin-left: 9px;
@@ -99,8 +110,8 @@
         }
 
         .peed2-outerdiv {
-            display: flex;
-            flex-direction: row;
+            /*display: flex;
+            flex-direction: row;*/
             background-color: #f0f0f0;
             /* width: 670px; */
             /* margin: 50px 0 0 30px; */
@@ -111,7 +122,8 @@
             /* display: flex;
             flex-direction: column; */
             margin-left: 8px;
-        }      
+            display: inline-block;
+        }
 
         .peed2-span-icon {
             border-style: solid;
@@ -122,10 +134,11 @@
             display: inline-block;
         }
 
-        .peed2-span-icon:hover{
-            background-color:  #e1f9fd;
-            cursor: pointer;
+        .peed2-span-icon:hover {
+            background-color: #e1f9fd;
+            /* cursor: pointer; */
         }
+
         .peed2-icon {
             font-size: 28px;
         }
@@ -146,7 +159,6 @@
         }
 
         .peed1-outerdiv {
-            background-color: #fcfcfc;
             /* margin: 20px 0 0 40px; */
             padding: 10px 0 10px 50px;
             /* width: 600px; */
@@ -163,9 +175,10 @@
             margin: 0 10px 10px 0;
             border-width: 2px;
         }
-        .peed1-span-item:hover{
-            background-color:  #e1f9fd;
-            cursor: pointer;
+
+        .peed1-span-item:hover {
+            background-color: #e1f9fd;
+            /* cursor: pointer; */
         }
 
         .peed1-span-itext {
@@ -202,11 +215,26 @@
             padding-top: 10px;
             text-align: center;
         }
+        #item{
+            opacity: 0.45;
+        }
+        #item:hover{
+            opacity: 1;
+        }
     </style>
+
+
+
+
+
+
+
 </head>
 
 <body style="background-color: aquamarine; margin: 0px;">
-    <span style="display: inline-block;">
+    <div style="display: inline-block; " id="container">
+    <div style="background-color: #1b77db; padding-top: 30px; cursor: pointer;" id="item">
+        <div style="background-color: white; cursor: default;">
         <div class="peed-outerdiv">
             <div style="width: 100%;">
                 <table style="width: 100%;">
@@ -219,35 +247,35 @@
                     </colgroup>
                     <tr>
                         <td>
-                            <span class="peed-div-home">
+                            <span class="peed-div-home icon-button">
                                 <div>
-                                    <i class="icon-home peed-icon-home"></i>
+                                    <i class="icon-home peed-icon-home icon-button"></i>
                                 </div>
-                               
+
                             </span>
                         </td>
                         <td>
-                            <span class="peed-clear">
+                            <span class="peed-clear icon-button">
                                 <div class="peed-span-ta">
                                     <span class="peed-span-clear">
-                                        <i class="icon-clear peed-icon-clear"></i>
+                                        <i class="icon-clear peed-icon-clear icon-button"></i>
                                     </span>
                                 </div>
-                               
+
                             </span>
                         </td>
                         <td>
-                            <span class="peed-play">
+                            <span class="peed-play icon-button">
                                 <span class="peed-play-ispan">
-                                    <i class="icon-play_arrow peed-play-icon"></i>
+                                    <i class="icon-play_arrow peed-play-icon icon-button"></i>
                                 </span>
-                            
+
                             </span>
                         </td>
                         <td>
                             <span class="peed-play">
-                                <span class="peed-play-ispan">
-                                    <i class="icon-share peed-play-icon"></i>
+                                <span class="peed-play-ispan ">
+                                    <i class="icon-share peed-play-icon icon-button"></i>
                                 </span>
                             </span>
                         </td>
@@ -262,8 +290,8 @@
 
                     <tr>
                         <td>
-                            <div style="text-align: center;">
-                                <!-- <span class="peed-text-home"></span> -->
+                            <div class="peed-text-home">
+                                <!-- <span class=""></span> -->
                                 Home
                             </div>
                         </td>
@@ -296,9 +324,9 @@
                 <tr>
                     {% for cl in rw.peed_ele_col %}
                     <td>
-                        <span class="peed1-span-item">
+                        <span class="peed1-span-item card-button">
                             <span class="peed1-span-itext">{{cl.text}}</span>
-                            <span class="peed1-span-iicon"><i class="{{cl.icon}} peed1-icon"></i></span>
+                            <span class="peed1-span-iicon"><i class="{{cl.icon}} peed1-icon" id="i{{cl.icon}}"></i></span>
                         </span>
                     </td>
                     {% endfor %}
@@ -313,27 +341,94 @@
 
         <div class="peed2-outerdiv">
             <span class="peed2-div-item">
-                <span class="peed2-span-icon"><i class="icon-profile peed2-icon"></i></span>
+                <span class="peed2-span-icon card-button"><i class="icon-profile peed2-icon"></i></span>
                 <div class="peed2-span-text">About Me</div>
             </span>
             <span class="peed2-div-item">
-                <span class="peed2-span-icon"><i class="icon-help peed2-icon"></i></span>
+                <span class="peed2-span-icon card-button"><i class="icon-help peed2-icon"></i></span>
                 <div class="peed2-span-text">Help</div>
             </span>
             <span class="peed2-div-item">
-                <span class="peed2-span-icon"><i class="icon-edit peed2-icon"></i></span>
+                <span class="peed2-span-icon card-button"><i class="icon-edit peed2-icon"></i></span>
                 <div class="peed2-span-text">Edit</div>
             </span>
             <span class="peed2-div-item">
-                <span class="peed2-span-icon"><i class="icon-settings peed2-icon"></i></span>
+                <span class="peed2-span-icon card-button"><i class="icon-settings peed2-icon"></i></span>
                 <div class="peed2-span-text">Settings</div>
             </span>
             <span class="peed2-span-cards">
                 Cards
             </span>
         </div>
+    </div>
+    </div>
+</div>
 
-    </span>
+    <script>
+        var dragItem = document.querySelector("#item");
+        var container = document.querySelector("#container");
+    
+        var active = false;
+        var currentX;
+        var currentY;
+        var initialX;
+        var initialY;
+        var xOffset = 0;
+        var yOffset = 0;
+    
+        container.addEventListener("touchstart", dragStart, false);
+        container.addEventListener("touchend", dragEnd, false);
+        container.addEventListener("touchmove", drag, false);
+    
+        container.addEventListener("mousedown", dragStart, false);
+        container.addEventListener("mouseup", dragEnd, false);
+        container.addEventListener("mousemove", drag, false);
+    
+        function dragStart(e) {
+          if (e.type === "touchstart") {
+            initialX = e.touches[0].clientX - xOffset;
+            initialY = e.touches[0].clientY - yOffset;
+          } else {
+            initialX = e.clientX - xOffset;
+            initialY = e.clientY - yOffset;
+          }
+    
+          if (e.target === dragItem) {
+            active = true;
+          }
+        }
+    
+        function dragEnd(e) {
+          initialX = currentX;
+          initialY = currentY;
+    
+          active = false;
+        }
+    
+        function drag(e) {
+          if (active) {
+          
+            e.preventDefault();
+          
+            if (e.type === "touchmove") {
+              currentX = e.touches[0].clientX - initialX;
+              currentY = e.touches[0].clientY - initialY;
+            } else {
+              currentX = e.clientX - initialX;
+              currentY = e.clientY - initialY;
+            }
+    
+            xOffset = currentX;
+            yOffset = currentY;
+    
+            setTranslate(currentX, currentY, dragItem);
+          }
+        }
+    
+        function setTranslate(xPos, yPos, el) {
+          el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+        }
+      </script>
 </body>
 
 </html>
