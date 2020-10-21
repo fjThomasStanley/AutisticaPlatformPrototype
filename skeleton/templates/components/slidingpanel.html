@@ -6,9 +6,6 @@
     <title>Accessibility</title>
     <link rel="stylesheet" href="{% static "css/style.css" %}">
 <style>
-    .a-icon-accessibility {
-        font-size: 40px;
-    }
     .sp-sliding-panel {
         position: fixed;
         top: 0;
@@ -20,17 +17,19 @@
         z-index: 1;
     }
     .sp-slide-left {
-        transform: translate(-700px, 0);
+        transform: translate(-428px, 0);
         transition: transform 0.5s ease-in-out;
     }
     .sp-slide-right {
-        transform: translate(700px, 0);
+        transform: translate(428px, 0);
         transition: transform 0.5s ease-in-out;
     }
     .sp-icon-close {
         margin-left: 380px;
     }
 </style>
+{% block panelStyle %}
+{% endblock %}
 <script>
     function movePanelLeft()
     {
@@ -53,13 +52,10 @@
         }
     }
 </script>
-</head>
-<body>
-<div class="a-button-div">
-    <i class="icon-access a-icon-accessibility" onclick="movePanelLeft()"></i>
-</div>
 <div class="sp-sliding-panel" id="sidepanel">
     <i class="icon-close sp-icon-close" onclick="movePanelRight()"></i>
+    <div>
+{% block panelContent %}
+{% endblock %}
+    </div>
 </div>
-</body>
-</html>
