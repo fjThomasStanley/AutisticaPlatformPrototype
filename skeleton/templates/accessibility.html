@@ -10,10 +10,14 @@
         font-size: 40px;
     }
     .a-sliding-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 400px;
-        height: 600px;
+        height: 100%;
         margin-left: 1500px;
         background-color: grey;
+        z-index: 1;
     }
     .a-slide-left {
         transform: translate(-700px, 0);
@@ -25,6 +29,9 @@
     }
     .a-icon-close {
         margin-left: 380px;
+    }
+    .a-outerdiv {
+
     }
 </style>
 <script>
@@ -52,10 +59,13 @@
 </head>
 <body>
 <div class="a-button-div">
-    <i class="icon-accessibility-button-blue a-icon-accessibility" onclick="movePanelLeft()"><i class="path1"></i><i class="path2"></i></i>
+    <i class="icon-access a-icon-accessibility" onclick="movePanelLeft()"></i>
 </div>
 <div class="a-sliding-panel" id="sidepanel">
     <i class="icon-close a-icon-close" onclick="movePanelRight()"></i>
+    <div class="a-outerdiv">
+
+    </div>
 </div>
 </body>
 </html>

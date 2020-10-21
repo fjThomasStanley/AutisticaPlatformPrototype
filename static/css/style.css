@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?a7uc0f');
-  src:  url('fonts/icomoon.eot?a7uc0f#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?a7uc0f') format('truetype'),
-    url('fonts/icomoon.woff?a7uc0f') format('woff'),
-    url('fonts/icomoon.svg?a7uc0f#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?jfsxd3');
+  src:  url('fonts/icomoon.eot?jfsxd3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?jfsxd3') format('truetype'),
+    url('fonts/icomoon.woff?jfsxd3') format('woff'),
+    url('fonts/icomoon.svg?jfsxd3#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-access:before {
+  content: "\e92b";
+  color: #1970cc;
+}
 .icon-perfume:before {
   content: "\e91f";
   color: #36c;
@@ -202,24 +206,6 @@
   content: "\f1a5";
   color: #1970cc;
 }
-.icon-accessibility-button-blue-copy .path1:before {
-  content: "\f1a6";
-  color: rgb(25, 112, 204);
-}
-.icon-accessibility-button-blue-copy .path2:before {
-  content: "\f1a7";
-  margin-left: -1em;
-  color: rgb(250, 251, 252);
-}
-.icon-accessibility-button-blue .path1:before {
-  content: "\f1a8";
-  color: rgb(25, 112, 204);
-}
-.icon-accessibility-button-blue .path2:before {
-  content: "\f1a9";
-  margin-left: -1em;
-  color: rgb(250, 251, 252);
-}
 .icon-autistic-person:before {
   content: "\f1aa";
   color: #1b77db;
@@ -339,15 +325,6 @@
 .icon-tick-blue:before {
   content: "\f1c4";
   color: #1970cc;
-}
-.icon-accessibility-button .path1:before {
-  content: "\f1c5";
-  color: rgb(0, 0, 0);
-}
-.icon-accessibility-button .path2:before {
-  content: "\f1c6";
-  margin-left: -1em;
-  color: rgb(250, 251, 252);
 }
 .icon-brightness:before {
   content: "\f1c7";
