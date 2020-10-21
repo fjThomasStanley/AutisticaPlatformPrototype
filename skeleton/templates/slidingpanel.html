@@ -9,7 +9,7 @@
     .a-icon-accessibility {
         font-size: 40px;
     }
-    .a-sliding-panel {
+    .sp-sliding-panel {
         position: fixed;
         top: 0;
         left: 0;
@@ -19,15 +19,15 @@
         background-color: grey;
         z-index: 1;
     }
-    .a-slide-left {
+    .sp-slide-left {
         transform: translate(-700px, 0);
         transition: transform 0.5s ease-in-out;
     }
-    .a-slide-right {
+    .sp-slide-right {
         transform: translate(700px, 0);
         transition: transform 0.5s ease-in-out;
     }
-    .a-icon-close {
+    .sp-icon-close {
         margin-left: 380px;
     }
 </style>
@@ -36,20 +36,20 @@
     {
         var ssidepanel = document.getElementById("sidepanel");
 
-        if (ssidepanel.classList.contains("a-slide-right"))
+        if (ssidepanel.classList.contains("sp-slide-right"))
         {
-            ssidepanel.classList.remove("a-slide-right");
+            ssidepanel.classList.remove("sp-slide-right");
         }
-        ssidepanel.classList.add("a-slide-left");
+        ssidepanel.classList.add("sp-slide-left");
     }
     function movePanelRight()
     {
         var ssidepanel = document.getElementById("sidepanel");
 
-        if (!ssidepanel.classList.contains("a-slide-right"))
+        if (!ssidepanel.classList.contains("sp-slide-right"))
         {
-            ssidepanel.classList.add("a-slide-right");
-            ssidepanel.classList.remove("a-slide-left");
+            ssidepanel.classList.add("sp-slide-right");
+            ssidepanel.classList.remove("sp-slide-left");
         }
     }
 </script>
@@ -58,8 +58,8 @@
 <div class="a-button-div">
     <i class="icon-access a-icon-accessibility" onclick="movePanelLeft()"></i>
 </div>
-<div class="a-sliding-panel" id="sidepanel">
-    <i class="icon-close a-icon-close" onclick="movePanelRight()"></i>
+<div class="sp-sliding-panel" id="sidepanel">
+    <i class="icon-close sp-icon-close" onclick="movePanelRight()"></i>
 </div>
 </body>
 </html>

@@ -153,7 +153,7 @@ def index(request):
     return render(request, 'index.html', context=context)
 
 def accessibility(request):
-    return render(request, 'accessibility.html')
+    return render(request, 'slidingpanel.html')
 
 def componentGallery(request):
     context = {
