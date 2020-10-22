@@ -9,24 +9,21 @@
     .sp-sliding-panel {
         position: fixed;
         top: 0;
-        left: 0;
         width: 400px;
-        height: 100%;
-        margin-left: 1500px;
+        bottom: 0;
+        right: -400px;
         background-color: grey;
         z-index: 1;
-    }
-    .sp-slide-left {
-        transform: translate(-428px, 0);
+         transform: translate(0, 0);
         transition: transform 0.5s ease-in-out;
-    }
-    .sp-slide-right {
-        transform: translate(428px, 0);
+   }
+    .sp-slide-left {
+        transform: translate(-400px, 0);
         transition: transform 0.5s ease-in-out;
     }
     .sp-icon-close {
         margin-left: 380px;
-    }
+     }
 </style>
 {% block panelStyle %}
 {% endblock %}
@@ -35,22 +32,14 @@
     {
         var ssidepanel = document.getElementById("sidepanel");
 
-        if (ssidepanel.classList.contains("sp-slide-right"))
-        {
-            ssidepanel.classList.remove("sp-slide-right");
-        }
         ssidepanel.classList.add("sp-slide-left");
     }
     function movePanelRight()
     {
         var ssidepanel = document.getElementById("sidepanel");
 
-        if (!ssidepanel.classList.contains("sp-slide-right"))
-        {
-            ssidepanel.classList.add("sp-slide-right");
-            ssidepanel.classList.remove("sp-slide-left");
-        }
-    }
+        ssidepanel.classList.remove("sp-slide-left");
+     }
 </script>
 <div class="sp-sliding-panel" id="sidepanel">
     <i class="icon-close sp-icon-close" onclick="movePanelRight()"></i>

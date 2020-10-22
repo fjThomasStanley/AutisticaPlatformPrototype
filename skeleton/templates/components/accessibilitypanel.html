@@ -24,6 +24,22 @@
         font-size: 30px;
         margin-left: 50px;
     }
+    .ap-navadjust-outerdiv {
+        border-style: solid;
+        margin: 10px;
+    }
+    .ap-navadjust-text {
+        margin-left: 10px;
+        color: #0082cf;
+    }
+    .ap-arrow {
+        font-size: 25px;
+        margin-left: 140px;
+     }
+    .ap-navadjust-expand {
+        border-top: solid;
+        display: none;
+    }
 </style>
 {% endblock %}
 {% block panelContent %}
@@ -33,6 +49,14 @@
     <div>
         <span class="ap-accmenu">Accessibility Menu</span>
         <i class="icon-help ap-icon-help"></i>
+    </div>
+    <div class="ap-navadjust-outerdiv">
+        <span class="ap-navadjust-text">Navigation Adjustment</span>
+        <i class="icon-keyboard_arrow_right ap-arrow-right" onclick="show_hideNavAdjust()"></i>
+
+        <div class="ap-navadjust-expand">
+        <span>Hello World</span>
+        </div>
     </div>
 </div>
 {% endblock %}
