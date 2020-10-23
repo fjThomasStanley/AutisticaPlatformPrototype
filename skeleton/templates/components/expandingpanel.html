@@ -1,0 +1,8 @@
+<div class="ap-navadjust-outerdiv">
+    <span class="ap-navadjust-text">{{PanelData.Title}}</span>
+    <i class="icon-keyboard_arrow_right ap-arrow-right" id="arrow_expandingpanel" onclick="show_hideExpandingPanel('{{PanelData.ID}}')"></i>
+    <div class="ap-navadjust-expand" id="{{PanelData.ID}}">
+        {% block PanelContent %}
+        {% endblock %}
+     </div>
+</div>

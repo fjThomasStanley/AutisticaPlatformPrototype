@@ -41,6 +41,24 @@
         display: none;
     }
 </style>
+<script>
+    function show_hideExpandingPanel(panelID)
+    {
+        var expanding_panel = document.getElementById("arrow_expandingpanel");
+        if (expanding_panel.classList.contains("icon-keyboard_arrow_right"))
+        {
+            expanding_panel.classList.remove("icon-keyboard_arrow_right");
+            expanding_panel.classList.add("icon-expand_more");
+            document.getElementById(panelID).style.display = "block";
+        }
+        else
+        {
+            expanding_panel.classList.remove("icon-expand_more");
+            expanding_panel.classList.add("icon-keyboard_arrow_right");
+            document.getElementById(panelID).style.display = "none";
+        }
+    }
+</script>
 {% endblock %}
 {% block panelContent %}
 <div class="ap-outerdiv">
@@ -50,13 +68,7 @@
         <span class="ap-accmenu">Accessibility Menu</span>
         <i class="icon-help ap-icon-help"></i>
     </div>
-    <div class="ap-navadjust-outerdiv">
-        <span class="ap-navadjust-text">Navigation Adjustment</span>
-        <i class="icon-keyboard_arrow_right ap-arrow-right" onclick="show_hideNavAdjust()"></i>
-
-        <div class="ap-navadjust-expand">
-        <span>Hello World</span>
-        </div>
-    </div>
+    {% include 'components/navadjustment.html' with PanelData=AP_data.0 %}
+    {% include 'components/colouradjustment.html' with PanelData=AP_data.1 %}
 </div>
 {% endblock %}

@@ -270,8 +270,24 @@ def componentGallery(request):
                 "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
                 "Summary": "None use of microphone in conference"
             }
-        ]
+        ],
+        'AP_data': [
+            {
+                "Title": "Navigation Adjustment",
+                "ID": "navadjust"
+            },
+            {
+                "Title": "Colour Adjustment",
+                "ID": "coladjust"
+            }
+        ],
+        'AP_blank':
+            {
+                "Title": "Expanding Panel",
+                "ID": "blankexpanel"
+            }
     }
+
     stepper_object = Stepper.Stepper(request)
 
     stepper_object.update()
