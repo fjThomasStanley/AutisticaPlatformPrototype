@@ -1,4 +1,98 @@
 {% extends 'components/expandingpanel.html' %}
+{% block PanelStyle %}
+<style>
+    .ap-div-cc {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+    }
+    .ap-icon-col {
+        padding: 9px 10px 0 0;
+        font-size: 18px;
+    }
+    .ap-cc-text {
+        color: #0082cf;
+    }
+    .ap-div-col {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .ap-box-cc {
+        border-style: solid;
+        border-color: #0082cf;
+        text-align: center;
+        margin-left: 5px;
+        height: 70px;
+    }
+    .ap-icon-col-big {
+        font-size: 28px;
+        padding: 10px 10px 0 10px;
+    }
+    .ap-box-cc-text {
+        font-size: 12px;
+        padding: 5px;
+        margin: 0;
+    }
+    .ap-sc-circle {
+        border-style: solid;
+        border-width: 0.5px;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        margin-right: 20px;
+    }
+    .ap-div-sc {
+        font-size: 12px;
+        width: 70px;
+    }
+    .ap-sc-text {
+        color: #0082cf;
+    }
+    .ap-div-tabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+    .ap-tab-bground {
+        border-style: solid;
+        border-radius: 40px;
+        padding: 0 10px 0 10px;
+        color: white;
+        background-color: #0082cf;
+    }
+    .ap-tab-other {
+        border-style: solid;
+        border-radius: 40px;
+        padding: 0 10px 0 10px;
+        color: #0082cf;
+    }
+</style>
+{% endblock %}
 {% block PanelContent %}
-<span>Hello World Colour</span>
+<div class="ap-div-cc">
+    <div class="ap-icon-col">
+        <i class="icon-opacity-24px"></i>
+    </div>
+    <div class="ap-cc-text">
+        <div>Custom Colour</div>
+        <div>Change the site's colours</div>
+    </div>
+</div>
+<div class="ap-div-col">
+    <div class="ap-box-cc">
+        <div class="ap-icon-col-big"><i class="icon-opacity-24px"></i></div>
+        <div class="ap-box-cc-text">Custom Colour</div>
+    </div>
+    <div class="ap-div-sc">
+        <div class="ap-sc-circle"></div>
+        <div class="ap-sc-text">Selected Colour</div>
+    </div>
+</div>
+<div class="ap-div-tabs">
+    <div class="ap-tab-bground">Background</div>
+    <div class="ap-tab-other">Headings</div>
+    <div class="ap-tab-other">Content</div>
+</div>
 {% endblock %}

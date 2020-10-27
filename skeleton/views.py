@@ -274,17 +274,20 @@ def componentGallery(request):
         'AP_data': [
             {
                 "Title": "Navigation Adjustment",
-                "ID": "navadjust"
+                "ID": "navadjust",
+                "arrow": "arrow_expandingpanel_na"
             },
             {
                 "Title": "Colour Adjustment",
-                "ID": "coladjust"
+                "ID": "coladjust",
+                "arrow": "arrow_expandingpanel_ca"
             }
         ],
         'AP_blank':
             {
                 "Title": "Expanding Panel",
-                "ID": "blankexpanel"
+                "ID": "blankexpanel",
+                "arrow": "arrow_expandingpanel_bep"
             }
     }
 
