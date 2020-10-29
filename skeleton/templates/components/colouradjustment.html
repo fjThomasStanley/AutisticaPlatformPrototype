@@ -41,6 +41,7 @@
         height: 50px;
         border-radius: 25px;
         margin-right: 20px;
+        background-color: hsl(var(--current-hsl), var(--saturation), var(--lightness));
     }
     .ap-div-sc {
         font-size: 12px;
@@ -68,9 +69,59 @@
         padding: 0 10px 0 10px;
         color: #0082cf;
     }
+       :root{
+	    --current-hsl:0;
+	    --lightness: 50%;
+	    --saturation: 100%;
+	    --hslbackground:linear-gradient(to right,
+		    hsl(360, var(--saturation), var(--lightness)), hsl(359, var(--saturation), var(--lightness)), hsl(358, var(--saturation), var(--lightness)), hsl(357, var(--saturation), var(--lightness)), hsl(356, var(--saturation), var(--lightness)), hsl(355, var(--saturation), var(--lightness)), hsl(354, var(--saturation), var(--lightness)), hsl(353, var(--saturation), var(--lightness)), hsl(352, var(--saturation), var(--lightness)), hsl(351, var(--saturation), var(--lightness)), hsl(350, var(--saturation), var(--lightness)), hsl(349, var(--saturation), var(--lightness)), hsl(348, var(--saturation), var(--lightness)), hsl(347, var(--saturation), var(--lightness)), hsl(346, var(--saturation), var(--lightness)), hsl(345, var(--saturation), var(--lightness)), hsl(344, var(--saturation), var(--lightness)), hsl(343, var(--saturation), var(--lightness)), hsl(342, var(--saturation), var(--lightness)), hsl(341, var(--saturation), var(--lightness)), hsl(340, var(--saturation), var(--lightness)), hsl(339, var(--saturation), var(--lightness)), hsl(338, var(--saturation), var(--lightness)), hsl(337, var(--saturation), var(--lightness)), hsl(336, var(--saturation), var(--lightness)), hsl(335, var(--saturation), var(--lightness)), hsl(334, var(--saturation), var(--lightness)), hsl(333, var(--saturation), var(--lightness)), hsl(332, var(--saturation), var(--lightness)), hsl(331, var(--saturation), var(--lightness)), hsl(330, var(--saturation), var(--lightness)), hsl(329, var(--saturation), var(--lightness)), hsl(328, var(--saturation), var(--lightness)), hsl(327, var(--saturation), var(--lightness)), hsl(326, var(--saturation), var(--lightness)), hsl(325, var(--saturation), var(--lightness)), hsl(324, var(--saturation), var(--lightness)), hsl(323, var(--saturation), var(--lightness)), hsl(322, var(--saturation), var(--lightness)), hsl(321, var(--saturation), var(--lightness)), hsl(320, var(--saturation), var(--lightness)), hsl(319, var(--saturation), var(--lightness)), hsl(318, var(--saturation), var(--lightness)), hsl(317, var(--saturation), var(--lightness)), hsl(316, var(--saturation), var(--lightness)), hsl(315, var(--saturation), var(--lightness)), hsl(314, var(--saturation), var(--lightness)), hsl(313, var(--saturation), var(--lightness)), hsl(312, var(--saturation), var(--lightness)), hsl(311, var(--saturation), var(--lightness)), hsl(310, var(--saturation), var(--lightness)), hsl(309, var(--saturation), var(--lightness)), hsl(308, var(--saturation), var(--lightness)), hsl(307, var(--saturation), var(--lightness)), hsl(306, var(--saturation), var(--lightness)), hsl(305, var(--saturation), var(--lightness)), hsl(304, var(--saturation), var(--lightness)), hsl(303, var(--saturation), var(--lightness)), hsl(302, var(--saturation), var(--lightness)), hsl(301, var(--saturation), var(--lightness)), hsl(300, var(--saturation), var(--lightness)), hsl(299, var(--saturation), var(--lightness)), hsl(298, var(--saturation), var(--lightness)), hsl(297, var(--saturation), var(--lightness)), hsl(296, var(--saturation), var(--lightness)), hsl(295, var(--saturation), var(--lightness)), hsl(294, var(--saturation), var(--lightness)), hsl(293, var(--saturation), var(--lightness)), hsl(292, var(--saturation), var(--lightness)), hsl(291, var(--saturation), var(--lightness)), hsl(290, var(--saturation), var(--lightness)), hsl(289, var(--saturation), var(--lightness)), hsl(288, var(--saturation), var(--lightness)), hsl(287, var(--saturation), var(--lightness)), hsl(286, var(--saturation), var(--lightness)), hsl(285, var(--saturation), var(--lightness)), hsl(284, var(--saturation), var(--lightness)), hsl(283, var(--saturation), var(--lightness)), hsl(282, var(--saturation), var(--lightness)), hsl(281, var(--saturation), var(--lightness)), hsl(280, var(--saturation), var(--lightness)), hsl(279, var(--saturation), var(--lightness)), hsl(278, var(--saturation), var(--lightness)), hsl(277, var(--saturation), var(--lightness)), hsl(276, var(--saturation), var(--lightness)), hsl(275, var(--saturation), var(--lightness)), hsl(274, var(--saturation), var(--lightness)), hsl(273, var(--saturation), var(--lightness)), hsl(272, var(--saturation), var(--lightness)), hsl(271, var(--saturation), var(--lightness)), hsl(270, var(--saturation), var(--lightness)), hsl(269, var(--saturation), var(--lightness)), hsl(268, var(--saturation), var(--lightness)), hsl(267, var(--saturation), var(--lightness)), hsl(266, var(--saturation), var(--lightness)), hsl(265, var(--saturation), var(--lightness)), hsl(264, var(--saturation), var(--lightness)), hsl(263, var(--saturation), var(--lightness)), hsl(262, var(--saturation), var(--lightness)), hsl(261, var(--saturation), var(--lightness)), hsl(260, var(--saturation), var(--lightness)), hsl(259, var(--saturation), var(--lightness)), hsl(258, var(--saturation), var(--lightness)), hsl(257, var(--saturation), var(--lightness)), hsl(256, var(--saturation), var(--lightness)), hsl(255, var(--saturation), var(--lightness)), hsl(254, var(--saturation), var(--lightness)), hsl(253, var(--saturation), var(--lightness)), hsl(252, var(--saturation), var(--lightness)), hsl(251, var(--saturation), var(--lightness)), hsl(250, var(--saturation), var(--lightness)), hsl(249, var(--saturation), var(--lightness)), hsl(248, var(--saturation), var(--lightness)), hsl(247, var(--saturation), var(--lightness)), hsl(246, var(--saturation), var(--lightness)), hsl(245, var(--saturation), var(--lightness)), hsl(244, var(--saturation), var(--lightness)), hsl(243, var(--saturation), var(--lightness)), hsl(242, var(--saturation), var(--lightness)), hsl(241, var(--saturation), var(--lightness)), hsl(240, var(--saturation), var(--lightness)), hsl(239, var(--saturation), var(--lightness)), hsl(238, var(--saturation), var(--lightness)), hsl(237, var(--saturation), var(--lightness)), hsl(236, var(--saturation), var(--lightness)), hsl(235, var(--saturation), var(--lightness)), hsl(234, var(--saturation), var(--lightness)), hsl(233, var(--saturation), var(--lightness)), hsl(232, var(--saturation), var(--lightness)), hsl(231, var(--saturation), var(--lightness)), hsl(230, var(--saturation), var(--lightness)), hsl(229, var(--saturation), var(--lightness)), hsl(228, var(--saturation), var(--lightness)), hsl(227, var(--saturation), var(--lightness)), hsl(226, var(--saturation), var(--lightness)), hsl(225, var(--saturation), var(--lightness)), hsl(224, var(--saturation), var(--lightness)), hsl(223, var(--saturation), var(--lightness)), hsl(222, var(--saturation), var(--lightness)), hsl(221, var(--saturation), var(--lightness)), hsl(220, var(--saturation), var(--lightness)), hsl(219, var(--saturation), var(--lightness)), hsl(218, var(--saturation), var(--lightness)), hsl(217, var(--saturation), var(--lightness)), hsl(216, var(--saturation), var(--lightness)), hsl(215, var(--saturation), var(--lightness)), hsl(214, var(--saturation), var(--lightness)), hsl(213, var(--saturation), var(--lightness)), hsl(212, var(--saturation), var(--lightness)), hsl(211, var(--saturation), var(--lightness)), hsl(210, var(--saturation), var(--lightness)), hsl(209, var(--saturation), var(--lightness)), hsl(208, var(--saturation), var(--lightness)), hsl(207, var(--saturation), var(--lightness)), hsl(206, var(--saturation), var(--lightness)), hsl(205, var(--saturation), var(--lightness)), hsl(204, var(--saturation), var(--lightness)), hsl(203, var(--saturation), var(--lightness)), hsl(202, var(--saturation), var(--lightness)), hsl(201, var(--saturation), var(--lightness)), hsl(200, var(--saturation), var(--lightness)), hsl(199, var(--saturation), var(--lightness)), hsl(198, var(--saturation), var(--lightness)), hsl(197, var(--saturation), var(--lightness)), hsl(196, var(--saturation), var(--lightness)), hsl(195, var(--saturation), var(--lightness)), hsl(194, var(--saturation), var(--lightness)), hsl(193, var(--saturation), var(--lightness)), hsl(192, var(--saturation), var(--lightness)), hsl(191, var(--saturation), var(--lightness)), hsl(190, var(--saturation), var(--lightness)), hsl(189, var(--saturation), var(--lightness)), hsl(188, var(--saturation), var(--lightness)), hsl(187, var(--saturation), var(--lightness)), hsl(186, var(--saturation), var(--lightness)), hsl(185, var(--saturation), var(--lightness)), hsl(184, var(--saturation), var(--lightness)), hsl(183, var(--saturation), var(--lightness)), hsl(182, var(--saturation), var(--lightness)), hsl(181, var(--saturation), var(--lightness)), hsl(180, var(--saturation), var(--lightness)), hsl(179, var(--saturation), var(--lightness)), hsl(178, var(--saturation), var(--lightness)), hsl(177, var(--saturation), var(--lightness)), hsl(176, var(--saturation), var(--lightness)), hsl(175, var(--saturation), var(--lightness)), hsl(174, var(--saturation), var(--lightness)), hsl(173, var(--saturation), var(--lightness)), hsl(172, var(--saturation), var(--lightness)), hsl(171, var(--saturation), var(--lightness)), hsl(170, var(--saturation), var(--lightness)), hsl(169, var(--saturation), var(--lightness)), hsl(168, var(--saturation), var(--lightness)), hsl(167, var(--saturation), var(--lightness)), hsl(166, var(--saturation), var(--lightness)), hsl(165, var(--saturation), var(--lightness)), hsl(164, var(--saturation), var(--lightness)), hsl(163, var(--saturation), var(--lightness)), hsl(162, var(--saturation), var(--lightness)), hsl(161, var(--saturation), var(--lightness)), hsl(160, var(--saturation), var(--lightness)), hsl(159, var(--saturation), var(--lightness)), hsl(158, var(--saturation), var(--lightness)), hsl(157, var(--saturation), var(--lightness)), hsl(156, var(--saturation), var(--lightness)), hsl(155, var(--saturation), var(--lightness)), hsl(154, var(--saturation), var(--lightness)), hsl(153, var(--saturation), var(--lightness)), hsl(152, var(--saturation), var(--lightness)), hsl(151, var(--saturation), var(--lightness)), hsl(150, var(--saturation), var(--lightness)), hsl(149, var(--saturation), var(--lightness)), hsl(148, var(--saturation), var(--lightness)), hsl(147, var(--saturation), var(--lightness)), hsl(146, var(--saturation), var(--lightness)), hsl(145, var(--saturation), var(--lightness)), hsl(144, var(--saturation), var(--lightness)), hsl(143, var(--saturation), var(--lightness)), hsl(142, var(--saturation), var(--lightness)), hsl(141, var(--saturation), var(--lightness)), hsl(140, var(--saturation), var(--lightness)), hsl(139, var(--saturation), var(--lightness)), hsl(138, var(--saturation), var(--lightness)), hsl(137, var(--saturation), var(--lightness)), hsl(136, var(--saturation), var(--lightness)), hsl(135, var(--saturation), var(--lightness)), hsl(134, var(--saturation), var(--lightness)), hsl(133, var(--saturation), var(--lightness)), hsl(132, var(--saturation), var(--lightness)), hsl(131, var(--saturation), var(--lightness)), hsl(130, var(--saturation), var(--lightness)), hsl(129, var(--saturation), var(--lightness)), hsl(128, var(--saturation), var(--lightness)), hsl(127, var(--saturation), var(--lightness)), hsl(126, var(--saturation), var(--lightness)), hsl(125, var(--saturation), var(--lightness)), hsl(124, var(--saturation), var(--lightness)), hsl(123, var(--saturation), var(--lightness)), hsl(122, var(--saturation), var(--lightness)), hsl(121, var(--saturation), var(--lightness)), hsl(120, var(--saturation), var(--lightness)), hsl(119, var(--saturation), var(--lightness)), hsl(118, var(--saturation), var(--lightness)), hsl(117, var(--saturation), var(--lightness)), hsl(116, var(--saturation), var(--lightness)), hsl(115, var(--saturation), var(--lightness)), hsl(114, var(--saturation), var(--lightness)), hsl(113, var(--saturation), var(--lightness)), hsl(112, var(--saturation), var(--lightness)), hsl(111, var(--saturation), var(--lightness)), hsl(110, var(--saturation), var(--lightness)), hsl(109, var(--saturation), var(--lightness)), hsl(108, var(--saturation), var(--lightness)), hsl(107, var(--saturation), var(--lightness)), hsl(106, var(--saturation), var(--lightness)), hsl(105, var(--saturation), var(--lightness)), hsl(104, var(--saturation), var(--lightness)), hsl(103, var(--saturation), var(--lightness)), hsl(102, var(--saturation), var(--lightness)), hsl(101, var(--saturation), var(--lightness)), hsl(100, var(--saturation), var(--lightness)), hsl(99, var(--saturation), var(--lightness)), hsl(98, var(--saturation), var(--lightness)), hsl(97, var(--saturation), var(--lightness)), hsl(96, var(--saturation), var(--lightness)), hsl(95, var(--saturation), var(--lightness)), hsl(94, var(--saturation), var(--lightness)), hsl(93, var(--saturation), var(--lightness)), hsl(92, var(--saturation), var(--lightness)), hsl(91, var(--saturation), var(--lightness)), hsl(90, var(--saturation), var(--lightness)), hsl(89, var(--saturation), var(--lightness)), hsl(88, var(--saturation), var(--lightness)), hsl(87, var(--saturation), var(--lightness)), hsl(86, var(--saturation), var(--lightness)), hsl(85, var(--saturation), var(--lightness)), hsl(84, var(--saturation), var(--lightness)), hsl(83, var(--saturation), var(--lightness)), hsl(82, var(--saturation), var(--lightness)), hsl(81, var(--saturation), var(--lightness)), hsl(80, var(--saturation), var(--lightness)), hsl(79, var(--saturation), var(--lightness)), hsl(78, var(--saturation), var(--lightness)), hsl(77, var(--saturation), var(--lightness)), hsl(76, var(--saturation), var(--lightness)), hsl(75, var(--saturation), var(--lightness)), hsl(74, var(--saturation), var(--lightness)), hsl(73, var(--saturation), var(--lightness)), hsl(72, var(--saturation), var(--lightness)), hsl(71, var(--saturation), var(--lightness)), hsl(70, var(--saturation), var(--lightness)), hsl(69, var(--saturation), var(--lightness)), hsl(68, var(--saturation), var(--lightness)), hsl(67, var(--saturation), var(--lightness)), hsl(66, var(--saturation), var(--lightness)), hsl(65, var(--saturation), var(--lightness)), hsl(64, var(--saturation), var(--lightness)), hsl(63, var(--saturation), var(--lightness)), hsl(62, var(--saturation), var(--lightness)), hsl(61, var(--saturation), var(--lightness)), hsl(60, var(--saturation), var(--lightness)), hsl(59, var(--saturation), var(--lightness)), hsl(58, var(--saturation), var(--lightness)), hsl(57, var(--saturation), var(--lightness)), hsl(56, var(--saturation), var(--lightness)), hsl(55, var(--saturation), var(--lightness)), hsl(54, var(--saturation), var(--lightness)), hsl(53, var(--saturation), var(--lightness)), hsl(52, var(--saturation), var(--lightness)), hsl(51, var(--saturation), var(--lightness)), hsl(50, var(--saturation), var(--lightness)), hsl(49, var(--saturation), var(--lightness)), hsl(48, var(--saturation), var(--lightness)), hsl(47, var(--saturation), var(--lightness)), hsl(46, var(--saturation), var(--lightness)), hsl(45, var(--saturation), var(--lightness)), hsl(44, var(--saturation), var(--lightness)), hsl(43, var(--saturation), var(--lightness)), hsl(42, var(--saturation), var(--lightness)), hsl(41, var(--saturation), var(--lightness)), hsl(40, var(--saturation), var(--lightness)), hsl(39, var(--saturation), var(--lightness)), hsl(38, var(--saturation), var(--lightness)), hsl(37, var(--saturation), var(--lightness)), hsl(36, var(--saturation), var(--lightness)), hsl(35, var(--saturation), var(--lightness)), hsl(34, var(--saturation), var(--lightness)), hsl(33, var(--saturation), var(--lightness)), hsl(32, var(--saturation), var(--lightness)), hsl(31, var(--saturation), var(--lightness)), hsl(30, var(--saturation), var(--lightness)), hsl(29, var(--saturation), var(--lightness)), hsl(28, var(--saturation), var(--lightness)), hsl(27, var(--saturation), var(--lightness)), hsl(26, var(--saturation), var(--lightness)), hsl(25, var(--saturation), var(--lightness)), hsl(24, var(--saturation), var(--lightness)), hsl(23, var(--saturation), var(--lightness)), hsl(22, var(--saturation), var(--lightness)), hsl(21, var(--saturation), var(--lightness)), hsl(20, var(--saturation), var(--lightness)), hsl(19, var(--saturation), var(--lightness)), hsl(18, var(--saturation), var(--lightness)), hsl(17, var(--saturation), var(--lightness)), hsl(16, var(--saturation), var(--lightness)), hsl(15, var(--saturation), var(--lightness)), hsl(14, var(--saturation), var(--lightness)), hsl(13, var(--saturation), var(--lightness)), hsl(12, var(--saturation), var(--lightness)), hsl(11, var(--saturation), var(--lightness)), hsl(10, var(--saturation), var(--lightness)), hsl(9, var(--saturation), var(--lightness)), hsl(8, var(--saturation), var(--lightness)), hsl(7, var(--saturation), var(--lightness)), hsl(6, var(--saturation), var(--lightness)), hsl(5, var(--saturation), var(--lightness)), hsl(4, var(--saturation), var(--lightness)), hsl(3, var(--saturation), var(--lightness)), hsl(2, var(--saturation), var(--lightness)), hsl(1, var(--saturation), var(--lightness)), hsl(0, var(--saturation), var(--lightness))
+	    );
+    }
+   .ap-hslcolorpicker{
+        height: 17px;
+        border-radius: 15px;
+        margin-top: 10px;
+	    background-image: var(--hslbackground)
+    }
+    .ap-slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 13px;
+        background: transparent;
+        outline: none;
+        transform: translateX(-2px)
+    }
+    .ap-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        border-radius:15px;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+
+    .ap-slider::-moz-range-thumb {
+        width: 24px;
+        height: 24px;
+        border-radius:15px;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+    .ap-span-rc {
+        margin-left: 200px;
+        font-size: 12px;
+        color: #0082cf;
+    }
+    .ap-icon-rc {
+        margin-left: 50px;
+        font-size: 25px;
+    }
 </style>
+
 {% endblock %}
 {% block PanelContent %}
+<div style="margin: 0 5px 0 5px;">
 <div class="ap-div-cc">
     <div class="ap-icon-col">
         <i class="icon-opacity-24px"></i>
@@ -86,7 +137,7 @@
         <div class="ap-box-cc-text">Custom Colour</div>
     </div>
     <div class="ap-div-sc">
-        <div class="ap-sc-circle"></div>
+        <div class="ap-sc-circle" id="ap-colsel"></div>
         <div class="ap-sc-text">Selected Colour</div>
     </div>
 </div>
@@ -94,5 +145,40 @@
     <div class="ap-tab-bground">Background</div>
     <div class="ap-tab-other">Headings</div>
     <div class="ap-tab-other">Content</div>
+</div>
+<div class="ap-hslcolorpicker">
+
+<!-- initial value is set to 0 but would be set as a django/python value -->
+
+		<input type="range" min="0" max="360" value="0" class="ap-slider" id="myRange">
+</div>
+<div>
+	Saturation
+	<input type="range" min="0" max="100" value="100" style="width:100%" id="saturation">
+</div>
+<div>
+	Lightness
+	<input type="range" min="0" max="100" value="50" style="width:100%" id="lightness">
+</div>
+<script>
+	var hslSlider = document.getElementById("myRange");
+	var saturationSlider = document.getElementById("saturation");
+	var lightnessSlider = document.getElementById("lightness");
+	let root = document.documentElement;
+	hslSlider.oninput = function() {
+		root.style.setProperty('--current-hsl', 360 - this.value)
+	}
+
+	saturationSlider.oninput = function() {
+		root.style.setProperty('--saturation', this.value + "%")
+	}
+
+	lightnessSlider.oninput = function() {
+		root.style.setProperty('--lightness', this.value + "%")
+	}
+</script>
+<div>
+    <span class="ap-span-rc">Reset colours</span><i class="icon-reset-colour ap-icon-rc"></i>
+</div>
 </div>
 {% endblock %}
