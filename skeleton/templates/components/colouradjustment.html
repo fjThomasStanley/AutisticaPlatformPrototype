@@ -4,7 +4,6 @@
     .ap-div-cc {
         display: flex;
         flex-direction: row;
-        font-size: 12px;
     }
     .ap-icon-col {
         padding: 9px 10px 0 0;
@@ -30,7 +29,6 @@
         padding: 10px 10px 0 10px;
     }
     .ap-box-cc-text {
-        font-size: 12px;
         padding: 5px;
         margin: 0;
     }
@@ -44,7 +42,6 @@
         background-color: hsl(var(--current-hsl), var(--saturation), var(--lightness));
     }
     .ap-div-sc {
-        font-size: 12px;
         width: 70px;
     }
     .ap-sc-text {
@@ -54,7 +51,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        font-size: 12px;
     }
     .ap-tab-bground {
         border-style: solid;
@@ -109,19 +105,60 @@
         cursor: pointer;
     }
     .ap-span-rc {
-        margin-left: 200px;
-        font-size: 12px;
-        color: #0082cf;
+        margin-left: 180px;
+        c
     }
     .ap-icon-rc {
         margin-left: 50px;
         font-size: 25px;
     }
+    .ap-bpcpp {
+        margin: 10px 0 10px 30px;
+        color: #0082cf;
+    }
+    .ap-col-circles {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+    .ap-circle-1, .ap-circle-2, .ap-circle-3, .ap-circle-4, .ap-circle-5, .ap-circle-6 {
+        width: 40px;
+        height: 40px;
+        border-style: solid;
+        border-radius: 20px;
+        padding: 10px 0 10px 0;
+        font-size: 8px;
+    }
+    .ap-circle-1 {
+        border-color: #9FC7D8;
+        background-color: #9FC7D8;
+    }
+    .ap-circle-2 {
+        border-color: #E9F6DC;
+        background-color: #E9F6DC;
+    }
+    .ap-circle-3 {
+        border-color: #421ABC;
+        background-color: #421ABC;
+    }
+    .ap-circle-4 {
+        border-color: #F1DEDD;
+        background-color: #F1DEDD;
+    }
+    .ap-circle-5 {
+        border-color: #DECDBF;
+        background-color: #DECDBF;
+    }
+    .ap-circle-6 {
+        border-color: #F2F2F2;
+        background-color: #F2F2F2;
+    }
 </style>
 
 {% endblock %}
 {% block PanelContent %}
-<div style="margin: 0 5px 0 5px;">
+<div style="margin: 0 5px 0 5px; font-size: 12px;">
 <div class="ap-div-cc">
     <div class="ap-icon-col">
         <i class="icon-opacity-24px"></i>
@@ -157,13 +194,13 @@
 	<input type="range" min="0" max="100" value="100" style="width:100%" id="saturation">
 </div>
 <div>
-	Lightness
-	<input type="range" min="0" max="100" value="50" style="width:100%" id="lightness">
+	Brightness
+	<input type="range" min="0" max="100" value="50" style="width:100%" id="brightness">
 </div>
 <script>
 	var hslSlider = document.getElementById("myRange");
 	var saturationSlider = document.getElementById("saturation");
-	var lightnessSlider = document.getElementById("lightness");
+	var brightnessSlider = document.getElementById("brightness");
 	let root = document.documentElement;
 	hslSlider.oninput = function() {
 		root.style.setProperty('--current-hsl', 360 - this.value)
@@ -173,12 +210,26 @@
 		root.style.setProperty('--saturation', this.value + "%")
 	}
 
-	lightnessSlider.oninput = function() {
+	brightnessSlider.oninput = function() {
 		root.style.setProperty('--lightness', this.value + "%")
 	}
 </script>
 <div>
     <span class="ap-span-rc">Reset colours</span><i class="icon-reset-colour ap-icon-rc"></i>
+</div>
+<div class="ap-bpcpp">
+    <span>Background Preset Colours</span>
+    <br>
+    <span>Pastel Panel</span>
+</div>
+<div class="ap-col-circles">
+    <div class="ap-circle-1">#9FC7D8</div>
+    <div class="ap-circle-2">#E9F6DC</div>
+    <div class="ap-circle-3">#421ABC</div>
+    <div class="ap-circle-4">#F1DEDD</div>
+    <div class="ap-circle-5">#DECDBF</div>
+    <div class="ap-circle-6">#F2F2F2</div>
+
 </div>
 </div>
 {% endblock %}
