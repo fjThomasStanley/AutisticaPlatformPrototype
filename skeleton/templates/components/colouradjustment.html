@@ -106,7 +106,6 @@
     }
     .ap-span-rc {
         margin-left: 180px;
-        c
     }
     .ap-icon-rc {
         margin-left: 50px;
@@ -120,7 +119,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-
+        margin: 20px 0 20px 0;
     }
     .ap-circle-1, .ap-circle-2, .ap-circle-3, .ap-circle-4, .ap-circle-5, .ap-circle-6 {
         width: 40px;
@@ -154,6 +153,32 @@
         border-color: #F2F2F2;
         background-color: #F2F2F2;
     }
+    .ap-div-contrast {
+        display: flex;
+        flex-direction: row;
+    }
+    .ap-contrast-box {
+        border-style: solid;
+        border-color: #0082cf;
+        text-align: center;
+        margin-left: 5px;
+        height: 70px;
+        width: 100px;
+     }
+    .ap-icon-contrast {
+        font-size: 18px;
+        padding: 10px 10px 5px 10px;
+     }
+    .ap-bottom-slider {
+        width: 330px;
+        height: 25px;
+        border-style: solid;
+        border-radius: 12.5px;
+        background-color: lightgrey;
+        border-color: lightgrey;
+    }
+    .ap-bottom-slider-right {
+        margin-left: 250px;
 </style>
 
 {% endblock %}
@@ -229,7 +254,24 @@
     <div class="ap-circle-4">#F1DEDD</div>
     <div class="ap-circle-5">#DECDBF</div>
     <div class="ap-circle-6">#F2F2F2</div>
-
+</div>
+<div class="ap-div-contrast">
+    <div class="ap-contrast-box">
+        <div class="ap-icon-contrast"><i class="icon-bright-high-contrast-copy"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span></i></div>
+        <div>Bright / High Contrast</div>
+    </div>
+    <div class="ap-contrast-box">
+        <div class="ap-icon-contrast"><i class="icon-dark-high-contrast"></i></div>
+        <div>Dark / High Contrast</div>
+    </div>
+    <div class="ap-contrast-box">
+        <div class="ap-icon-contrast"><i class="icon-contrast-mode"><span class="path1"></span><span class="path2"></span></i></div>
+        <div>Contrast Mode</div>
+    </div>
+</div>
+<div class="ap-bottom-slider">
+    <span><i class="icon-remove_circle-24px" style="font-size: 24px;"></i></span>
+    <span class="ap-bottom-slider-right"><i class="icon-add_circle-24px" style="font-size: 24px;"></i></span>
 </div>
 </div>
 {% endblock %}
