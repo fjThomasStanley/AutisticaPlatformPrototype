@@ -79,15 +79,15 @@
         margin-top: 10px;
 	    background-image: var(--hslbackground)
     }
-    .ap-slider {
+   .ap-slider {
         -webkit-appearance: none;
         width: 100%;
         height: 13px;
         background: transparent;
         outline: none;
         transform: translateX(-2px)
-    }
-    .ap-slider::-webkit-slider-thumb {
+   }
+   .ap-slider::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
         width: 24px;
@@ -95,7 +95,7 @@
         border-radius:15px;
         background: #4CAF50;
         cursor: pointer;
-    }
+   }
 
     .ap-slider::-moz-range-thumb {
         width: 24px;
@@ -171,16 +171,27 @@
      }
     .ap-bottom-slider {
         width: 330px;
-        height: 25px;
+        height: 20px;
+        margin: 20px 0 20px 0;
         border-style: solid;
-        border-radius: 12.5px;
+        border-radius: 10px;
         background-color: lightgrey;
         border-color: lightgrey;
     }
-    .ap-bottom-slider-right {
-        margin-left: 250px;
+    .ap-icon-bottom-slider-right {
+        margin-left: 272px;
+        padding-bottom: 20px;
+    }
+    .ap-bottom-slider-left {
+        width: 100px;
+        height: 20px;
+        margin: 20px 0 20px 0;
+        border-style: solid;
+        border-radius: 10px;
+        background-color: grey;
+        border-color: grey;
+    }
 </style>
-
 {% endblock %}
 {% block PanelContent %}
 <div style="margin: 0 5px 0 5px; font-size: 12px;">
@@ -270,8 +281,10 @@
     </div>
 </div>
 <div class="ap-bottom-slider">
-    <span><i class="icon-remove_circle-24px" style="font-size: 24px;"></i></span>
-    <span class="ap-bottom-slider-right"><i class="icon-add_circle-24px" style="font-size: 24px;"></i></span>
+    <div class="ap-bottom-slider-left">
+        <span><i class="icon-remove_circle-24px" style="font-size: 24px;"></i></span>
+        <span class="ap-icon-bottom-slider-right"><i class="icon-add_circle-24px" style="font-size: 24px;"></i></span>
+    </div>
 </div>
 </div>
 {% endblock %}
