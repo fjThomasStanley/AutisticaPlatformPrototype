@@ -281,6 +281,11 @@ def componentGallery(request):
                 "Title": "Colour Adjustment",
                 "ID": "coladjust",
                 "arrow": "arrow_expandingpanel_ca"
+            },
+            {
+                "Title": "Content Adjustment",
+                "ID": "contadjust",
+                "arrow": "arrow_expandingpanel_cta"
             }
         ],
         'AP_blank':
