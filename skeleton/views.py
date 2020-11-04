@@ -293,6 +293,10 @@ def componentGallery(request):
                 "Title": "Expanding Panel",
                 "ID": "blankexpanel",
                 "arrow": "arrow_expandingpanel_bep"
+            },
+        'AP_HCL':
+            {
+                "Desc": "Some people cannot read text if there is not sufficient contrast between the text and background. For others, bright colours (high luminance) are not readable; they need low luminance."
             }
     }
 

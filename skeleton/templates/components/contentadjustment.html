@@ -49,6 +49,38 @@
         text-align: center;
         padding: 2px 0 2px 0;
     }
+    .ap-icon-lum {
+        margin: 10px 0 0 5px;
+    }
+    .ap-lum-outerdiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .ap-hcl {
+        border-style: solid;
+        padding: 5x 2px 0 2px;
+        width: 115px;
+        height: 75px;
+        margin-top: 10px;
+    }
+    .ap-hc1-desc {
+        font-size: 5px;
+    }
+    .ap-hc2-desc {
+        font-size: 5px;
+        color: yellow;
+        background-color: black;
+    }
+    .ap-hc3-desc {
+        font-size: 5px;
+        color: #57564c;
+        background-color: #1e1b1a;
+    }
+    .ap-hcl-title {
+        text-align: center;
+        margin: 15px 5px 0 5px;
+    }
 </style>
 {% endblock %}
 {% block PanelContent %}
@@ -72,6 +104,44 @@
            Word Spacing
         </div>
     </div>
-    <i class="icon-luminance"></i>
+    <div class="ap-icon-lum">
+        <i class="icon-luminance" style="font-size: 15px"></i>
+        <span style="margin-left: 15px;">High Contrast / Low Luminance Text</span>
+    </div>
+    <div class="ap-lum-outerdiv">
+        <div class="ap-hcl">
+            <div class="ap-hc1-desc">
+                {{AP_HCL.Desc}}
+            </div>
+            <div class="ap-hcl-title">
+                High Contrast 1
+            </div>
+        </div>
+        <div class="ap-hcl">
+            <div class="ap-hc2-desc">
+                {{AP_HCL.Desc}}
+            </div>
+            <div class="ap-hcl-title">
+                High Contrast 2
+            </div>
+        </div>
+        <div class="ap-hcl">
+            <div class="ap-hc3-desc">
+                {{AP_HCL.Desc}}
+            </div>
+            <div class="ap-hcl-title">
+                Low Luminance 1
+            </div>
+        </div>
+
+    </div>
+        <div class="ap-hcl">
+            <div class="ap-hc1-desc">
+                {{AP_HCL.Desc}}
+            </div>
+            <div class="ap-hcl-title">
+                Low Luminance 2
+            </div>
+        </div>
 </div>
 {% endblock %}
