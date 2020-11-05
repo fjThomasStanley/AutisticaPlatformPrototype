@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     {% load static %}
+    <title>Accessibility</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+<style>
+    .sp-sliding-panel {
+        position: fixed;
+        top: 0;
+        width: 430px;
+        bottom: 0;
+        right: -430px;
+        background-color: grey;
+        z-index: 1;
+         transform: translate(0, 0);
+        transition: transform 0.5s ease-in-out;
+        overflow-y: auto;
+   }
+    .sp-slide-left {
+        transform: translate(-430px, 0);
+        transition: transform 0.5s ease-in-out;
+    }
+    .sp-icon-close {
+        margin-left: 380px;
+     }
+</style>
+{% block panelStyle %}
+{% endblock %}
+<script>
+    function movePanelLeft()
+    {
+        var ssidepanel = document.getElementById("sidepanel");
+
+        ssidepanel.classList.add("sp-slide-left");
+    }
+    function movePanelRight()
+    {
+        var ssidepanel = document.getElementById("sidepanel");
+
+        ssidepanel.classList.remove("sp-slide-left");
+     }
+</script>
+<div class="sp-sliding-panel" id="sidepanel">
+    <i class="icon-close sp-icon-close" onclick="movePanelRight()"></i>
+    <div>
+{% block panelContent %}
+{% endblock %}
+    </div>
+</div>

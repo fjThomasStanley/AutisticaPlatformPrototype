@@ -21,7 +21,7 @@ def index(request):
     Starting page for app.
     """
 
-    test_step_data = {
+    context = {
         "stepper": [
             {
                 "id": 1,
@@ -36,23 +36,124 @@ def index(request):
                 "label": "Add Event"
             }
         ],
+        "ueftext": [
+            {
+                "rows": [
+                    {
+                        "qtext": "Where",
+                        "qcolour": "#4d75ad",
+                        "phtext": "Enter name of location or postcode...",
+                        "input": "ip"
+                    },
+                    {
+                        "qtext": "What",
+                        "qcolour": "#ffbb5d",
+                        "phtext": "Your experience can be entered here...",
+                        "input": "ta"
+                    }
+                ],
+                "maintext": "Enter your experience"
+            },
+            {
+                "rows": [
+                    {
+                        "qtext": "What",
+                        "qcolour": "#ffbb5d",
+                        "phtext": "",
+                        "input": "ta"
+                    }
+                ],
+                "maintext": "What would you have wished to be different?"
+            }
+        ],
+        "user_exp": [
+            {
+                "id": "32097868",
+                "datetime": "Sept 18, 2019, 10:31 a.m.",
+                "user_txt": [
+                    {
+                        "question": "Event",
+                        "text": "The air conditioning in the room where I was having a meeting was really loud and I found it really hard to concentrate."
+                    },
+                    {
+                        "question": "What would you have liked to be different?",
+                        "text": ""
+                    }
+                ]
+            },
+            {
+                "id": "19279611",
+                "datetime": "Sept 17, 2019, 8:46 a.m.",
+                "user_txt": [
+                    {
+                        "question": "Event",
+                        "text": "The tube is too loud."
+                    },
+                    {
+                        "question": "What would you have liked to be different?",
+                        "text": ""
+                    }
+                ]
+            },
+            {
+                "id": "32097868",
+                "datetime": "Sept 17, 2019, 8:45 a.m.",
+                "user_txt": [
+                    {
+                        "question": "Event",
+                        "text": "I'm at a conference today and I found people not using the microphone really difficult - it makes it much harder to concentrate on what they were saying. I was much more distracted."
+                    },
+                    {
+                        "question": "What would you have liked to be different?",
+                        "text": ""
+                    }
+                ]
+            }
+        ],
+        "MONE_data": [
+            {
+                "UID": "0000001",
+                "EID": "32097868",
+                "date": "18/09/19",
+                "Event_What": "The air conditioning in the room where I was having a meeting was really loud and I found it really heard to concentrate, it was a rubbish experience.",
+                "Location_Where": "NW1 2HS",
+                "LikeToBeDifferent": "I would have liked the air conditioning to less loud to aid my concentration",
+                "Summary": "Loud Air Conditioning"
+            },
+            {
+                "UID": "0000002",
+                "EID": "32097867",
+                "date": "17/09/19",
+                "Event_What": "The tube is too loud.",
+                "Location_Where": "NW1 8NH",
+                "LikeToBeDifferent": "would have liked the tube to be less loud",
+                "Summary": "Loud Tube"
+            },
+            {
+                "UID": "0000003",
+                "EID": "32097866",
+                "date": "17/09/19",
+                "Event_What": "I'm at a conference today and I found the people not using the microphone really difficult - it makes it harder to concentrate on what they were saying. I was much more distracted.",
+                "Location_Where": "SE15 5DQ",
+                "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
+                "Summary": "None use of microphone in conference"
+            }
+        ]
     }
-    stepper_object = Stepper.Stepper(test_step_data, request)
+    stepper_object = Stepper.Stepper(request)
 
     stepper_object.update()
 
-    stepper_data = stepper_object.get_stepper_data()
-
     auth_url = OpenHumansMember.get_auth_url()
-    context = {'auth_url': auth_url,
-               'oh_proj_page': settings.OH_PROJ_PAGE}
+    context = {**context, **{'auth_url': auth_url,
+                             'oh_proj_page': settings.OH_PROJ_PAGE}}
     if request.user.is_authenticated:
         return redirect('overview')
     # return render(request, 'index.html', context=context)
-    return render(request, 'index.html', stepper_data)
+    return render(request, 'index.html', context=context)
 
 def componentGallery(request):
-    test_step_data = {
+    context = {
         "stepper": [
             {
                 "id": 1,
@@ -97,15 +198,184 @@ def componentGallery(request):
                 "maintext": "What would you have wished to be different?"
         }
         ],
+        "user_exp": [
+            {
+                "id": "32097868",
+                "datetime": "Sept 18, 2019, 10:31 a.m.",
+                "user_txt": [
+                    {
+                        "question": "Event",
+                        "text": "The air conditioning in the room where I was having a meeting was really loud and I found it really hard to concentrate."
+                    },
+                    {
+                        "question": "What would you have liked to be different?",
+                        "text": ""
+                    }
+                ]
+            },
+            {
+                "id": "19279611",
+                "datetime": "Sept 17, 2019, 8:46 a.m.",
+                "user_txt": [
+                    {
+                        "question": "Event",
+                        "text": "The tube is too loud."
+                    },
+                    {
+                        "question": "What would you have liked to be different?",
+                        "text": ""
+                    }
+                ]
+            },
+            {
+                "id": "32097868",
+                "datetime": "Sept 17, 2019, 8:45 a.m.",
+                "user_txt": [
+                    {
+                        "question": "Event",
+                        "text": "I'm at a conference today and I found people not using the microphone really difficult - it makes it much harder to concentrate on what they were saying. I was much more distracted."
+                    },
+                    {
+                        "question": "What would you have liked to be different?",
+                        "text": ""
+                    }
+                ]
+            }
+        ],
+        "MONE_data": [
+            {
+                "UID": "0000001",
+                "EID": "32097868",
+                "date": "18/09/19",
+                "Event_What": "The air conditioning in the room where I was having a meeting was really loud and I found it really heard to concentrate, it was a rubbish experience.",
+                "Location_Where": "NW1 2HS",
+                "LikeToBeDifferent": "I would have liked the air conditioning to less loud to aid my concentration",
+                "Summary": "Loud Air Conditioning"
+            },
+            {
+                "UID": "0000002",
+                "EID": "32097867",
+                "date": "17/09/19",
+                "Event_What": "The tube is too loud.",
+                "Location_Where": "NW1 8NH",
+                "LikeToBeDifferent": "would have liked the tube to be less loud",
+                "Summary": "Loud Tube"
+            },
+            {
+                "UID": "0000003",
+                "EID": "32097866",
+                "date": "17/09/19",
+                "Event_What": "I'm at a conference today and I found the people not using the microphone really difficult - it makes it harder to concentrate on what they were saying. I was much more distracted.",
+                "Location_Where": "SE15 5DQ",
+                "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
+                "Summary": "None use of microphone in conference"
+            }
+        ],
+        'AP_data': [
+            {
+                "Title": "Navigation Adjustment",
+                "ID": "navadjust",
+                "arrow": "arrow_expandingpanel_na"
+            },
+            {
+                "Title": "Colour Adjustment",
+                "ID": "coladjust",
+                "arrow": "arrow_expandingpanel_ca"
+            },
+            {
+                "Title": "Content Adjustment",
+                "ID": "contadjust",
+                "arrow": "arrow_expandingpanel_cta"
+            }
+        ],
+        'AP_blank':
+            {
+                "Title": "Expanding Panel",
+                "ID": "blankexpanel",
+                "arrow": "arrow_expandingpanel_bep"
+            },
+        'AP_HCL':
+            {
+                "Desc": "Some people cannot read text if there is not sufficient contrast between the text and background. For others, bright colours (high luminance) are not readable; they need low luminance."
+            }
     }
-    stepper_object = Stepper.Stepper(test_step_data, request)
+
+    stepper_object = Stepper.Stepper(request)
 
     stepper_object.update()
 
-    stepper_data = stepper_object.get_stepper_data()
+    auth_url = OpenHumansMember.get_auth_url()
+    context = {**context, **{'auth_url': auth_url}}#,
+#               'oh_proj_page': settings.OH_PROJ_PAGE}}
+    if request.user.is_authenticated:
+        oh_member = request.user.openhumansmember
+        context = {**context, **{'oh_id': oh_member.oh_id,
+                                 'oh_member': oh_member}}#,
+#                                 'oh_proj_page': settings.OH_PROJ_PAGE}}
 
+    return render(request, 'gallery.html', context=context)
+def share(request):
+    context = {
+        "stepper": [
+            {
+                "id": 1,
+                "label": "Login"
+            },
+            {
+                "id": 2,
+                "label": "Define Profile"
+            },
+            {
+                "id": 3,
+                "label": "Add Experience"
+            }
+        ],
+    }
+    stepper_object = Stepper.Stepper(request)
 
-    return render(request, 'gallery.html', stepper_data)
+    stepper_object.update()
+    return render(request, 'share.html', context=context)
+
+def view(request):
+    context = {
+        "stepper": [
+            {
+                "id": 1,
+                "label": "Login"
+            },
+            {
+                "id": 2,
+                "label": "Define Profile"
+            },
+            {
+                "id": 3,
+                "label": "Add Experience"
+            },
+            {
+                "id": 4,
+                "label": "View Experience"
+            }
+        ],
+    }
+    stepper_object = Stepper.Stepper(request)
+
+    stepper_object.update()
+    return render(request, 'view.html', context=context)
+
+def home(request):
+    return render(request, 'home.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def mydata(request):
+    return render(request, 'mydata.html')
+
+def settings(request):
+    return render(request, 'settings.html')
+
+def login(request):
+    return render(request, 'login.html')
 
 def overview(request):
     if request.user.is_authenticated:
@@ -116,6 +386,209 @@ def overview(request):
         return render(request, 'main/overview.html', context=context)
     return redirect('index')
 
+def pictorialexperienceeditor(request):
+    context = {
+        "peed_ele_row": [
+            {
+                "peed_ele_col" : [
+                    {
+                        "text": "I",
+                        "icon": "icon-Autistic-Person"
+                    },
+                    {
+                        "text": "Audio Desc",
+                        "icon": "icon-audio-description"
+                    },
+                    {
+                        "text": "Account",
+                        "icon": "icon-account_circle"
+                    },
+                    {
+                        "text": "Add box",
+                        "icon": "icon-add_box"
+                    }
+                ]
+            },
+            {
+                "peed_ele_col": [
+                    {
+                        "text": "Add",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "text": "Apps",
+                        "icon": "icon-apps-24px"
+                    },
+                    {
+                        "text": "Bar Chart",
+                        "icon": "icon-bar_chart"
+                    },
+                    {
+                        "text": "Camera",
+                        "icon": "icon-camera_alt"
+                    }
+                ]
+            },
+            {
+                "peed_ele_col": [
+                    {
+                        "text": "Tick",
+                        "icon": "icon-check-circle-together"
+                    },
+                    {
+                        "text": "Cross",
+                        "icon": "icon-close"
+                    },
+                    {
+                        "text": "Smile",
+                        "icon": "icon-comment-alt-smile"
+                    },
+                    {
+                        "text": "Compass",
+                        "icon": "icon-compass"
+                    }
+                ]
+            },
+            {
+                "peed_ele_col": [
+                    {
+                        "text": "CSP",
+                        "icon": "icon-csp-lblue"
+                    },
+                    {
+                        "text": "Database",
+                        "icon": "icon-database-solid"
+                    },
+                    {
+                        "text": "Email",
+                        "icon": "icon-email"
+                    },
+                    {
+                        "text": "Fast Food",
+                        "icon": "icon-fastfood"
+                    }
+                ]
+            },
+            {
+                "peed_ele_col": [
+                    {
+                        "text": "Image",
+                        "icon": "icon-image"
+                    },
+                    {
+                        "text": "School",
+                        "icon": "icon-school"
+                    },
+                    {
+                        "text": "Language",
+                        "icon": "icon-language"
+                    },
+                    {
+                        "text": "No",
+                        "icon": "icon-no"
+                    }
+                ]
+            },
+        ],
+        "peed_fld": [
+            {
+                "number": "2.",
+                "title": "Sensory"
+            }
+        ],
+        "peed_ele_master": [
+                    {
+                        "text": "I",
+                        "icon": "icon-Autistic-Person"
+                    },
+                    {
+                        "text": "Audio Desc",
+                        "icon": "icon-audio-description"
+                    },
+                    {
+                        "text": "Account",
+                        "icon": "icon-account_circle"
+                    },
+                    {
+                        "text": "Add box",
+                        "icon": "icon-add_box"
+                    },
+                    {
+                        "text": "Add",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "text": "Apps",
+                        "icon": "icon-apps-24px"
+                    },
+                    {
+                        "text": "Bar Chart",
+                        "icon": "icon-bar_chart"
+                    },
+                    {
+                        "text": "Camera",
+                        "icon": "icon-camera_alt"
+                    },
+                    {
+                        "text": "Tick",
+                        "icon": "icon-check-circle-together"
+                    },
+                    {
+                        "text": "Cross",
+                        "icon": "icon-close"
+                    },
+                    {
+                        "text": "Smile",
+                        "icon": "icon-comment-alt-smile"
+                    },
+                    {
+                        "text": "Compass",
+                        "icon": "icon-compass"
+                    },
+                    {
+                        "text": "CSP",
+                        "icon": "icon-csp-lblue"
+                    },
+                    {
+                        "text": "Database",
+                        "icon": "icon-database-solid"
+                    },
+                    {
+                        "text": "Email",
+                        "icon": "icon-email"
+                    },
+                    {
+                        "text": "Fast Food",
+                        "icon": "icon-fastfood"
+                    },
+                    {
+                        "text": "Image",
+                        "icon": "icon-image"
+                    },
+                    {
+                        "text": "School",
+                        "icon": "icon-school"
+                    },
+                    {
+                        "text": "Language",
+                        "icon": "icon-language"
+                    },
+                    {
+                        "text": "No",
+                        "icon": "icon-no"
+                    }
+        ],
+
+    }
+    row = 1
+    col = 1
+    for item in peed_ele_master:
+        peed_ele_row.row.peed_ele_col.col.text = item.text
+        peed_ele_row.row.peed_ele_col.col.icon = item.icon
+        row = row + 1
+        col = col + 1
+
+    return render(request, 'pictorialexperienceeditor.html',context=context)
 
 def logout_user(request):
     """
