@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?a7uc0f');
-  src:  url('fonts/icomoon.eot?a7uc0f#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?a7uc0f') format('truetype'),
-    url('fonts/icomoon.woff?a7uc0f') format('woff'),
-    url('fonts/icomoon.svg?a7uc0f#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?5nmk29');
+  src:  url('fonts/icomoon.eot?5nmk29#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5nmk29') format('truetype'),
+    url('fonts/icomoon.woff?5nmk29') format('woff'),
+    url('fonts/icomoon.svg?5nmk29#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,50 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-contrast-mode:before {
+  content: "\e956";
+  color: #1970cc;
+}
+.icon-luminance:before {
+  content: "\e9af";
+  color: #1970cc;
+}
+.icon-bright-high-contrast:before {
+  content: "\e957";
+  color: #1970cc;
+}
+.icon-magnifier:before {
+  content: "\e9ad";
+  color: #1970cc;
+}
+.icon-mic:before {
+  content: "\e9b1";
+  color: #1b77db;
+}
+.icon-play-circle-green:before {
+  content: "\e9b2";
+  color: #34a835;
+}
+.icon-dark-high-contrast:before {
+  content: "\e9ae";
+  color: #1970cc;
+}
+.icon-font-sizing:before {
+  content: "\e9aa";
+  color: #1970cc;
+}
+.icon-text-reader:before {
+  content: "\e9ab";
+  color: #1970cc;
+}
+.icon-voice-commands:before {
+  content: "\e9ac";
+  color: #1970cc;
+}
+.icon-access:before {
+  content: "\e92b";
+  color: #1970cc;
+}
 .icon-perfume:before {
   content: "\e91f";
   color: #36c;
@@ -77,68 +121,6 @@
   content: "\f187";
   color: #1970cc;
 }
-.icon-bright-high-contrast-copy .path1:before {
-  content: "\f188";
-  color: rgb(25, 112, 204);
-}
-.icon-bright-high-contrast-copy .path2:before {
-  content: "\f189";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-bright-high-contrast-copy .path3:before {
-  content: "\f18a";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-bright-high-contrast-copy .path4:before {
-  content: "\f18b";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-bright-high-contrast-copy .path5:before {
-  content: "\f18c";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-bright-high-contrast-copy .path6:before {
-  content: "\f18d";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-bright-high-contrast-copy .path7:before {
-  content: "\f18e";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-bright-high-contrast-copy .path8:before {
-  content: "\f18f";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-bright-high-contrast-copy .path9:before {
-  content: "\f190";
-  margin-left: -1em;
-  color: rgb(252, 252, 252);
-}
-.icon-bright-high-contrast-copy .path10:before {
-  content: "\f191";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-contrast-mode .path1:before {
-  content: "\f192";
-  color: rgb(25, 112, 204);
-}
-.icon-contrast-mode .path2:before {
-  content: "\f193";
-  margin-left: -1em;
-  color: rgb(250, 251, 252);
-}
-.icon-dark-high-contrast:before {
-  content: "\f194";
-  color: #1970cc;
-}
 .icon-loop-24px:before {
   content: "\f195";
 }
@@ -158,15 +140,6 @@
   content: "\f19a";
   color: #1970cc;
 }
-.icon-play-circle-green .path1:before {
-  content: "\f19b";
-  color: rgb(226, 242, 225);
-}
-.icon-play-circle-green .path2:before {
-  content: "\f19c";
-  margin-left: -1em;
-  color: rgb(52, 168, 53);
-}
 .icon-screen-reader-white:before {
   content: "\f19d";
   color: #fff;
@@ -177,14 +150,6 @@
 }
 .icon-voice-text1:before {
   content: "\f19f";
-  color: #1970cc;
-}
-.icon-voice-commands:before {
-  content: "\f1a0";
-  color: #1970cc;
-}
-.icon-text-reader:before {
-  content: "\f1a1";
   color: #1970cc;
 }
 .icon-screen-reader:before {
@@ -202,85 +167,9 @@
   content: "\f1a5";
   color: #1970cc;
 }
-.icon-accessibility-button-blue-copy .path1:before {
-  content: "\f1a6";
-  color: rgb(25, 112, 204);
-}
-.icon-accessibility-button-blue-copy .path2:before {
-  content: "\f1a7";
-  margin-left: -1em;
-  color: rgb(250, 251, 252);
-}
-.icon-accessibility-button-blue .path1:before {
-  content: "\f1a8";
-  color: rgb(25, 112, 204);
-}
-.icon-accessibility-button-blue .path2:before {
-  content: "\f1a9";
-  margin-left: -1em;
-  color: rgb(250, 251, 252);
-}
 .icon-autistic-person:before {
   content: "\f1aa";
   color: #1b77db;
-}
-.icon-luminance .path1:before {
-  content: "\f1ab";
-  color: rgb(25, 112, 204);
-}
-.icon-luminance .path2:before {
-  content: "\f1ac";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-luminance .path3:before {
-  content: "\f1ad";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-luminance .path4:before {
-  content: "\f1ae";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-luminance .path5:before {
-  content: "\f1af";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-luminance .path6:before {
-  content: "\f1b0";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-luminance .path7:before {
-  content: "\f1b1";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-luminance .path8:before {
-  content: "\f1b2";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-luminance .path9:before {
-  content: "\f1b3";
-  margin-left: -1em;
-  color: rgb(252, 252, 252);
-}
-.icon-luminance .path10:before {
-  content: "\f1b4";
-  margin-left: -1em;
-  color: rgb(25, 112, 204);
-}
-.icon-luminance .path11:before {
-  content: "\f1b5";
-  margin-left: -1em;
-  color: rgb(250, 251, 252);
-}
-.icon-font-sizing:before {
-  content: "\f1b6";
-  color: #1970cc;
 }
 .icon-color-drop:before {
   content: "\f1b7";
@@ -301,20 +190,6 @@
 .icon-color_pal:before {
   content: "\f1bb";
   color: #1970cc;
-}
-.icon-magnifier .path1:before {
-  content: "\f1bc";
-  color: rgb(25, 112, 204);
-}
-.icon-magnifier .path2:before {
-  content: "\f1bd";
-  margin-left: -1em;
-  color: rgb(252, 252, 252);
-}
-.icon-magnifier .path3:before {
-  content: "\f1be";
-  margin-left: -1em;
-  color: rgb(252, 252, 252);
 }
 .icon-Low-Vision:before {
   content: "\f1bf";
@@ -339,15 +214,6 @@
 .icon-tick-blue:before {
   content: "\f1c4";
   color: #1970cc;
-}
-.icon-accessibility-button .path1:before {
-  content: "\f1c5";
-  color: rgb(0, 0, 0);
-}
-.icon-accessibility-button .path2:before {
-  content: "\f1c6";
-  margin-left: -1em;
-  color: rgb(250, 251, 252);
 }
 .icon-brightness:before {
   content: "\f1c7";
@@ -1019,15 +885,6 @@
 }
 .icon-menu:before {
   content: "\e955";
-}
-.icon-mic .path1:before {
-  content: "\e956";
-  color: rgb(255, 255, 255);
-}
-.icon-mic .path2:before {
-  content: "\e957";
-  margin-left: -1em;
-  color: rgb(27, 119, 219);
 }
 .icon-more_horiz:before {
   content: "\e958";

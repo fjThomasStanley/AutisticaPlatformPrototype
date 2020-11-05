@@ -270,8 +270,36 @@ def componentGallery(request):
                 "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
                 "Summary": "None use of microphone in conference"
             }
-        ]
+        ],
+        'AP_data': [
+            {
+                "Title": "Navigation Adjustment",
+                "ID": "navadjust",
+                "arrow": "arrow_expandingpanel_na"
+            },
+            {
+                "Title": "Colour Adjustment",
+                "ID": "coladjust",
+                "arrow": "arrow_expandingpanel_ca"
+            },
+            {
+                "Title": "Content Adjustment",
+                "ID": "contadjust",
+                "arrow": "arrow_expandingpanel_cta"
+            }
+        ],
+        'AP_blank':
+            {
+                "Title": "Expanding Panel",
+                "ID": "blankexpanel",
+                "arrow": "arrow_expandingpanel_bep"
+            },
+        'AP_HCL':
+            {
+                "Desc": "Some people cannot read text if there is not sufficient contrast between the text and background. For others, bright colours (high luminance) are not readable; they need low luminance."
+            }
     }
+
     stepper_object = Stepper.Stepper(request)
 
     stepper_object.update()

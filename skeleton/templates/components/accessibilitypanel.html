@@ -1,0 +1,75 @@
+{% extends 'components/slidingpanel.html' %}
+{% block panelStyle %}
+<style>
+    .ap-outerdiv {
+        border-style: solid;
+        border-color: #000b5a;
+        background-color: white;
+        margin-right: 10px;
+    }
+    .ap-langsel {
+        margin-left: 40px;
+    }
+    .ap-language {
+        color: #112550;
+        margin: 15px 0 0 70px;
+        font-size: 15px;
+    }
+    .ap-accmenu {
+        font-size: 20px;
+        margin-left: 130px;
+        color: #112550;
+    }
+    .ap-icon-help {
+        font-size: 30px;
+        margin-left: 50px;
+    }
+    .ap-navadjust-outerdiv {
+        border-style: solid;
+        margin: 10px;
+    }
+    .ap-navadjust-text {
+        margin-left: 10px;
+        color: #0082cf;
+    }
+    .ap-arrow {
+        font-size: 25px;
+        margin-left: 140px;
+     }
+    .ap-navadjust-expand {
+        border-top: solid;
+        display: none;
+    }
+</style>
+<script>
+    function show_hideExpandingPanel(panelID, panel_arrow)
+    {
+        var expanding_panel = document.getElementById(panel_arrow);
+        if (expanding_panel.classList.contains("icon-keyboard_arrow_right"))
+        {
+            expanding_panel.classList.remove("icon-keyboard_arrow_right");
+            expanding_panel.classList.add("icon-expand_more");
+            document.getElementById(panelID).style.display = "block";
+        }
+        else
+        {
+            expanding_panel.classList.remove("icon-expand_more");
+            expanding_panel.classList.add("icon-keyboard_arrow_right");
+            document.getElementById(panelID).style.display = "none";
+        }
+    }
+</script>
+{% endblock %}
+{% block panelContent %}
+<div class="ap-outerdiv">
+    <div class="ap-langsel">Language Selector</div>
+    <div class="ap-language">English</div>
+    <div>
+        <span class="ap-accmenu">Accessibility Menu</span>
+        <i class="icon-help ap-icon-help"></i>
+    </div>
+    {% include 'components/navadjustment.html' with PanelData=AP_data.0 %}
+    {% include 'components/colouradjustment.html' with PanelData=AP_data.1 %}
+    {% include 'components/contentadjustment.html' with PanelData=AP_data.2 %}
+</div>
+{% endblock %}

@@ -202,6 +202,24 @@
     </h3>
     <!-- Moderation of New Experiences -->
     {% include 'main/../components/imageupload.html' %}
+    <br>
+     <h3>
+        Expanding Panel
+        <small class="text-muted">Component Description</small>
+    </h3>
+    <!-- Moderation of New Experiences -->
+    {% include 'main/../components/expandingpanel.html' with PanelData=AP_blank %}
+
+  <br>
+      <h3>
+        Accessibility Panel
+        <small class="text-muted">Component Description</small>
+    </h3>
+    <!-- Moderation of New Experiences -->
+    <div>
+        <i class="icon-access" style="font-size: 40px;" onclick="movePanelLeft()"></i>
+    </div>
+    {% include 'main/../components/accessibilitypanel.html' %}
 
   <br>
    <h3>
