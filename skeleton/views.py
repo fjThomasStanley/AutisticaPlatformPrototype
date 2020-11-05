@@ -145,8 +145,8 @@ def index(request):
     stepper_object.update()
 
     auth_url = OpenHumansMember.get_auth_url()
-    context = {**context, **{'auth_url': auth_url,
-                             'oh_proj_page': settings.OH_PROJ_PAGE}}
+    context = {**context, **{'auth_url': auth_url}}#,
+#                             'oh_proj_page': settings.OH_PROJ_PAGE}}
     if request.user.is_authenticated:
         return redirect('overview')
     # return render(request, 'index.html', context=context)
@@ -580,13 +580,6 @@ def pictorialexperienceeditor(request):
         ],
 
     }
-    row = 1
-    col = 1
-    for item in peed_ele_master:
-        peed_ele_row.row.peed_ele_col.col.text = item.text
-        peed_ele_row.row.peed_ele_col.col.icon = item.icon
-        row = row + 1
-        col = col + 1
 
     return render(request, 'pictorialexperienceeditor.html',context=context)
 
