@@ -152,9 +152,6 @@ def index(request):
     # return render(request, 'index.html', context=context)
     return render(request, 'index.html', context=context)
 
-def imageupload(request):
-    return render(request, 'imageupload.html')
-
 def componentGallery(request):
     context = {
         "stepper": [
@@ -280,13 +277,13 @@ def componentGallery(request):
     stepper_object.update()
 
     auth_url = OpenHumansMember.get_auth_url()
-    context = {**context, **{'auth_url': auth_url,
-               'oh_proj_page': settings.OH_PROJ_PAGE}}
+    context = {**context, **{'auth_url': auth_url}}#,
+#               'oh_proj_page': settings.OH_PROJ_PAGE}}
     if request.user.is_authenticated:
         oh_member = request.user.openhumansmember
         context = {**context, **{'oh_id': oh_member.oh_id,
-                                 'oh_member': oh_member,
-                                 'oh_proj_page': settings.OH_PROJ_PAGE}}
+                                 'oh_member': oh_member}}#,
+#                                 'oh_proj_page': settings.OH_PROJ_PAGE}}
 
     return render(request, 'gallery.html', context=context)
 def share(request):
