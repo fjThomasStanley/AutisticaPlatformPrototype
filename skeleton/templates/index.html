@@ -46,28 +46,33 @@
 </nav>
 <div class="indexView">
 <div class="indexLeft">
-
+    
 <h2>Live Prototype</h2>
 
-<h2>Homepage</h2>
     <div class="container-lg px-0">
-        {% include "components/navbar.html" %}
-        {% include "components/banner.html" %}
-        
-        {% if messages %}
+
+        {% for page in navlinks %}
+        {% if navpage == page.linkName %}
+            {% include ""|add:page.template with pagename=navpage links=navlinks %}
+        {% endif %}
+
+        {% endfor %}
+
+        {% for message in messages %}
+            <div class="alert alert-info" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
 
 
-{% for page in navlinks %}
-    {% if navpage == page.linkName %}
-        {% include ""|add:page.template with pagename=navpage links=navlinks %}
-    {% endif %}
-{% endfor %}
+        {% block content %}
+        {% endblock %}
 
-
+    </div>
 </div>
     <div class="indexRight">
         <h2>Component Gallery</h2>
-        The component gallery is a showcase of all the visual components that make up the platform. The gallery's purpose is to show to platform testers and developers the kinds of components that make up the platform. , whilst the platform is in development, 
+        The component gallery is a showcase of all the visual components that make up the platform. The gallery's purpose is to show to platform testers and developers the kinds of components that make up the platform. Websites and website applications make are made up of many elements that each serve a specific purpose. , whilst the platform is in development, 
         {% include "gallery.html" %}
     </div>
 </div>
