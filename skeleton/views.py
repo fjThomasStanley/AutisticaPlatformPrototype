@@ -5,7 +5,7 @@ import requests
 
 from django.conf import settings
 from django.contrib.auth import logout
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, Http404
 from .models import PublicExperience
 from openhumans.models import OpenHumansMember
 import io
@@ -16,12 +16,39 @@ from StepperComponent import Stepper
 logger = logging.getLogger(__name__)
 
 
-def index(request):
+def index(request, page="home"):
     """
     Starting page for app.
     """
 
     context = {
+        "navpage": page,
+        "navlinks": [
+            {
+            "linkTitle": "Home",
+            "linkLoc": "/home",
+            "linkName": "home",
+            "template": "home.html"
+            },
+            {
+            "linkTitle": "About",
+            "linkLoc": "/about",
+            "linkName": "about",
+            "template": "about.html"
+            },
+            {
+            "linkTitle": "Share",
+            "linkLoc": "/share",
+            "linkName": "share",
+            "template": "share.html"
+            },
+            {
+            "linkTitle": "Login",
+            "linkLoc": "/login",
+            "linkName": "login",
+            "template": "login.html"
+            }
+        ],
         "stepper": [
             {
                 "id": 1,
@@ -150,7 +177,12 @@ def index(request):
     if request.user.is_authenticated:
         return redirect('overview')
     # return render(request, 'index.html', context=context)
+
+#    if(page == "error"):
+#        raise Http404("page does not exist: error")
+#    else:
     return render(request, 'index.html', context=context)
+    
 
 def componentGallery(request):
     context = {
