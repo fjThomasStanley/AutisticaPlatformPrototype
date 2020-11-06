@@ -302,8 +302,36 @@ def componentGallery(request):
                 "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
                 "Summary": "None use of microphone in conference"
             }
-        ]
+        ],
+        'AP_data': [
+            {
+                "Title": "Navigation Adjustment",
+                "ID": "navadjust",
+                "arrow": "arrow_expandingpanel_na"
+            },
+            {
+                "Title": "Colour Adjustment",
+                "ID": "coladjust",
+                "arrow": "arrow_expandingpanel_ca"
+            },
+            {
+                "Title": "Content Adjustment",
+                "ID": "contadjust",
+                "arrow": "arrow_expandingpanel_cta"
+            }
+        ],
+        'AP_blank':
+            {
+                "Title": "Expanding Panel",
+                "ID": "blankexpanel",
+                "arrow": "arrow_expandingpanel_bep"
+            },
+        'AP_HCL':
+            {
+                "Desc": "Some people cannot read text if there is not sufficient contrast between the text and background. For others, bright colours (high luminance) are not readable; they need low luminance."
+            }
     }
+
     stepper_object = Stepper.Stepper(request)
 
     stepper_object.update()
@@ -314,8 +342,8 @@ def componentGallery(request):
     if request.user.is_authenticated:
         oh_member = request.user.openhumansmember
         context = {**context, **{'oh_id': oh_member.oh_id,
-                                 'oh_member': oh_member,
-                                 'oh_proj_page': settings.OH_PROJ_PAGE}}
+                                 'oh_member': oh_member}}#,
+#                                 'oh_proj_page': settings.OH_PROJ_PAGE}}
 
     return render(request, 'gallery.html', context=context)
 def share(request):
@@ -389,6 +417,203 @@ def overview(request):
                    'oh_proj_page': settings.OH_PROJ_PAGE}
         return render(request, 'main/overview.html', context=context)
     return redirect('index')
+
+def pictorialexperienceeditor(request):
+    context = {
+        "peed_ele_row": [
+            {
+                "peed_ele_col" : [
+                    {
+                        "text": "I",
+                        "icon": "icon-Autistic-Person"
+                    },
+                    {
+                        "text": "Audio Desc",
+                        "icon": "icon-audio-description"
+                    },
+                    {
+                        "text": "Account",
+                        "icon": "icon-account_circle"
+                    },
+                    {
+                        "text": "Add box",
+                        "icon": "icon-add_box"
+                    }
+                ]
+            },
+            {
+                "peed_ele_col": [
+                    {
+                        "text": "Add",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "text": "Apps",
+                        "icon": "icon-apps-24px"
+                    },
+                    {
+                        "text": "Bar Chart",
+                        "icon": "icon-bar_chart"
+                    },
+                    {
+                        "text": "Camera",
+                        "icon": "icon-camera_alt"
+                    }
+                ]
+            },
+            {
+                "peed_ele_col": [
+                    {
+                        "text": "Tick",
+                        "icon": "icon-check-circle-together"
+                    },
+                    {
+                        "text": "Cross",
+                        "icon": "icon-close"
+                    },
+                    {
+                        "text": "Smile",
+                        "icon": "icon-comment-alt-smile"
+                    },
+                    {
+                        "text": "Compass",
+                        "icon": "icon-compass"
+                    }
+                ]
+            },
+            {
+                "peed_ele_col": [
+                    {
+                        "text": "CSP",
+                        "icon": "icon-csp-lblue"
+                    },
+                    {
+                        "text": "Database",
+                        "icon": "icon-database-solid"
+                    },
+                    {
+                        "text": "Email",
+                        "icon": "icon-email"
+                    },
+                    {
+                        "text": "Fast Food",
+                        "icon": "icon-fastfood"
+                    }
+                ]
+            },
+            {
+                "peed_ele_col": [
+                    {
+                        "text": "Image",
+                        "icon": "icon-image"
+                    },
+                    {
+                        "text": "School",
+                        "icon": "icon-school"
+                    },
+                    {
+                        "text": "Language",
+                        "icon": "icon-language"
+                    },
+                    {
+                        "text": "No",
+                        "icon": "icon-no"
+                    }
+                ]
+            },
+        ],
+        "peed_fld": [
+            {
+                "number": "2.",
+                "title": "Sensory"
+            }
+        ],
+        "peed_ele_master": [
+                    {
+                        "text": "I",
+                        "icon": "icon-Autistic-Person"
+                    },
+                    {
+                        "text": "Audio Desc",
+                        "icon": "icon-audio-description"
+                    },
+                    {
+                        "text": "Account",
+                        "icon": "icon-account_circle"
+                    },
+                    {
+                        "text": "Add box",
+                        "icon": "icon-add_box"
+                    },
+                    {
+                        "text": "Add",
+                        "icon": "icon-add"
+                    },
+                    {
+                        "text": "Apps",
+                        "icon": "icon-apps-24px"
+                    },
+                    {
+                        "text": "Bar Chart",
+                        "icon": "icon-bar_chart"
+                    },
+                    {
+                        "text": "Camera",
+                        "icon": "icon-camera_alt"
+                    },
+                    {
+                        "text": "Tick",
+                        "icon": "icon-check-circle-together"
+                    },
+                    {
+                        "text": "Cross",
+                        "icon": "icon-close"
+                    },
+                    {
+                        "text": "Smile",
+                        "icon": "icon-comment-alt-smile"
+                    },
+                    {
+                        "text": "Compass",
+                        "icon": "icon-compass"
+                    },
+                    {
+                        "text": "CSP",
+                        "icon": "icon-csp-lblue"
+                    },
+                    {
+                        "text": "Database",
+                        "icon": "icon-database-solid"
+                    },
+                    {
+                        "text": "Email",
+                        "icon": "icon-email"
+                    },
+                    {
+                        "text": "Fast Food",
+                        "icon": "icon-fastfood"
+                    },
+                    {
+                        "text": "Image",
+                        "icon": "icon-image"
+                    },
+                    {
+                        "text": "School",
+                        "icon": "icon-school"
+                    },
+                    {
+                        "text": "Language",
+                        "icon": "icon-language"
+                    },
+                    {
+                        "text": "No",
+                        "icon": "icon-no"
+                    }
+        ],
+
+    }
+
+    return render(request, 'pictorialexperienceeditor.html',context=context)
 
 def logout_user(request):
     """

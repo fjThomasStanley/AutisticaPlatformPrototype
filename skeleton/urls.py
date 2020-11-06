@@ -13,6 +13,7 @@ urlpatterns = [
  #   url(r'^settings/?$', views.settings, name='settings'),
  #   url(r'^login/?$', views.login, name='login'),
  #   url(r'^logout/?$', views.logout_user, name='logout'),
+    url(r'^pictorialexperienceeditor/?$', views.pictorialexperienceeditor, name='peed'),
     url(r'^overview/?$', views.overview, name='overview'),
     url(r'^public_experiences/?$', views.list_public_experiences, name='public_experiences'),
     url(r'^moderate_public_experiences/?$', views.moderate_public_experiences, name='moderate_public_experiences'),
