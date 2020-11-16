@@ -9,7 +9,10 @@
     --autistica-mint-green: #00a590;
     --autistica-dark-green: #00444f;
     --autistica-light-green: #e4f6f4;
-/*--autistica-blue-primary-secondary: #;*/
+    --autistica-light-grey: #f2f5f6;
+    --autistica-pink: #f08ba9;
+    --autistica-grey: #e6e6ee;
+    /*--autistica-blue-primary-secondary: #;*/
 }
 
 
@@ -28,12 +31,12 @@ body {
 }
 
 .banner-autistica-light-blue {
-    background-color: var(--autistica-blue-light) !important;
-    color: #3d65b1 !important;
+    background-color: var(--autistica-light-green) !important;
+    color: var(--autistica-black) !important;
 }
 
 .nav-link {
-    color: var(--autistica-blue-primary-font) !important;
+    color: var(--autistica-mint-green) !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
