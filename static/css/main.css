@@ -4,7 +4,12 @@
     --autistica-blue-secondary: #3d65b1;
     --autistica-blue-light: #DFECF9;
     --autistica-blue-primary-font: #203467;
-    /*--autistica-blue-primary-secondary: #;*/
+    --autistica-black: #000000;
+    --autistica-white: #ffffff;
+    --autistica-mint-green: #00a590;
+    --autistica-dark-green: #00444f;
+    --autistica-light-green: #e4f6f4;
+/*--autistica-blue-primary-secondary: #;*/
 }
 
 
@@ -20,29 +25,6 @@ body {
 
 .navbar-autistica-grey {
     background-color: #444444 !important;
-}
-
-.footer-top {
-    background-color: var(--autistica-blue-primary) !important;
-    height: 101px !important;
-}
-
-.footer-bottom {
-    background-color: #454545 !important;
-    height: 54px !important;
-}
-
-.pnospace {
-    margin: 0;
-    padding: 15px;
-    font-size: 40px;
-    line-height: 60px;
-}
-
-.copyrt {
-    font-size: 12px;
-    padding: 16px;
-    color: #C2ECF2 !important;
 }
 
 .banner-autistica-light-blue {
