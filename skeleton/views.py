@@ -336,6 +336,29 @@ def share(request):
     stepper_object.update()
     return render(request, 'share.html', context=context)
 
+def moderationreject(request):
+    context = {
+    'mrtext':
+        {
+            "rows": [
+                {
+                    "qtext": "How",
+                    "qcolour": "#4d75ad",
+                    "phtext": "Enter name of location or postcode...",
+                    "input": "ta"
+                },
+                {
+                    "qtext": "Why",
+                    "qcolour": "#ffbb5d",
+                    "phtext": "Your experience can be entered here...",
+                    "input": "ta"
+                }
+            ],
+            "maintext": "Moderation Rejection"
+        }
+    }
+    return render(request, 'moderationreject.html', context=context)
+
 def view(request):
     context = {
         "stepper": [
