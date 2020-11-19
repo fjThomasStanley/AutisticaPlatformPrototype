@@ -5,6 +5,7 @@
     <i class="icon-keyboard_arrow_right ap-arrow-right" id="{{PanelData.arrow}}" onclick="show_hideExpandingPanel('{{PanelData.ID}}', '{{PanelData.arrow}}')"></i>
     <div class="ap-navadjust-expand" id="{{PanelData.ID}}">
         {% block PanelContent %}
+            {{PanelContent}}
         {% endblock %}
      </div>
 </div>

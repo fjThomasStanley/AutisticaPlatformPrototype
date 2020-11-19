@@ -1,0 +1,60 @@
+{% extends './expandingpanel.html' %}
+
+{% block PanelContent %}
+<div style="margin: 10px;">
+<h3>
+    Secondary banner
+    <small class="text-muted">This component is used to display a tagline to the user, it provides a short description about what the page is about and how the user should be expected to interact with the page</small>
+</h3>
+<!-- Secondary Banner -->
+{% include './banner.html' %}
+
+<h3>
+    Secondary banner Alt
+    <small class="text-muted">Component Description</small>
+</h3>
+<!-- Secondary Banner -->
+{% include '../alt_banner.html' %}
+
+<br>
+
+<h3>
+    Jumbotron
+    <small class="text-muted">This component is used to show key and important information. </small>
+</h3>
+<!-- Jumbotron -->
+{% include './jumbotron.html' %}
+
+
+
+<br>
+<h3>
+    Card
+    <small class="text-muted">This component is used to show key and important information. </small>
+</h3>
+<!-- Jumbotron -->
+
+<div class="card autistica-card" style="width: 40rem;">
+    <div class="card-body">
+      <h4 class="card-title hiw-heading">Title</h4>
+      <div class="hiw-body">
+        Card Body
+      </div>
+    </div>
+</div>
+
+<pre>
+<code>
+&lt;div class="card autistica-card" style="width: 40rem;"&gt;
+<br>&lt;div class="card-body"&gt;
+<br>&lt;h4 class="card-title hiw-heading">Title&lt;/h4&gt;
+<br>&lt;div class="hiw-body"&gt;
+<br>Card Body
+<br>&lt;/div&gt;
+<br>&lt;/div&gt;
+<br>&lt;/div&gt;
+</code>
+</pre>
+
+</div>
+{% endblock %}

@@ -54,36 +54,22 @@
     {#    <!-- Static navbar -->#}
     {#    {% include 'path/to/html' %}#}
 
-    <br>
-    <h3>
-        Navigation Bar
-        <small class="text-muted">The component that appears at the top of each page which allows the user to navigate between the different pages of the platform</small>
-    </h3>
-    <!-- Static navbar -->
-    {% include 'main/../components/navbar.html' %}
+
+
+    <h1>
+        Component showcase
+    </h1>
+
+
+        {% include './components/partials/gallery_panels_expand.html' with PanelData=AP_gallery_panels%}
 
     <br>
-    <h3>
-        Secondary banner
-        <small class="text-muted">This component is used to display a tagline to the user, it provides a short description about what the page is about and how the user should be expected to interact with the page</small>
-    </h3>
-    <!-- Secondary Banner -->
-    {% include 'main/../components/banner.html' %}
 
-    <h3>
-        Secondary banner Alt
-        <small class="text-muted">Component Description</small>
-    </h3>
-    <!-- Secondary Banner -->
-    {% include 'main/../components/alt_banner.html' %}
+        {% include './components/partials/gallery_animated_panels_expand.html' with PanelData=AP_gallery_animated_panels%}
 
-    <br>
-    <h3>
-        Jumbotron
-        <small class="text-muted">This component is used to show key and important information. </small>
-    </h3>
-    <!-- Jumbotron -->
-    {% include 'main/../components/jumbotron.html' %}
+        <br>
+
+        {% include './components/partials/gallery_navigation_expand.html' with PanelData=AP_gallery_navigation%}
 
     <br>
     <h3>
@@ -91,7 +77,7 @@
         <small class="text-muted">This component organises key information and logical aspects of the page</small>
     </h3>
     <!-- Newsletter Cards -->
-    {% include 'main/../components/newsletterCards.html' %}
+    {% include './components/newsletterCards.html' %}
 
     <br>
     <h3>
@@ -104,13 +90,27 @@
         {% display_user_journey request.session.activeStepper stepper %}
     </form>
 
+    "stepper": [
+    {
+        "id": 1,
+        "label": "Login"
+    },
+    {
+        "id": 2,
+        "label": "Define Profile"
+    },
+    {
+        "id": 3,
+        "label": "Add Event"
+    }
+],
     <br>
     <h3>
         Newsletter Signup
         <small class="text-muted">Component Description</small>
     </h3>
     <!-- Newsletter Signup -->
-    {% include 'main/../components/newsletterSignup.html' %}
+    {% include './components/newsletterSignup.html' %}
 
     <br>
     <h3>
@@ -118,7 +118,7 @@
         <small class="text-muted">Component Description</small>
     </h3>
     <!-- Language Selector -->
-    {% include 'main/../components/languageSelector.html' %}
+    {% include './components/languageSelector.html' %}
 
     <br>
     <h3>
@@ -126,7 +126,7 @@
        <small class="text-muted">Component Description</small>
    </h3>
    <!-- Define profile -->
-   {% include 'main/../components/defineprofile.html' %}
+   {% include './components/defineprofile.html' %}
 
    <br>
     <h3>
@@ -134,58 +134,98 @@
        <small class="text-muted">Component Description</small>
    </h3>
    <!-- User experience form -->
-   {% include 'main/../components/userexperienceform.html' %}
+   {% include './components/userexperienceform.html' %}
 
-
-   <style>
-    .ma_outerdiv {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .ma_button {
-        background-color: red;
-        color: white;
-        border: none;
-        border-radius: 7px;
-        font-size: 20px;
-        padding: 10px 40px 10px 40px;
-        margin-left: 20px;
-    }
-
-    .ma_text {
-        padding-top: 12px;
-        margin-right: 20px;
-    }
-    </style>
+   "ueftext": [
+   {
+       "rows": [
+       {
+           "qtext": "Where",
+           "qcolour": "#4d75ad",
+           "phtext": "Enter name of location or postcode...",
+           "input": "ip"
+       },
+       {
+           "qtext": "What",
+           "qcolour": "#ffbb5d",
+           "phtext": "Your experience can be entered here...",
+           "input": "ta"
+       }
+       ],
+       "maintext": "Enter your experience"
+   },
+   {
+       "rows": [
+       {
+            "qtext": "What",
+            "qcolour": "#ffbb5d",
+            "phtext": "",
+            "input": "ta"
+       }
+       ],
+           "maintext": "What would you have wished to be different?"
+   }
+   ],
    <br>
-    <h3>
-       Modular Alert
-       <small class="text-muted">Component Description</small>
-   </h3>
-   <div class="ma_outerdiv">
-        <span class="ma_text">Timeout Save Alert Test</span>
-        <span><button class="ma_button" onclick="showModularAlert('Timeout Save', 'Inactive for 10 minutes, in 2 minutes time your event will be saved as a draft', 1)"><u>Alert</u></button></span>
-   </div>
-   <!-- Modular alerts -->
-   {% include 'main/../components/modularalerts.html' %}
-
-   <br>
+  
    <h3>
         Experience Viewer Control
         <small class="text-muted">Component Description</small>
     </h3>
     <!-- Experience Viewer Control -->
-    {% include 'main/../components/experienceviewercontrol.html' %}
+    {% include './components/experienceviewercontrol.html' %}
 
+    "user_exp": [
+    {
+        "id": "32097868",
+        "datetime": "Sept 18, 2019, 10:31 a.m.",
+        "user_txt": [
+            {
+                "question": "Event",
+                "text": "The air conditioning in the room where I was having a meeting was really loud and I found it really hard to concentrate."
+            },
+            {
+                "question": "What would you have liked to be different?",
+                "text": ""
+            }
+        ]
+    },
+    {
+        "id": "19279611",
+        "datetime": "Sept 17, 2019, 8:46 a.m.",
+        "user_txt": [
+            {
+                "question": "Event",
+                "text": "The tube is too loud."
+            },
+            {
+                "question": "What would you have liked to be different?",
+                "text": ""
+            }
+        ]
+    },
+    {
+        "id": "32097868",
+        "datetime": "Sept 17, 2019, 8:45 a.m.",
+        "user_txt": [
+            {
+                "question": "Event",
+                "text": "I'm at a conference today and I found people not using the microphone really difficult - it makes it much harder to concentrate on what they were saying. I was much more distracted."
+            },
+            {
+                "question": "What would you have liked to be different?",
+                "text": ""
+            }
+        ]
+    }
+],
    <br>
       <h3>
         Community Approval Mechanism
         <small class="text-muted">Component Description</small>
     </h3>
     <!-- community approval mechanism -->
-    {% include 'main/../components/communityapprovalmechanism.html' %}
+    {% include './components/communityapprovalmechanism.html' %}
 
    <br>
       <h3>
@@ -193,52 +233,59 @@
         <small class="text-muted">Component Description</small>
     </h3>
     <!-- Moderation of New Experiences -->
-    {% include 'main/../components/moderationofnewexperiences.html' %}
-                                 
+    {% include './components/moderationofnewexperiences.html' %}
+    "MONE_data": [
+            {
+                "UID": "0000001",
+                "EID": "32097868",
+                "date": "18/09/19",
+                "Event_What": "The air conditioning in the room where I was having a meeting was really loud and I found it really heard to concentrate, it was a rubbish experience.",
+                "Location_Where": "NW1 2HS",
+                "LikeToBeDifferent": "I would have liked the air conditioning to less loud to aid my concentration",
+                "Summary": "Loud Air Conditioning"
+            },
+            {
+                "UID": "0000002",
+                "EID": "32097867",
+                "date": "17/09/19",
+                "Event_What": "The tube is too loud.",
+                "Location_Where": "NW1 8NH",
+                "LikeToBeDifferent": "would have liked the tube to be less loud",
+                "Summary": "Loud Tube"
+            },
+            {
+                "UID": "0000003",
+                "EID": "32097866",
+                "date": "17/09/19",
+                "Event_What": "I'm at a conference today and I found the people not using the microphone really difficult - it makes it harder to concentrate on what they were saying. I was much more distracted.",
+                "Location_Where": "SE15 5DQ",
+                "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
+                "Summary": "None use of microphone in conference"
+            }
+        ],                             
    <br>
    <h3>
      Documentation Viewer
      <small class="text-muted">Component Description</small>
     </h3>
     <!-- Documentation viewer -->
-        {% include 'main/../components/documentationviewer.html' %}
+        {% include './components/documentationviewer.html' %}
     <br>
 
-
-    <br>
-      <h3>
-        Image Upload
-        <small class="text-muted">Component Description</small>
-    </h3>
-    <!-- Moderation of New Experiences -->
-    {% include 'main/../components/imageupload.html' %}
     <br>
      <h3>
         Expanding Panel
         <small class="text-muted">Component Description</small>
     </h3>
     <!-- Moderation of New Experiences -->
-    {% include 'main/../components/expandingpanel.html' with PanelData=AP_blank %}
+    {% include './components/partials/expandingpanel.html' with PanelData=AP_blank PanelContent=AP_blank.content %}
 
-  <br>
-      <h3>
-        Accessibility Panel
-        <small class="text-muted">Component Description</small>
-    </h3>
-    <!-- Moderation of New Experiences -->
-    <div>
-        <i class="icon-access" style="font-size: 40px;" onclick="movePanelLeft()"></i>
-    </div>
-    {% include 'main/../components/accessibilitypanel.html' %}
 
-  <br>
-   <h3>
-       Footer
-        <small class="text-muted">Component Description</small>
-    </h3>
-    <!-- Footer -->
-    {% include 'main/../components/footer.html' %}
+ 
 
 </div> <!-- /container -->
 </body>
+
+<script type="text/javascript" src="{% static 'scripts/components/modal.js'%}"></script>
+<script type="text/javascript" src="{% static 'scripts/components/slidingpanel.js'%}"></script>
 </html>

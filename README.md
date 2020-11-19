@@ -88,6 +88,12 @@ This project is based on the web framework of Python Django and because of this 
 Another important Component based development approach
 
 
+Styling CSS!!
+
+Global and Private
+To reduce the duplication of CSS within the platform 
+
+
 **Feedback is welcome from everyone**
 
 ## Get app running on local machine
