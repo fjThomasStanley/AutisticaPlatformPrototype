@@ -9,6 +9,7 @@
     --autistica-mint-green: #00a590;
     --autistica-dark-green: #00444f;
     --autistica-light-green: #e4f6f4;
+    --autistica-bright-green: #2dfc30;
     --autistica-light-grey: #f2f5f6;
     --autistica-pink: #f08ba9;
     --autistica-grey: #e6e6ee;
@@ -56,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 .autistica-card {
     border-radius: 5px !important;
     background-color: white !important;
-    border-color: #3d65b1 !important;
+    border-color: var(--autistica-mint-green) !important;
     border-width: 3px;
     border-style: solid;
 }

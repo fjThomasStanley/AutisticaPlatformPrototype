@@ -4,6 +4,11 @@
         top: 0;
         left: 0;
     }
+    .ui-button {
+        color: var(--autistica-white);
+        background-color: var(--autistica-mint-green);
+        border-color: var(--autistica-mint-green);
+    }
     .ui-outerdiv {
         display: none;
         position: fixed;
@@ -130,7 +135,7 @@
 <body>
 <div class="ui-master-div">
     <div>
-        <button onclick="showImageUpload()">Upload</button>
+        <button onclick="showImageUpload()" class="ui-button"><u>Upload</u></button>
     </div>
 </div>
 <div class="ui-outerdiv" id="upload">
