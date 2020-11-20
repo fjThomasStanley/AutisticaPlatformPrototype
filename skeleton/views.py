@@ -338,24 +338,30 @@ def share(request):
 
 def moderationreject(request):
     context = {
-    'mrtext':
+    'mrtext': [
         {
             "rows": [
                 {
-                    "qtext": "How",
+                    "qtext": "",
                     "qcolour": "#4d75ad",
-                    "phtext": "Enter name of location or postcode...",
-                    "input": "ta"
-                },
-                {
-                    "qtext": "Why",
-                    "qcolour": "#ffbb5d",
-                    "phtext": "Your experience can be entered here...",
+                    "phtext": "Enter reasoning",
                     "input": "ta"
                 }
             ],
-            "maintext": "Moderation Rejection"
+            "maintext": "Why is this experience not appropriate?"
+        },
+        {
+            "rows": [
+                {
+                    "qtext": "",
+                    "qcolour": "#4d75ad",
+                    "phtext": "Enter proposed changes",
+                    "input": "ta"
+                }
+           ],
+            "maintext": "How can this experience be improved?"
         }
+    ]
     }
     return render(request, 'moderationreject.html', context=context)
 

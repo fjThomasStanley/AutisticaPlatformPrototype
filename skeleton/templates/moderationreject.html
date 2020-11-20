@@ -70,42 +70,14 @@
 </style>
 </head>
 <body>
-<div class="mr-top-box">
-    <table style="width: 100%;">
-        <tr>
-            <td class="mr-top-text">
-                {{mrtext.maintext}}
-            </td>
-        </tr>
-    </table>
-</div>
-<div class="mr-outer-div">
+<form>
     <div>
-        <table class="mr-table">
-            <col width="100px" />
-            <col width="*" />
-{% for gf in mrtext.rows %}
-    {% if forloop.counter < mrtext.rows|length %}
-            <tr class="mr-tr1">
-    {% else %}
-            <tr class="mr-tr1-nb">
-    {% endif %}
-                <td class="mr-td-wh" >
-                    <span class="mr-span-wh" style="color: {{gf.qcolour}};">{{gf.qtext}}</span>
-                </td>
-                <td class="mr-td-input">
-                {% if gf.input == "ta" %}
-                    <textarea class="mr-td-txarea" placeholder="{{gf.phtext}}"></textarea>
-                {% elif gf.input == "ip" %}
-                    <input class="mr-td-ip" placeholder="{{gf.phtext}}">
-                {% endif %}
-                </td>
-            </tr>
-{% endfor %}
-        </table>
+        {% include 'moderationrejectbase.html' with mrt=mrtext.0 %}
     </div>
-</div>
-<p>&nbsp;</p>
+    <div>
+        {% include 'moderationrejectbase.html' with mrt=mrtext.1 %}
+    </div>
+</form>
 <span class="mr-submit">Submit</span>
 </body>
 </html>
