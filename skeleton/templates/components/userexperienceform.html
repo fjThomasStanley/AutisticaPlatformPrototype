@@ -152,6 +152,7 @@
         color: var(--autistica-mint-green);
         font-size: 24px;
         padding: 8px 38px 8px 38px;
+        border-style: solid;
         border-radius: 5px;
         border-width: 2px;
         border-color: var(--autistica-mint-green);
@@ -207,8 +208,8 @@
             <div class="sgs-div-inner">
                  <span>&nbsp;</span>
                 <audio id="submitSound" src="http://www.soundjay.com/button/beep-07.wav"></audio>
-                 <span><button class="sgs-submit-button" type="button" onclick="submitButton(this.form)">Submit</button></span>
-                <span><button class="sgs-views-button" type="button" onclick="views()">Views</button></span>
+                 <span class="sgs-submit-button" onclick="submitButton(this.form)">Submit</span>
+                 <span class="sgs-views-button" onclick="views()">Views</span>
             </div>
         </div>
     </form>
