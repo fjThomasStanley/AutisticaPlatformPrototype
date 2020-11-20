@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^gallery/?$', views.componentGallery, name='gallery'),
     url(r'^moderationreject/?$', views.moderationreject, name='moderationreject'),
+    url(r'^configure/?$', views.configure, name='configure'),
     url(r'^home/?$', views.home, name='home'),
     url(r'^about/?$', views.about, name='about'),
     url(r'^share/?$', views.share, name='share'),

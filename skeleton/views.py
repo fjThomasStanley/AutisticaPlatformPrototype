@@ -365,6 +365,9 @@ def moderationreject(request):
     }
     return render(request, 'moderationreject.html', context=context)
 
+def configure(request):
+    return render(request, 'configure.html')
+
 def view(request):
     context = {
         "stepper": [
