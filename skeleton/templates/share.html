@@ -37,7 +37,14 @@
           href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" type="text/css"
           href="{% static 'css/main.css' %}">
-
+<style>
+    .sh-outerdiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 400px;
+    }
+</style>
 </head>
 
 <body>
@@ -47,13 +54,18 @@
     <!-- Static navbar -->
     {% include 'main/../components/navbar.html' %}
 
-    {% load userJourney %}
-    <form id="stepper" method="POST">{% csrf_token %}
-        {% display_user_journey request.session.activeStepper stepper %}
-    </form>
 
-    <a href="/home"><i class="icon-home" style="font-size: 25px;"></i></a><span>&nbsp;&nbsp;Share&nbsp;&nbsp;</span><i class="icon-label-24px"></i>
+    <span>&nbsp;&nbsp;Share&nbsp;&nbsp;</span><i class="icon-label-24px"></i>
     <span>&nbsp;Where users can enter their experiences</span>
+    <div class="sh-outerdiv">
+        <div><i class="icon-database-solid" style="font-size: 40px;"></i></div>
+        <div>
+            <div style="font-size: 25px;">Add Event</div>
+            <div>Talk about any experience in your daily life</div>
+        </div>
+    </div>
+    <!-- User experience form -->
+    {% include 'main/../components/userexperienceform.html' %}
     <!-- Footer -->
     {% include 'main/../components/footer.html' %}
 
