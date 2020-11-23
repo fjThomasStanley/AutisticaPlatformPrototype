@@ -1,20 +1,23 @@
 {% extends './expandingpanel.html' %}
 {% block PanelContent %}
 <div style="margin: 10px;">
+    <div class="componentblock">
     <h3>
         Navigation Bar
         <small class="text-muted">The component that appears at the top of each page which allows the user to navigate between the different pages of the platform</small>
     </h3>
     <!-- Static navbar -->
     {% include '../navbar.html' %}
-
+</div>
     <br>
 
+    <div class="componentblock">
     <h3>
         Footer
          <small class="text-muted">Component Description</small>
      </h3>
      <!-- Footer -->
      {% include '../footer.html' %}
+</div>
 </div>
 {% endblock %}

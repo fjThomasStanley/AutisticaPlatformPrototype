@@ -2,32 +2,40 @@
 
 {% block PanelContent %}
 <div style="margin: 10px;">
+
+    <div class="componentblock">
 <h3>
     Secondary banner
     <small class="text-muted">This component is used to display a tagline to the user, it provides a short description about what the page is about and how the user should be expected to interact with the page</small>
 </h3>
 <!-- Secondary Banner -->
 {% include './banner.html' %}
-
+</div>
+<br>
+<div class="componentblock">
 <h3>
     Secondary banner Alt
     <small class="text-muted">Component Description</small>
 </h3>
 <!-- Secondary Banner -->
 {% include '../alt_banner.html' %}
-
+</div>
 <br>
 
+<div class="componentblock">
 <h3>
     Jumbotron
     <small class="text-muted">This component is used to show key and important information. </small>
 </h3>
 <!-- Jumbotron -->
 {% include './jumbotron.html' %}
-
+</div>
 
 
 <br>
+
+
+<div class="componentblock">
 <h3>
     Card
     <small class="text-muted">This component is used to show key and important information. </small>
@@ -55,6 +63,18 @@
 <br>&lt;/div&gt;
 </code>
 </pre>
+</div>
+
+
+<br>
+<div class="componentblock">
+     <h3>
+        Expanding Panel
+        <small class="text-muted">Component Description</small>
+    </h3>
+    <!-- Moderation of New Experiences -->
+    {% include './expandingpanel.html' with PanelData=AP_blank PanelContent=AP_blank.content %}
+</div>
 
 </div>
 {% endblock %}

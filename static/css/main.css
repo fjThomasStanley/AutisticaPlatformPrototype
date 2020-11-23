@@ -13,6 +13,9 @@ body {
     min-height: 100vh;
 }
 
+.descriptiveheading{
+    display: inline;
+}
 
 .navbar-autistica-blue {
     background-color: var(--autistica-blue-primary) !important;

@@ -37,6 +37,19 @@
           href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" type="text/css"
           href="{% static 'css/main.css' %}">
+    <style>
+        .codeblock{
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: 5px;
+        }
+       
+        .componentblock{
+            background-color: #eaeaea;
+            padding: 8px;
+            border-radius: 7px;
+        }
+    </style>
 
 </head>
 
@@ -54,11 +67,90 @@
     {#    <!-- Static navbar -->#}
     {#    {% include 'path/to/html' %}#}
 
+    <h2>
+        Background - Why do we need a component gallery and what does the gallery's purpose achieve?   
+    </h2>
+    The component gallery is a showcase of all the visual components that make up the platform. The gallery's purpose is to show to platform testers and developers the kinds of components that make up the platform. Websites and website applications make are made up of many elements that each serve a specific purpose. , whilst the platform is in development,
+
+    <h2>
+        Django Templating system - How are platform components written and used?    
+    </h2>
+    The platform utilises Django's templating system so that common or repeatable sections of code can be written once in a generic template and then reused or included in a parent page. In order to include Django templates or components within a parent page we must utilise the Django include tag:
+    <br>
+    <br>
+    <div class="codeblock">
+        {{"{% include 'pathToComponentTemplate' %}"}}
+    </div>
+    
+    
+<!--     <br>
+    and in the case of component showcase section of this Gallery for reference, there are is a parent gallery.html template file which includes  
+    <br> -->
+    
+    
+    <br>
+
+    Some components have parameters which can be utilised to customise the appearance and content. As part of the Django include statement we can use the 'with' keyword to assign a value to a component template paramter name:
+    <br>
+    <br>
+    <div class="codeblock">
+        {{"{% include 'pathToComponentTemplate' with componentParameterName=value %}"}}
+    </div>
+    <br>
+    
+    More than one parameter can be defined on the include which is usefull if more than one parameters on a template need to be defined:
+    <br>
+    <br>
+    <div class="codeblock">
+    {{"{% include 'pathToComponentTemplate' with componentParameterName=value another anotherParameterName=secondValue %}"}}
+    </div>
+    <br>
+
+    Django Parameter values can 
+
+    Django 
 
 
-    <h1>
+    <br>
+    <br>
+    The Django templating system also allows for the functionality of extending base templates. This is very usefull as 
+
+    The platform this is utilised for example in the 
+
+    The platform makes use of Django template extensions
+
+    <br>
+    <br>
+    <div class="codeblock">
+    {{"{% extends 'pathToComponentTemplate' %}"}}
+    </div>
+
+    <br>
+    <br>
+    <div class="codeblock">
+        {{"{% include 'pathToComponentTemplate' %}"}}
+    </div>
+    
+
+    <br>
+    <br>
+    Django allows us to repeat over 
+    Django for tag
+
+    <br>
+    <br>
+    <div class="codeblock">
+        {{"{% for  %}"}}
+    </div>
+
+    <br>
+    <br>
+
+    There are other Django templating tags and features which can be found <a href="https://docs.djangoproject.com/en/3.0/ref/templates/builtins/" target="_blank">here</a>. For other Django related documentation please see <a href="https://docs.djangoproject.com/en/3.0/" target="_blank">here</a>. 
+
+    <h2>
         Component showcase
-    </h1>
+    </h2>
 
 
         {% include './components/partials/gallery_panels_expand.html' with PanelData=AP_gallery_panels%}
@@ -72,14 +164,17 @@
         {% include './components/partials/gallery_navigation_expand.html' with PanelData=AP_gallery_navigation%}
 
     <br>
+    <div class="componentblock">
     <h3>
         Newsletter Cards
         <small class="text-muted">This component organises key information and logical aspects of the page</small>
     </h3>
     <!-- Newsletter Cards -->
     {% include './components/newsletterCards.html' %}
-
+    </div>
     <br>
+
+    <div class="componentblock">
     <h3>
         User Journey Stepped Control
         <small class="text-muted">This component is a navigational feedback element. It shows to the user how many steps of a process there are, how many steps have been completed and finally the current step the user is at.</small>
@@ -104,7 +199,11 @@
         "label": "Add Event"
     }
 ],
+    </div>
     <br>
+
+
+    <div class="componentblock">
     <h3>
         Newsletter Signup
         <small class="text-muted">Component Description</small>
@@ -112,29 +211,57 @@
     <!-- Newsletter Signup -->
     {% include './components/newsletterSignup.html' %}
 
+    <h4>Template Inclusion</h4>
+
+      Template name: newsletterSignup.html
+
+      </div>
     <br>
+    <br>
+
+    <div class="componentblock">
     <h3>
         Language Selector
-        <small class="text-muted">Component Description</small>
+        <small class="text-muted">This component allows the user to change the language setting of the platform</small>
     </h3>
     <!-- Language Selector -->
     {% include './components/languageSelector.html' %}
 
+    <h4>Template Inclusion</h4>
+
+    Template name: languageSelector.html
+    </div>
     <br>
+    <br>
+
+    <div class="componentblock">
     <h3>
        Defined Profile
-       <small class="text-muted">Component Description</small>
+       <small class="text-muted">This component allows a user to adjust their profile type so that the platform can best match the user's use case</small>
    </h3>
    <!-- Define profile -->
    {% include './components/defineprofile.html' %}
+   <h4>Template Inclusion</h4>
 
+   Template name: defineprofilehtml
+    </div>
    <br>
+   <br>
+
+   <div class="componentblock">
     <h3>
        User Experience Form
-       <small class="text-muted">Component Description</small>
+       <small class="text-muted">This component allows a user to create and submit with data sharing preferences their experience which they would like to share with the platform</small>
    </h3>
    <!-- User experience form -->
    {% include './components/userexperienceform.html' %}
+
+   <h4>Template Inclusion</h4>
+
+   Template name: userexperienceform.html
+   
+    <br>
+    <br>
 
    "ueftext": [
    {
@@ -166,15 +293,23 @@
            "maintext": "What would you have wished to be different?"
    }
    ],
+</div>
    <br>
-  
+
+
+   <div class="componentblock">
+
    <h3>
         Experience Viewer Control
-        <small class="text-muted">Component Description</small>
+        <small class="text-muted">This control allows a user to browse through their own or other's publicly shared experiences</small>
     </h3>
     <!-- Experience Viewer Control -->
     {% include './components/experienceviewercontrol.html' %}
+    <h4>Template Inclusion</h4>
 
+      Template name: experienceviewercontrol.html
+    <br>
+    <br>
     "user_exp": [
     {
         "id": "32097868",
@@ -219,21 +354,38 @@
         ]
     }
 ],
+   </div>
+   <br>
+
+
+   <div class="componentblock">
    <br>
       <h3>
         Community Approval Mechanism
-        <small class="text-muted">Component Description</small>
+        <small class="text-muted"></small>
     </h3>
     <!-- community approval mechanism -->
     {% include './components/communityapprovalmechanism.html' %}
+    <h4>Template Inclusion</h4>
 
+      Template name: communityapprovalmechanism.html
+    <br>
+   </div>
+
+  
    <br>
+   <div class="componentblock">
       <h3>
         Moderation of New Experiences
-        <small class="text-muted">Component Description</small>
+        <small class="text-muted">This component allows platform moderators to see an overview of how many blocked and approved user experiences their are. Moderators can use this component to filter through the available experience submissions.</small>
     </h3>
     <!-- Moderation of New Experiences -->
     {% include './components/moderationofnewexperiences.html' %}
+    <h4>Template Inclusion</h4>
+
+    Template name: moderationofnewexperiences.html
+    <br>
+    <br>
     "MONE_data": [
             {
                 "UID": "0000001",
@@ -262,24 +414,28 @@
                 "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
                 "Summary": "None use of microphone in conference"
             }
-        ],                             
+        ],
+   </div>                             
    <br>
+
+
+   <div class="componentblock">
    <h3>
      Documentation Viewer
      <small class="text-muted">Component Description</small>
     </h3>
     <!-- Documentation viewer -->
         {% include './components/documentationviewer.html' %}
+
+    <h4>Template Inclusion</h4>
+
+        Template name: documentationviewer.html
+
+   </div>    
+    <br>
     <br>
 
-    <br>
-     <h3>
-        Expanding Panel
-        <small class="text-muted">Component Description</small>
-    </h3>
-    <!-- Moderation of New Experiences -->
-    {% include './components/partials/expandingpanel.html' with PanelData=AP_blank PanelContent=AP_blank.content %}
-
+    
 
  
 
