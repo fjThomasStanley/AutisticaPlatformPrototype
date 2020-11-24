@@ -59,7 +59,7 @@
         display: flex;
         flex-direction: row;
     }
-    .ui-upload-dashed-border {
+    .dropzone {
         margin: 40px 0 0 150px;
         border-style: dashed;
         border-radius: 5px;
@@ -122,8 +122,19 @@
          left: 40px;
          color: green;
     }
+
+
+.dropzonex {
+    background: white;
+    border-radius: 5px;
+    border: 2px dashed rgb(0, 135, 247);
+    border-image: none;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>
+<script src="/static/dropzone.js"></script>
 <script>
     function showImageUpload() {
         document.getElementById("upload").style.display = "block"
@@ -131,6 +142,29 @@
         function hideImageUpload() {
         document.getElementById("upload").style.display = "none"
     }
+var dropzone = new Dropzone('#demo-upload', {
+  previewTemplate: document.querySelector('#preview-template').innerHTML,
+  parallelUploads: 2,
+  thumbnailHeight: 120,
+  thumbnailWidth: 120,
+  maxFilesize: 3,
+  acceptedFiles: "image/jpeg,image/png,video/mpeg,audio/wav",
+  filesizeBase: 1000,
+  thumbnail: function(file, dataUrl) {
+    if (file.previewElement) {
+      file.previewElement.classList.remove("dz-file-preview");
+      var images = file.previewElement.querySelectorAll("[data-dz-thumbnail]");
+      for (var i = 0; i < images.length; i++) {
+        var thumbnailElement = images[i];
+        thumbnailElement.alt = file.name;
+        thumbnailElement.src = dataUrl;
+      }
+      setTimeout(function() { file.previewElement.classList.add("dz-image-preview"); }, 1);
+    }
+  }
+
+});
+
 </script>
 </head>
 <body>
@@ -149,9 +183,10 @@
          </div>
          <div class="ui-toptext">Upload Media (Photo or Sound)</div>
      </div>
-     <div class="ui-upload">
-        <div>
-            <div class="ui-upload-dashed-border">
+        <div class="ui-upload">
+        <div id="dropzone">
+        <form class="dropzone ui-upload-dashed-borderx needsclick" id="demo-upload" action="/upload">
+        <div class="dz-message needsclick">
                 <div class="ui-div-icon-upload">
                     <i class="icon-upload ui-icon-upload"></i>
                 </div>
@@ -159,21 +194,26 @@
                     Drag & Drop Upload<br>
                     File Types: <span class="ui-file-ext">&nbsp;&nbsp;&nbsp;.jpg .png .mpg .wav</span>
                 </div>
-            </div>
-            <div class="ui-file-details">
+        </div>
+        </form>
+<!--        <div class="ui-file-details">
+
                 <i class="icon-attachment ui-icon-attach"></i>
                 <span class="ui-filename">&nbsp;&nbsp;&nbsp;busy-tube.png</span>
                 <i class="icon-close ui-icon-cfu"></i>
             </div>
             <hr class="ui-hr">
             <span class="ui-progress">100% uploaded &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 minutes left</span>
-        </div>
-         <div>
-             <div class="ui-image-div">
-                 <img src="static/img/busy-tube.png" class="ui-image">
+        </div>-->
+
+         <div id="preview-template" style="display: none;>
+                <DIV class="dz-previw dz-file-preview dz-image">
+            <IMG data-dz-thumbnail=""></DIV>
+                 <!--<img src="static/img/busy-tube.png" class="ui-image">-->
                  <i class="icon-check_circle ui-image-tickbox"></i>
          </div>
-     </div>
    </div>
    </div>
 </div>
+
+
