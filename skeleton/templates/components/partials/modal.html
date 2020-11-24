@@ -1,0 +1,78 @@
+<style>
+        .ma-div-screen {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: #1e3963cf;
+        z-index: 1;
+        display: none;
+    }
+
+    .ma-divts {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -150px;
+        margin-top: -125px;
+        background-color: white;
+        width: 300px;
+        height: 250px;
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .ma-div-cb {
+        display: flex;
+    /* flex-direction: row; */
+    width: 100%;
+    margin-top: -5px;
+    margin-right: -5px;
+    justify-content: flex-end;
+    transform: translate(-4px, 6px);
+    line-height: 24px;
+    }
+
+    .ma_close_button {
+     /* height: 30px; */
+    /* width: 30px; */
+    font-size: 24px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    /* padding-top: 5px; */
+    /* padding-right: 5px; */
+    padding: 5px 9px 5px 9px;
+    border-radius: 7px;
+    margin: 2px;
+    line-height: 30px;
+    display: inline-block;
+    }
+    .ma_close_button:hover {
+        cursor: pointer;
+        background-color: #f71919b3;
+    }
+</style>
+
+{% block componentStyle%}
+{% endblock %}
+
+<div class="ma-div-screen" id="{{modalID}}">
+    <div class="ma-divts">
+        <div class="ma-div-cb">
+            <span class="ma_close_button" onclick="citizenSciencePlatform_modalfunctions.HideModal('{{modalID}}')">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        {% block componentContent %}
+        {% endblock %}
+    </div>
+</div>
+
+
+{% block componentFunctions %}
+{% endblock %}

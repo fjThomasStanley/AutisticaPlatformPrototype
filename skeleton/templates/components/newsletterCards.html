@@ -1,16 +1,20 @@
 <style>
   mark {
-    background-color: #00f5eb;
+    background-color: var(--autistica-bright-green);
+    line-height: 24px;
   }
   .hiw-heading {
     border-bottom: solid;
+    border-color: var(--autistica-mint-green);
   }
   .hiw-body {
     display: flex;
     flex-direction: row;
+    font-size: 24px;
   }
   .hiw-right-icon {
   margin-left: 340px;
+  color: var(--autistica-dark-green);
   }
 </style>
 <div class="card autistica-card" style="width: 40rem;">
@@ -18,7 +22,7 @@
     <h4 class="card-title hiw-heading"><mark>How it works</mark> <i class="icon-how_it_works"></i><i class="icon-expand_more hiw-right-icon"></i></h4>
     <div class="hiw-body">
       <div>
-        <h6 class="card-subtitle mb-2 text-muted"><mark>First Login to Open Humans to upload our experiences. The platform uses OH for the storing of data, the platform tool collects</mark></h6>
+        <mark>First Login to Open Humans to upload our experiences. The platform uses OH for the storing of data, the platform tool collects</mark>
         <p class="card-text">
           <ul>
             <li><mark>Login</mark></li>
@@ -27,7 +31,7 @@
           </ul>
         </p>
       </div>
-      <img src="/static/img/you-and-your-data.png">
+      <img src="/static/img/you-and-your-data.png" style="width: 50%; height: auto;">
     </div>
   </div>
 </div>

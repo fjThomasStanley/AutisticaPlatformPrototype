@@ -1,4 +1,4 @@
-{% extends 'components/expandingpanel.html' %}
+{% extends 'components/partials/expandingpanel.html' %}
 {% block PanelStyle %}
 <style>
     .ap-fs-outerdiv {
@@ -11,11 +11,12 @@
     }
     .ap-fs-text {
         margin-left: 30px;
+        color: var(--autistica-mint-green);
     }
     .ap-fs-box {
         border-style: solid;
         border-width: 2px;
-        border-color: #0082cf;
+        border-color: var(--autistica-mint-green);
         text-align: center;
         margin-left: 5px;
         width: 110px;
@@ -36,7 +37,7 @@
         border-radius: 10px;
         border-color: grey;
         color: white;
-        background-color: #0082cf;
+        background-color: var(--autistica-mint-green);
         text-align: center;
         padding: 2px 8px 2px 8px;
     }
@@ -59,6 +60,8 @@
     }
     .ap-hcl {
         border-style: solid;
+        border-color: var(--autistica-mint-green);
+        border-width: 2px;
         padding: 5x 2px 0 2px;
         width: 115px;
         height: 75px;
@@ -77,9 +80,24 @@
         color: #57564c;
         background-color: #1e1b1a;
     }
+    .ap-hc4-desc {
+        font-size: 5px;
+        background-color: #a59170;
+    }
     .ap-hcl-title {
         text-align: center;
         margin: 15px 5px 0 5px;
+    }
+    .ap-mag-div {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    .ap-mag-box {
+        border-style: solid;
+        border-color: var(--autistica-mint-green);
+        width: 115px;
+        text-align: center;
     }
 </style>
 {% endblock %}
@@ -135,13 +153,24 @@
         </div>
 
     </div>
-        <div class="ap-hcl">
-            <div class="ap-hc1-desc">
-                {{AP_HCL.Desc}}
-            </div>
-            <div class="ap-hcl-title">
-                Low Luminance 2
-            </div>
+    <div class="ap-hcl">
+        <div class="ap-hc4-desc">
+            {{AP_HCL.Desc}}
         </div>
+        <div class="ap-hcl-title">
+            Low Luminance 2
+        </div>
+    </div>
+
+    <div class="ap-mag-div">
+        <div style="padding: 10px;"><i class="icon-magnifier" style="font-size: 18px;"></i></div>
+        <div>
+            Magnifier<br>Increase & Decrease View
+        </div>
+    </div>
+    <div class="ap-mag-box">
+        <div style="padding: 10px;"><i class="icon-magnifier" style="font-size: 25px;"></i></div>
+        <div>Magnifier</div>
+    </div>
 </div>
 {% endblock %}

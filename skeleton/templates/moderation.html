@@ -37,37 +37,26 @@
           href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" type="text/css"
           href="{% static 'css/main.css' %}">
-<style>
-    .sh-outerdiv {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 400px;
-    }
-</style>
+
 </head>
 
 <body>
-    <a name=""top"></a>
-    <div class="container-lg px-1">
+<a name=""top"></a>
+<div class="container-lg px-1">
 
     <!-- Static navbar -->
-    {% include './components/navbar.html' %}
+    {% include 'main/../components/navbar.html' %}
 
+    <!-- Secondary Banner -->
+    {% include 'main/../components/banner.html' %}
 
-    <span>&nbsp;&nbsp;Share&nbsp;&nbsp;</span><i class="icon-label-24px"></i>
-    <span>&nbsp;Where users can enter their experiences</span>
-    <div class="sh-outerdiv">
-        <div><i class="icon-database-solid" style="font-size: 40px;"></i></div>
-        <div>
-            <div style="font-size: 25px;">Add Event</div>
-            <div>Talk about any experience in your daily life</div>
-        </div>
-    </div>
-    <!-- User experience form -->
-    {% include 'main/../components/userexperienceform.html' %}
+ <span>&nbsp;&nbsp;Moderation&nbsp;&nbsp;</span><i class="icon-label-24px"></i>
+ <span>&nbsp;Where moderators review users submissions</span>
+
+    {% include 'main/../components/communityapprovalmechanism.html' %}
+    {% include 'main/../components/moderationofnewexperiences.html' %}
     <!-- Footer -->
-    {% include './components/footer.html' %}
+    {% include 'main/../components/footer.html' %}
 
 </div> <!-- /container -->
 </body>

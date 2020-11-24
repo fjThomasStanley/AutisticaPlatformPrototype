@@ -1,0 +1,39 @@
+<style>
+    .sliding-panel {
+        position: fixed;
+        top: 0;
+        width: 430px;
+        bottom: 0;
+        right: -430px;
+        background-color: grey;
+        z-index: 1;
+        transform: translate(0, 0);
+        transition: transform 0.5s ease-in-out;
+        overflow-y: auto;
+   }
+   .sliding-panel.left{
+        left: -430px;
+   }
+    .sliding-panel-open-right {
+        transform: translate(-430px, 0);
+        transition: transform 0.5s ease-in-out;
+    }
+    .sliding-panel-open-left {
+        transform: translate(430px, 0);
+        transition: transform 0.5s ease-in-out;
+    }
+    .sp-icon-close {
+        margin-left: 380px;
+     }
+</style>
+{% block panelStyle %}
+{% endblock %}
+
+<div class="sliding-panel {{Direction}}" id="{{PanelID}}" data-direction="{{Direction}}">
+    <i class="icon-close sp-icon-close" onclick="citizenSciencePlatform_slidingpanelfunctions.ClosePanel('{{PanelID}}')"></i>
+    <div>
+{% block panelContent %}
+{% endblock %}
+    </div>
+</div>
+

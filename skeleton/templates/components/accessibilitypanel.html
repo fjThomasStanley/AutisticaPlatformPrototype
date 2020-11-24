@@ -1,9 +1,9 @@
-{% extends 'components/slidingpanel.html' %}
+{% extends 'components/partials/slidingpanel.html' %}
 {% block panelStyle %}
 <style>
     .ap-outerdiv {
         border-style: solid;
-        border-color: #000b5a;
+        border-color: var(--autistica-mint-green);
         background-color: white;
         margin-right: 10px;
     }
@@ -27,10 +27,11 @@
     .ap-navadjust-outerdiv {
         border-style: solid;
         margin: 10px;
+        border-color: var(--autistica-mint-green);
     }
     .ap-navadjust-text {
         margin-left: 10px;
-        color: #0082cf;
+        color: var(--autistica-mint-green);
     }
     .ap-arrow {
         font-size: 25px;
@@ -39,6 +40,7 @@
     .ap-navadjust-expand {
         border-top: solid;
         display: none;
+        border-color: var(--autistica-mint-green);
     }
 </style>
 <script>

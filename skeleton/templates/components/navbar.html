@@ -15,6 +15,18 @@
         </div>
         <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
             <ul class="navbar-nav ml-auto flex-nowrap">
+                {% for link in links %}
+                    <li class="nav-item">
+                        <a href="{{link.linkLoc}}" class="nav-link m-2 menu-item {% if pagename == ''|add:link.linkName %} selected {% endif %}">
+                            {{link.linkTitle}}
+                        </a>
+                    </li>
+                {% endfor %}
+
+
+  <!--               <li class="nav-item">
+                    <a href="/home" class="nav-link m-2 menu-item">Home</a>
+                </li>
                 <li class="nav-item">
                     <a href="/about" class="nav-link m-2 menu-item">About</a>
                 </li>
@@ -28,11 +40,15 @@
                     <a href="/mydata" class="nav-link m-2 menu-item">MyData</a>
                 </li>
                 <li class="nav-item">
+                    <a href="/moderation" class="nav-link m-2 menu-item">Moderation</a>
+                </li>
+                <li class="nav-item">
                     <a href="/settings" class="nav-link m-2 menu-item">Settings</a>
                 </li>
                 <li class="nav-item">
                     <a href="/login" class="nav-link m-2 menu-item">Login</a>
-                </li>
+                </li> -->
+
             </ul>
         </div>
     </nav>
