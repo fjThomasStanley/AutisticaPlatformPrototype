@@ -8,7 +8,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-}
+ }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -19,6 +19,7 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  color: #008279;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -27,23 +28,23 @@
 
 .icon-contrast-mode:before {
   content: "\e956";
-  color: #1970cc;
+  
 }
 .icon-luminance:before {
   content: "\e9af";
-  color: #1970cc;
+  
 }
 .icon-bright-high-contrast:before {
   content: "\e957";
-  color: #1970cc;
+  
 }
 .icon-magnifier:before {
   content: "\e9ad";
-  color: #1970cc;
+  
 }
 .icon-mic:before {
   content: "\e9b1";
-  color: #1b77db;
+  
 }
 .icon-play-circle-green:before {
   content: "\e9b2";
@@ -51,23 +52,23 @@
 }
 .icon-dark-high-contrast:before {
   content: "\e9ae";
-  color: #1970cc;
+  
 }
 .icon-font-sizing:before {
   content: "\e9aa";
-  color: #1970cc;
+  
 }
 .icon-text-reader:before {
   content: "\e9ab";
-  color: #1970cc;
+  
 }
 .icon-voice-commands:before {
   content: "\e9ac";
-  color: #1970cc;
+  
 }
 .icon-access:before {
   content: "\e92b";
-  color: #1970cc;
+  
 }
 .icon-perfume:before {
   content: "\e91f";
@@ -75,7 +76,7 @@
 }
 .icon-zoom_out_map:before {
   content: "\e9a9";
-  color: #1b77db;
+  
 }
 .icon-uitop-5-check-share:before {
   content: "\f17d";
@@ -83,31 +84,31 @@
 }
 .icon-bf-4-settings:before {
   content: "\f17e";
-  color: #1970cc;
+  
 }
 .icon-bf-2-help:before {
   content: "\f17f";
-  color: #1970cc;
+  
 }
 .icon-bf-1-about-me:before {
   content: "\f180";
-  color: #1970cc;
+  
 }
 .icon-bf-3-edit:before {
   content: "\f181";
-  color: #1970cc;
+  
 }
 .icon-folder-shape:before {
   content: "\f182";
-  color: #1b77db;
+  
 }
 .icon-uitop-3-play:before {
   content: "\f183";
-  color: #1b77db;
+  
 }
 .icon-uitop-4-share:before {
   content: "\f184";
-  color: #1b77db;
+  
 }
 .icon-uitop-2-clear:before {
   content: "\f185";
@@ -115,11 +116,11 @@
 }
 .icon-reset-colour:before {
   content: "\f186";
-  color: #1970cc;
+  
 }
 .icon-custom-colour:before {
   content: "\f187";
-  color: #1970cc;
+  
 }
 .icon-loop-24px:before {
   content: "\f195";
@@ -138,7 +139,7 @@
 }
 .icon-autoplay:before {
   content: "\f19a";
-  color: #1970cc;
+  
 }
 .icon-screen-reader-white:before {
   content: "\f19d";
@@ -150,11 +151,11 @@
 }
 .icon-voice-text1:before {
   content: "\f19f";
-  color: #1970cc;
+  
 }
 .icon-screen-reader:before {
   content: "\f1a2";
-  color: #1970cc;
+  
 }
 .icon-better:before {
   content: "\f1a3";
@@ -165,47 +166,47 @@
 }
 .icon-accessibility-24px:before {
   content: "\f1a5";
-  color: #1970cc;
+  
 }
 .icon-autistic-person:before {
   content: "\f1aa";
-  color: #1b77db;
+  
 }
 .icon-color-drop:before {
   content: "\f1b7";
-  color: #1970cc;
+  
 }
 .icon-opacity-24px:before {
   content: "\f1b8";
-  color: #1970cc;
+  
 }
 .icon-invert_colors_off-24px:before {
   content: "\f1b9";
-  color: #1970cc;
+  
 }
 .icon-colorize-24px:before {
   content: "\f1ba";
-  color: #1970cc;
+  
 }
 .icon-color_pal:before {
   content: "\f1bb";
-  color: #1970cc;
+  
 }
 .icon-Low-Vision:before {
   content: "\f1bf";
-  color: #1970cc;
+  
 }
 .icon-visibility:before {
   content: "\f1c0";
-  color: #1970cc;
+  
 }
 .icon-explore:before {
   content: "\f1c1";
-  color: #1b77db;
+  
 }
 .icon-research:before {
   content: "\f1c2";
-  color: #1b77db;
+  
 }
 .icon-tick-white:before {
   content: "\f1c3";
@@ -213,11 +214,11 @@
 }
 .icon-tick-blue:before {
   content: "\f1c4";
-  color: #1970cc;
+  
 }
 .icon-brightness:before {
   content: "\f1c7";
-  color: #1970cc;
+  
 }
 .icon-tag_face:before {
   content: "\f1c8";
@@ -233,7 +234,7 @@
 }
 .icon-how_it_works:before {
   content: "\f1cb";
-  color: #1970cc;
+  
 }
 .icon-car-traffic:before {
   content: "\f1cc";
@@ -477,146 +478,146 @@
 }
 .icon-remove_circle-24px:before {
   content: "\f209";
-  color: #1b77db;
+  
 }
 .icon-clear-24px:before {
   content: "\f20a";
-  color: #1b77db;
+  
 }
 .icon-add_circle-24px:before {
   content: "\f20b";
-  color: #1b77db;
+  
 }
 .icon-volume-toggle:before {
   content: "\f20c";
-  color: #1b77db;
+  
 }
 .icon-minus:before {
   content: "\f20d";
-  color: #1b77db;
+  
 }
 .icon-replay:before {
   content: "\f20e";
-  color: #1b77db;
+  
 }
 .icon-play_circle:before {
   content: "\f20f";
-  color: #1b77db;
+  
 }
 .icon-fast_forward-24px:before {
   content: "\f210";
-  color: #1b77db;
+  
 }
 .icon-fast_rewind-24px:before {
   content: "\f211";
-  color: #1b77db;
+  
 }
 .icon-settings:before {
   content: "\f212";
-  color: #1b77db;
+  
 }
 .icon-info-24px:before {
   content: "\f213";
-  color: #1b77db;
+  
 }
 .icon-keyboard_voice-24px:before {
   content: "\f214";
-  color: #1b77db;
+  
 }
 .icon-minus1:before {
   content: "\f215";
-  color: #1b77db;
+  
 }
 .icon-settings_voice:before {
   content: "\f216";
-  color: #1b77db;
+  
 }
 .icon-voice-toggle:before {
   content: "\f217";
-  color: #1b77db;
+  
 }
 .icon-location:before {
   content: "\f218";
-  color: #1b77db;
+  
 }
 .icon-publish:before {
   content: "\f219";
-  color: #1b77db;
+  
 }
 .icon-save:before {
   content: "\f21a";
-  color: #1b77db;
+  
 }
 .icon-record_voice_over:before {
   content: "\f21b";
-  color: #1b77db;
+  
 }
 .icon-voice-text:before {
   content: "\f21c";
-  color: #1970cc;
+  
 }
 .icon-uitop-1-home:before {
   content: "\f21d";
-  color: #1b77db;
+  
 }
 .icon-Autistic-Person:before {
   content: "\e900";
-  color: #1b77db;
+  
 }
 .icon-Autistic-Person-Diverse:before {
   content: "\e901";
-  color: #1b77db;
+  
 }
 .icon-Caregiver-Autistic-Person:before {
   content: "\e902";
-  color: #1b77db;
+  
 }
 .icon-Caregiver-Neurotypical:before {
   content: "\e903";
-  color: #1b77db;
+  
 }
 .icon-audio-description:before {
   content: "\e904";
-  color: #1b77db;
+  
 }
 .icon-Admin-Autistic-Person:before {
   content: "\e905";
-  color: #1b77db;
+  
 }
 .icon-Admin-Neurotypical:before {
   content: "\e906";
-  color: #1b77db;
+  
 }
 .icon-account_circle:before {
   content: "\e907";
-  color: #1b77db;
+  
 }
 .icon-add_a_photo:before {
   content: "\e908";
-  color: #1b77db;
+  
 }
 .icon-add_alert:before {
   content: "\e909";
-  color: #1b77db;
+  
 }
 .icon-add_box:before {
   content: "\e90a";
-  color: #1b77db;
+  
 }
 .icon-add_circle:before {
   content: "\e90b";
-  color: #1b77db;
+  
 }
 .icon-add_photo_alternate:before {
   content: "\e90c";
-  color: #1b77db;
+  
 }
 .icon-add:before {
   content: "\e90d";
 }
 .icon-apps-24px:before {
   content: "\e90e";
-  color: #1b77db;
+  
 }
 .icon-arrow_back:before {
   content: "\e90f";
@@ -626,11 +627,11 @@
 }
 .icon-attachment:before {
   content: "\e911";
-  color: #1b77db;
+  
 }
 .icon-bar_chart:before {
   content: "\e912";
-  color: #1b77db;
+  
 }
 .icon-block:before {
   content: "\e913";
@@ -638,7 +639,7 @@
 }
 .icon-brightness_2:before {
   content: "\e914";
-  color: #1b77db;
+  
 }
 .icon-brush:before {
   content: "\e915";
@@ -646,11 +647,11 @@
 }
 .icon-bubble_chart:before {
   content: "\e916";
-  color: #1b77db;
+  
 }
 .icon-camera_alt:before {
   content: "\e917";
-  color: #1b77db;
+  
 }
 .icon-check_box_outline_blank:before {
   content: "\e918";
@@ -687,7 +688,7 @@
 }
 .icon-cloud_upload:before {
   content: "\e922";
-  color: #1b77db;
+  
 }
 .icon-colorize:before {
   content: "\e923";
@@ -698,150 +699,150 @@
 }
 .icon-comment:before {
   content: "\e925";
-  color: #1b77db;
+  
 }
 .icon-compass:before {
   content: "\e926";
 }
 .icon-config:before {
   content: "\e927";
-  color: #1b77db;
+  
 }
 .icon-control_point:before {
   content: "\e928";
-  color: #1b77db;
+  
 }
 .icon-copyright:before {
   content: "\e929";
-  color: #1b77db;
+  
 }
 .icon-create:before {
   content: "\e92a";
-  color: #1b77db;
+  
 }
 .icon-dark-theme:before {
   content: "\e92c";
-  color: #1b77db;
+  
 }
 .icon-dashboard:before {
   content: "\e92d";
-  color: #1b77db;
+  
 }
 .icon-database-solid:before {
   content: "\e92e";
-  color: #1b77db;
+  
 }
 .icon-delete_forever:before {
   content: "\e92f";
-  color: #1b77db;
+  
 }
 .icon-delete:before {
   content: "\e930";
-  color: #1b77db;
+  
 }
 .icon-edit_attributes:before {
   content: "\e931";
-  color: #1b77db;
+  
 }
 .icon-edit:before {
   content: "\e932";
-  color: #1b77db;
+  
 }
 .icon-email:before {
   content: "\e933";
-  color: #1b77db;
+  
 }
 .icon-error:before {
   content: "\e934";
-  color: #1b77db;
+  
 }
 .icon-expand_more:before {
   content: "\e935";
-  color: #1b77db;
+  
 }
 .icon-expand:before {
   content: "\e936";
-  color: #1b77db;
+  
 }
 .icon-explore1:before {
   content: "\e937";
-  color: #1b77db;
+  
 }
 .icon-fastfood:before {
   content: "\e938";
-  color: #1b77db;
+  
 }
 .icon-filter_list:before {
   content: "\e939";
-  color: #1b77db;
+  
 }
 .icon-folder-whole:before {
   content: "\e93a";
-  color: #1b77db;
+  
 }
 .icon-folder:before {
   content: "\e93b";
-  color: #1b77db;
+  
 }
 .icon-format_list:before {
   content: "\e93c";
-  color: #1b77db;
+  
 }
 .icon-format_size:before {
   content: "\e93d";
-  color: #1b77db;
+  
 }
 .icon-forum:before {
   content: "\e93e";
-  color: #1b77db;
+  
 }
 .icon-from-device:before {
   content: "\e93f";
-  color: #1b77db;
+  
 }
 .icon-get-involved:before {
   content: "\e940";
-  color: #1b77db;
+  
 }
 .icon-gps_fixed:before {
   content: "\e941";
-  color: #1b77db;
+  
 }
 .icon-help:before {
   content: "\e942";
-  color: #1b77db;
+  
 }
 .icon-home:before {
   content: "\e943";
-  color: #1b77db;
+  
 }
 .icon-how-it-works:before {
   content: "\e944";
-  color: #1b77db;
+  
 }
 .icon-image_search:before {
   content: "\e945";
-  color: #1b77db;
+  
 }
 .icon-image:before {
   content: "\e946";
-  color: #1b77db;
+  
 }
 .icon-import_export:before {
   content: "\e947";
-  color: #1b77db;
+  
 }
 .icon-info:before {
   content: "\e948";
-  color: #1b77db;
+  
 }
 .icon-insert_chart:before {
   content: "\e949";
-  color: #1b77db;
+  
 }
 .icon-insert_photo:before {
   content: "\e94a";
-  color: #1b77db;
+  
 }
 .icon-keyboard_arrow_left:before {
   content: "\e94b";
@@ -853,35 +854,35 @@
 }
 .icon-keyboard_voice:before {
   content: "\e94d";
-  color: #1b77db;
+  
 }
 .icon-language:before {
   content: "\e94e";
-  color: #1b77db;
+  
 }
 .icon-light-theme:before {
   content: "\e94f";
-  color: #1b77db;
+  
 }
 .icon-live_help:before {
   content: "\e950";
-  color: #1b77db;
+  
 }
 .icon-location_on:before {
   content: "\e951";
-  color: #1b77db;
+  
 }
 .icon-location_searching:before {
   content: "\e952";
-  color: #1b77db;
+  
 }
 .icon-map-marker-sad:before {
   content: "\e953";
-  color: #1b77db;
+  
 }
 .icon-map-marker-smile:before {
   content: "\e954";
-  color: #1b77db;
+  
 }
 .icon-menu:before {
   content: "\e955";
@@ -913,54 +914,54 @@
 }
 .icon-notification_important:before {
   content: "\e960";
-  color: #1b77db;
+  
 }
 .icon-notifications:before {
   content: "\e961";
-  color: #1b77db;
+  
 }
 .icon-options_white:before {
   content: "\e962";
-  color: #1b77db;
+  
 }
 .icon-photo_album:before {
   content: "\e963";
-  color: #1b77db;
+  
 }
 .icon-photo_library:before {
   content: "\e964";
-  color: #1b77db;
+  
 }
 .icon-photo:before {
   content: "\e965";
-  color: #1b77db;
+  
 }
 .icon-pie_chart:before {
   content: "\e966";
-  color: #1b77db;
+  
 }
 .icon-place1:before {
   content: "\e967";
 }
 .icon-play_arrow:before {
   content: "\e968";
-  color: #1b77db;
+  
 }
 .icon-plus:before {
   content: "\e969";
-  color: #1b77db;
+  
 }
 .icon-policy:before {
   content: "\e96a";
-  color: #1b77db;
+  
 }
 .icon-profile:before {
   content: "\e96b";
-  color: #1b77db;
+  
 }
 .icon-publish1:before {
   content: "\e96c";
-  color: #1b77db;
+  
 }
 .icon-radio_button_checked:before {
   content: "\e96d";
@@ -970,7 +971,7 @@
 }
 .icon-record_voice_over1:before {
   content: "\e96f";
-  color: #1b77db;
+  
 }
 .icon-remove:before {
   content: "\e970";
@@ -982,14 +983,14 @@
 }
 .icon-reply:before {
   content: "\e972";
-  color: #1b77db;
+  
 }
 .icon-save1:before {
   content: "\e973";
 }
 .icon-scatter_plot:before {
   content: "\e974";
-  color: #1b77db;
+  
 }
 .icon-school1:before {
   content: "\e975";
@@ -1038,7 +1039,7 @@
 }
 .icon-security:before {
   content: "\e984";
-  color: #1b77db;
+  
 }
 .icon-sensor_door:before {
   content: "\e985";
@@ -1048,55 +1049,55 @@
 }
 .icon-settings_applications:before {
   content: "\e987";
-  color: #1b77db;
+  
 }
 .icon-settings_system_daydream:before {
   content: "\e988";
-  color: #1b77db;
+  
 }
 .icon-settings_voice1:before {
   content: "\e989";
-  color: #1b77db;
+  
 }
 .icon-settings1:before {
   content: "\e98a";
-  color: #1b77db;
+  
 }
 .icon-share:before {
   content: "\e98b";
-  color: #1b77db;
+  
 }
 .icon-show_chart:before {
   content: "\e98c";
-  color: #1b77db;
+  
 }
 .icon-sort:before {
   content: "\e98d";
-  color: #1b77db;
+  
 }
 .icon-spa:before {
   content: "\e98e";
-  color: #1b77db;
+  
 }
 .icon-storage:before {
   content: "\e98f";
-  color: #1b77db;
+  
 }
 .icon-subject:before {
   content: "\e990";
-  color: #1b77db;
+  
 }
 .icon-table_chart:before {
   content: "\e991";
-  color: #1b77db;
+  
 }
 .icon-table_list:before {
   content: "\e992";
-  color: #1b77db;
+  
 }
 .icon-tag:before {
   content: "\e993";
-  color: #1b77db;
+  
 }
 .icon-thermometer-empty:before {
   content: "\e994";
@@ -1115,59 +1116,59 @@
 }
 .icon-thumb_down:before {
   content: "\e999";
-  color: #1b77db;
+  
 }
 .icon-thumb_up:before {
   content: "\e99a";
-  color: #1b77db;
+  
 }
 .icon-toggle_off:before {
   content: "\e99b";
-  color: #1b77db;
+  
 }
 .icon-toggle_on:before {
   content: "\e99c";
-  color: #1b77db;
+  
 }
 .icon-tune:before {
   content: "\e99d";
-  color: #1b77db;
+  
 }
 .icon-UK:before {
   content: "\e99e";
-  color: #1b77db;
+  
 }
 .icon-unsubscribe:before {
   content: "\e99f";
-  color: #1b77db;
+  
 }
 .icon-upload:before {
   content: "\e9a0";
-  color: #1b77db;
+  
 }
 .icon-verified_user:before {
   content: "\e9a1";
-  color: #1b77db;
+  
 }
 .icon-view_list:before {
   content: "\e9a2";
-  color: #1b77db;
+  
 }
 .icon-view_module:before {
   content: "\e9a3";
-  color: #1b77db;
+  
 }
 .icon-views:before {
   content: "\e9a4";
-  color: #1b77db;
+  
 }
 .icon-Voice_Recognition:before {
   content: "\e9a5";
-  color: #1b77db;
+  
 }
 .icon-wb_sunny:before {
   content: "\e9a6";
-  color: #1b77db;
+  
 }
 .icon-wifi_off:before {
   content: "\e9a7";

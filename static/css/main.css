@@ -4,6 +4,15 @@
     --autistica-blue-secondary: #3d65b1;
     --autistica-blue-light: #DFECF9;
     --autistica-blue-primary-font: #203467;
+    --autistica-black: #000000;
+    --autistica-white: #ffffff;
+    --autistica-mint-green: #00a590;
+    --autistica-dark-green: #00444f;
+    --autistica-light-green: #e4f6f4;
+    --autistica-bright-green: #2dfc30;
+    --autistica-light-grey: #f2f5f6;
+    --autistica-pink: #f08ba9;
+    --autistica-grey: #e6e6ee;
     /*--autistica-blue-primary-secondary: #;*/
 }
 
@@ -25,36 +34,13 @@ body {
     background-color: #444444 !important;
 }
 
-.footer-top {
-    background-color: var(--autistica-blue-primary) !important;
-    height: 101px !important;
-}
-
-.footer-bottom {
-    background-color: #454545 !important;
-    height: 54px !important;
-}
-
-.pnospace {
-    margin: 0;
-    padding: 15px;
-    font-size: 40px;
-    line-height: 60px;
-}
-
-.copyrt {
-    font-size: 12px;
-    padding: 16px;
-    color: #C2ECF2 !important;
-}
-
 .banner-autistica-light-blue {
-    background-color: var(--autistica-blue-light) !important;
-    color: #3d65b1 !important;
+    background-color: var(--autistica-light-green) !important;
+    color: var(--autistica-black) !important;
 }
 
 .nav-link {
-    color: var(--autistica-blue-primary-font) !important;
+    color: var(--autistica-mint-green) !important;
 }
 
 .selected{
@@ -78,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 .autistica-card {
     border-radius: 5px !important;
     background-color: white !important;
-    border-color: #3d65b1 !important;
+    border-color: var(--autistica-mint-green) !important;
     border-width: 3px;
     border-style: solid;
 }
