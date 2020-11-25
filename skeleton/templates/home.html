@@ -37,7 +37,14 @@
           href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" type="text/css"
           href="{% static 'css/main.css' %}">
-
+<style>
+    .hm-ohlogin {
+        border-radius: 5px;
+        background-color: #ff815c;
+        padding: 10px 20px 10px 20px;
+        color: var(--autistica-white);
+    }
+</style>
 </head>
 
 <body>
@@ -50,9 +57,11 @@
     <!-- Secondary Banner -->
     {% include 'main/../components/banner.html' %}
 
- <a href="/home"><i class="icon-home" style="font-size: 25px;"></i></a><span>&nbsp;&nbsp;Home&nbsp;&nbsp;</span><i class="icon-label-24px"></i>
+ <i class="icon-home" style="font-size: 25px;"></i><span>&nbsp;&nbsp;Home&nbsp;&nbsp;</span><i class="icon-label-24px"></i>
  <span>&nbsp;Supporting Autism Research</span>
+    <div style="margin: 50px 0 0 50%;"><a href="https://www.openhumans.org/account/login/" class="hm-ohlogin">Login</a></div>
     <!-- Footer -->
+    <br>
     {% include 'main/../components/footer.html' %}
 
 </div> <!-- /container -->

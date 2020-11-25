@@ -176,7 +176,12 @@ def componentGallery(request):
                 "qcolour": "#4d75ad",
                 "phtext": "Enter name of location or postcode...",
                 "input": "ip"
-            },
+            }
+            ],
+            "maintext": "Location"
+        },
+        {
+            "rows": [
             {
                 "qtext": "What",
                 "qcolour": "#ffbb5d",
