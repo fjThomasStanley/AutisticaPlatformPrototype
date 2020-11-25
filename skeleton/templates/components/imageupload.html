@@ -1,3 +1,4 @@
+<link href="/static/css/dropzone.css" rel="stylesheet">
 <style>
     .ui-master-div {
         position: relative;
@@ -60,23 +61,25 @@
         flex-direction: row;
     }
     .dropzone {
-        margin: 40px 0 0 150px;
+        margin: 10px;
         border-style: dashed;
         border-radius: 5px;
         border-color: #0070d1;
-        width: 350px;
-        height: 185px;
+        width: 650px;
+        height: 330px;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     .ui-icon-upload {
         font-size: 60px;
      }
     .ui-div-icon-upload {
-        margin: 40px 0 0 145px;
+        margin-left: 250px;
     }
     .ui-ddutext {
         text-align: center;
         line-height: 25px;
-        margin-top: 30px;
+        margin-top: 10px;
     }
     .ui-file-ext {
         font-size: 12px;
@@ -135,6 +138,7 @@
 }
 </style>
 <script src="/static/dropzone.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>-->
 <script>
     function showImageUpload() {
         document.getElementById("upload").style.display = "block"
@@ -183,10 +187,10 @@ var dropzone = new Dropzone('#demo-upload', {
          </div>
          <div class="ui-toptext">Upload Media (Photo or Sound)</div>
      </div>
-        <div class="ui-upload">
-        <div id="dropzone">
+        <div class="ui-upload" id="dropzone">
+        <div>
         <form class="dropzone ui-upload-dashed-borderx needsclick" id="demo-upload" action="/upload">
-        <div class="dz-message needsclick">
+            <div style="background-color: #ffe4c4;border-radius: 7px; padding: 5px;">
                 <div class="ui-div-icon-upload">
                     <i class="icon-upload ui-icon-upload"></i>
                 </div>
@@ -194,6 +198,7 @@ var dropzone = new Dropzone('#demo-upload', {
                     Drag & Drop Upload<br>
                     File Types: <span class="ui-file-ext">&nbsp;&nbsp;&nbsp;.jpg .png .mpg .wav</span>
                 </div>
+                <div class="dz-message needsclick"></div>
         </div>
         </form>
 <!--        <div class="ui-file-details">
@@ -207,13 +212,26 @@ var dropzone = new Dropzone('#demo-upload', {
         </div>-->
 
          <div id="preview-template" style="display: none;>
-                <DIV class="dz-previw dz-file-preview dz-image">
+                <DIV class="dz-preview dz-file-preview dz-image">
             <IMG data-dz-thumbnail=""></DIV>
                  <!--<img src="static/img/busy-tube.png" class="ui-image">-->
-                 <i class="icon-check_circle ui-image-tickbox"></i>
+                 <!--<i class="icon-check_circle ui-image-tickbox"></i>-->
          </div>
    </div>
    </div>
 </div>
+
+<!--<h1>DropzoneJS File Upload Demo</h1>
+<SECTION>
+  <DIV id="dropzone">
+    <FORM class="dropzone needsclick" id="demo-upload" action="/upload">
+      <DIV class="dz-message needsclick">
+        Drop files here or click to upload.<BR>
+        <SPAN class="note needsclick">(This is just a demo dropzone. Selected
+        files are <STRONG>not</STRONG> actually uploaded.)</SPAN>
+      </DIV>
+    </FORM>
+  </DIV>
+</SECTION>-->
 
 
