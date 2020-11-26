@@ -189,7 +189,7 @@ def index(request, page="home"):
             "Version": "2"
             },
         ],
-                'AP_data': [
+        "AP_data": [
             {
                 "Title": "Navigation Adjustment",
                 "ID": "navadjust",
@@ -206,7 +206,7 @@ def index(request, page="home"):
                 "arrow": "arrow_expandingpanel_cta"
             }
         ],
-        'AP_blank':
+        "AP_blank":
             {
                 "Title": "Expanding Panel",
                 "ID": "blankexpanel",
@@ -851,6 +851,7 @@ def share(request):
                 "qcolour": "#4d75ad",
                 "phtext": "Enter name of location or postcode...",
                 "input": "ip"
+
             },
             {
                 "qtext": "What",
@@ -1029,10 +1030,227 @@ def moderation(request):
                 "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
                 "Summary": "None use of microphone in conference"
             }
+
+        ],
+        "AP_data": [
+            {
+                "Title": "Navigation Adjustment",
+                "ID": "navadjust",
+                "arrow": "arrow_expandingpanel_na"
+            },
+            {
+                "Title": "Colour Adjustment",
+                "ID": "coladjust",
+                "arrow": "arrow_expandingpanel_ca"
+            },
+            {
+                "Title": "Content Adjustment",
+                "ID": "contadjust",
+                "arrow": "arrow_expandingpanel_cta"
+            }
+        ],
+        "AP_blank":
+            {
+                "Title": "Expanding Panel",
+                "ID": "blankexpanel",
+                "arrow": "arrow_expandingpanel_bep"
+            },
+        "AP_HCL":
+            {
+                "Desc": "Some people cannot read text if there is not sufficient contrast between the text and background. For others, bright colours (high luminance) are not readable; they need low luminance."
+            }
+    }
+
+    stepper_object = Stepper.Stepper(request)
+
+    stepper_object.update()
+
+    auth_url = OpenHumansMember.get_auth_url()
+    context = {**context, **{'auth_url': auth_url}}#,
+#               'oh_proj_page': settings.OH_PROJ_PAGE}}
+    if request.user.is_authenticated:
+        oh_member = request.user.openhumansmember
+        context = {**context, **{'oh_id': oh_member.oh_id,
+                                 'oh_member': oh_member}}#,
+#                                 'oh_proj_page': settings.OH_PROJ_PAGE}}
+
+    return render(request, 'gallery.html', context=context)
+def share(request):
+    context = {
+        "ueftext": [
+        {
+            "rows": [
+            {
+                "qtext": "Where",
+                "qcolour": "#4d75ad",
+                "phtext": "Enter name of location or postcode...",
+                "input": "ip"
+            },
+            {
+                "qtext": "What",
+                "qcolour": "#ffbb5d",
+                "phtext": "Your experience can be entered here...",
+                "input": "ta"
+            }
+            ],
+            "maintext": "Enter your experience"
+        },
+        {
+            "rows": [
+            {
+                 "qtext": "What",
+                 "qcolour": "#ffbb5d",
+                 "phtext": "",
+                 "input": "ta"
+            }
+            ],
+                "maintext": "What would you have wished to be different?"
+        }
         ]
+    }
+    return render(request, 'share.html', context=context)
+
+def moderationreject(request):
+    context = {
+    'mrtext': [
+        {
+            "rows": [
+                {
+                    "qtext": "",
+                    "qcolour": "#4d75ad",
+                    "phtext": "Enter reasoning",
+                    "input": "ta"
+                }
+            ],
+            "maintext": "Why is this experience not appropriate?"
+        },
+        {
+            "rows": [
+                {
+                    "qtext": "",
+                    "qcolour": "#4d75ad",
+                    "phtext": "Enter proposed changes",
+                    "input": "ta"
+                }
+           ],
+            "maintext": "How can this experience be improved?"
+        }
+    ]
+    }
+    return render(request, 'moderationreject.html', context=context)
+
+def configure(request):
+    return render(request, 'configure.html')
+
+def getinvolved(request):
+    return render(request, 'getinvolved.html')
+
+def view(request):
+    context = {
+        "stepper": [
+            {
+                "id": 1,
+                "label": "Login"
+            },
+            {
+                "id": 2,
+                "label": "Define Profile"
+            },
+            {
+                "id": 3,
+                "label": "Add Experience"
+            },
+            {
+                "id": 4,
+                "label": "View Experience"
+            }
+        ],
     }
     return render(request, 'moderation.html', context=context)
 
+
+def mydata(request):
+    context = {
+        "user_exp": [
+            {
+                "id": "32097868",
+                "datetime": "Sept 18, 2019, 10:31 a.m.",
+                "user_txt": [
+                    {
+                        "question": "Event",
+                        "text": "The air conditioning in the room where I was having a meeting was really loud and I found it really hard to concentrate."
+                    },
+                    {
+                        "question": "What would you have liked to be different?",
+                        "text": ""
+                    }
+                ]
+            },
+            {
+                "id": "19279611",
+                "datetime": "Sept 17, 2019, 8:46 a.m.",
+                "user_txt": [
+                    {
+                        "question": "Event",
+                        "text": "The tube is too loud."
+                    },
+                    {
+                        "question": "What would you have liked to be different?",
+                        "text": ""
+                    }
+                ]
+            },
+            {
+                "id": "32097868",
+                "datetime": "Sept 17, 2019, 8:45 a.m.",
+                "user_txt": [
+                    {
+                        "question": "Event",
+                        "text": "I'm at a conference today and I found people not using the microphone really difficult - it makes it much harder to concentrate on what they were saying. I was much more distracted."
+                    },
+                    {
+                        "question": "What would you have liked to be different?",
+                        "text": ""
+                    }
+                ]
+            }
+        ]
+    }
+    return render(request, 'mydata.html', context=context)
+
+def moderation(request):
+    context = {
+        "MONE_data": [
+            {
+                "UID": "0000001",
+                "EID": "32097868",
+                "date": "18/09/19",
+                "Event_What": "The air conditioning in the room where I was having a meeting was really loud and I found it really heard to concentrate, it was a rubbish experience.",
+                "Location_Where": "NW1 2HS",
+                "LikeToBeDifferent": "I would have liked the air conditioning to less loud to aid my concentration",
+                "Summary": "Loud Air Conditioning"
+            },
+            {
+                "UID": "0000002",
+                "EID": "32097867",
+                "date": "17/09/19",
+                "Event_What": "The tube is too loud.",
+                "Location_Where": "NW1 8NH",
+                "LikeToBeDifferent": "would have liked the tube to be less loud",
+                "Summary": "Loud Tube"
+            },
+            {
+                "UID": "0000003",
+                "EID": "32097866",
+                "date": "17/09/19",
+                "Event_What": "I'm at a conference today and I found the people not using the microphone really difficult - it makes it harder to concentrate on what they were saying. I was much more distracted.",
+                "Location_Where": "SE15 5DQ",
+                "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
+                "Summary": "None use of microphone in conference"
+            }
+        ]
+    }
+    return render(request, 'moderation.html', context=context)
 
 def settings(request):
     return render(request, 'settings.html')
