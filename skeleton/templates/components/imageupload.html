@@ -1,16 +1,5 @@
 <link href="/static/css/dropzone.css" rel="stylesheet">
 <style>
-    .ui-master-div {
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-    .ui-button {
-        color: var(--autistica-white);
-        background-color: var(--autistica-mint-green);
-        border-color: var(--autistica-mint-green);
-        padding: 5px;
-    }
     .ui-outerdiv {
         display: none;
         position: fixed;
@@ -125,17 +114,6 @@
          left: 40px;
          color: green;
     }
-
-
-.dropzonex {
-    background: white;
-    border-radius: 5px;
-    border: 2px dashed rgb(0, 135, 247);
-    border-image: none;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
 </style>
 <script src="/static/dropzone.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>-->
@@ -172,11 +150,6 @@ var dropzone = new Dropzone('#demo-upload', {
 </script>
 </head>
 <body>
-<div class="ui-master-div">
-    <div>
-        <span onclick="showImageUpload()" class="ui-button"><u>Upload</u></span>
-    </div>
-</div>
 <div class="ui-outerdiv" id="upload">
    <div class="ui-highdiv">
      <div class="ui-topdiv">

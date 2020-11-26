@@ -523,7 +523,7 @@ def pictorialexperienceeditor(request):
     context = {
         "peed_ele_row": [
             {
-                "peed_ele_col" : [
+                "peed_ele_col": [
                     {
                         "text": "I",
                         "icon": "icon-Autistic-Person"
@@ -710,7 +710,7 @@ def pictorialexperienceeditor(request):
                         "text": "No",
                         "icon": "icon-no"
                     }
-        ],
+        ]
 
     }
     row = 1
