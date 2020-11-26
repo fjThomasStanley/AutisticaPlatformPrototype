@@ -165,7 +165,76 @@ def index(request, page="home"):
                 "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
                 "Summary": "None use of microphone in conference"
             }
-        ]
+        ],
+        "Documentation_data":[
+            {
+            "ID": "0000001",
+            "Date": "14/06/2019",
+            "Group": "moderation",
+            "Name": "experience-moderation-guidlines",
+            "Version": "0.4"
+            },
+            {
+            "ID": "0000002",
+            "Date": "02/09/2020",
+            "Group": "moderation",
+            "Name": "why-is-there-a-moderation-process",
+            "Version": "1"
+            },
+            {
+            "ID": "0000003",
+            "Date": "09/11/2020",
+            "Group": "instructional",
+            "Name": "experience-creation-and-submission",
+            "Version": "2"
+            },
+        ],
+                'AP_data': [
+            {
+                "Title": "Navigation Adjustment",
+                "ID": "navadjust",
+                "arrow": "arrow_expandingpanel_na"
+            },
+            {
+                "Title": "Colour Adjustment",
+                "ID": "coladjust",
+                "arrow": "arrow_expandingpanel_ca"
+            },
+            {
+                "Title": "Content Adjustment",
+                "ID": "contadjust",
+                "arrow": "arrow_expandingpanel_cta"
+            }
+        ],
+        'AP_blank':
+            {
+                "Title": "Expanding Panel",
+                "ID": "blankexpanel",
+                "arrow": "arrow_expandingpanel_bep",
+                "content": "Content that can be replaced"
+        },
+        'AP_gallery_panels':
+            {
+                "Title": "Panel Components - These components are based on core Bootstap components and form the core structural elements of the platform.",
+                "ID": "gal_expanel_panels",
+                "arrow": "arrow_expandingpanel_bep"
+        },
+        'AP_gallery_animated_panels':
+            {
+                "Title": "Animated Panel Components - These components are animated using javascript to show and hide them. They are core structural elements of the platform.",
+                "ID": "gal_expanel_animated_panel",
+                "arrow": "arrow_expandingpanel_bep"
+        },
+            'AP_gallery_navigation':
+            {
+                "Title": "Navigation Components - These components are used for platform navigation, they allow the platform user to move around the available sections/pages of the platform and to other related content.",
+                "ID": "gal_expanel_navigation",
+                "arrow": "arrow_expandingpanel_bep"
+        },
+        'AP_HCL':
+            {
+                "Desc": "Some people cannot read text if there is not sufficient contrast between the text and background. For others, bright colours (high luminance) are not readable; they need low luminance."
+        }
     }
     stepper_object = Stepper.Stepper(request)
 
@@ -302,6 +371,29 @@ def componentGallery(request):
                 "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
                 "Summary": "None use of microphone in conference"
             }
+        ],
+        "Documentation_data":[
+            {
+            "ID": "0000001",
+            "Date": "14/06/2019",
+            "Group": "moderation",
+            "Name": "experience-moderation-guidlines",
+            "Version": "0.4"
+            },
+            {
+            "ID": "0000002",
+            "Date": "02/09/2020",
+            "Group": "moderation",
+            "Name": "why-is-there-a-moderation-process",
+            "Version": "1"
+            },
+            {
+            "ID": "0000003",
+            "Date": "09/11/2020",
+            "Group": "instructional",
+            "Name": "experience-creation-and-submission",
+            "Version": "2"
+            },
         ],
         'AP_data': [
             {
