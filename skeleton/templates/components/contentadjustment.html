@@ -1,0 +1,176 @@
+{% extends 'components/partials/expandingpanel.html' %}
+{% block PanelStyle %}
+<style>
+    .ap-fs-outerdiv {
+        display: flex;
+        flex-direction: row;
+    }
+    .ap-icon-fs {
+        font-size: 20px;
+        margin-top: 7px;
+    }
+    .ap-fs-text {
+        margin-left: 30px;
+        color: var(--autistica-mint-green);
+    }
+    .ap-fs-box {
+        border-style: solid;
+        border-width: 2px;
+        border-color: var(--autistica-mint-green);
+        text-align: center;
+        margin-left: 5px;
+        width: 110px;
+        height: 70px;
+    }
+    .ap-icon-fs-box {
+        margin: 10px 0 10px 0;
+    }
+    .ap-flw-outerdiv {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .ap-fs-button {
+        border-style: solid;
+        height: 25px;
+        width: 95px;
+        border-radius: 10px;
+        border-color: grey;
+        color: white;
+        background-color: var(--autistica-mint-green);
+        text-align: center;
+        padding: 2px 8px 2px 8px;
+    }
+    .ap-lws-button {
+        border-style: solid;
+        height: 25px;
+        width: 95px;
+        border-radius: 10px;
+        border-color: grey;
+        text-align: center;
+        padding: 2px 0 2px 0;
+    }
+    .ap-icon-lum {
+        margin: 10px 0 0 5px;
+    }
+    .ap-lum-outerdiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .ap-hcl {
+        border-style: solid;
+        border-color: var(--autistica-mint-green);
+        border-width: 2px;
+        padding: 5x 2px 0 2px;
+        width: 115px;
+        height: 75px;
+        margin-top: 10px;
+    }
+    .ap-hc1-desc {
+        font-size: 5px;
+    }
+    .ap-hc2-desc {
+        font-size: 5px;
+        color: yellow;
+        background-color: black;
+    }
+    .ap-hc3-desc {
+        font-size: 5px;
+        color: #57564c;
+        background-color: #1e1b1a;
+    }
+    .ap-hc4-desc {
+        font-size: 5px;
+        background-color: #a59170;
+    }
+    .ap-hcl-title {
+        text-align: center;
+        margin: 15px 5px 0 5px;
+    }
+    .ap-mag-div {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    .ap-mag-box {
+        border-style: solid;
+        border-color: var(--autistica-mint-green);
+        width: 115px;
+        text-align: center;
+    }
+</style>
+{% endblock %}
+{% block PanelContent %}
+<div style="margin: 0 5px 0 5px; font-size: 12px;">
+    <div class="ap-fs-outerdiv">
+        <i class="icon-font-sizing ap-icon-fs"></i>
+        <span class="ap-fs-text">Font Sizing<br>Increase & Decrease Font</span>
+    </div>
+    <div class="ap-fs-box">
+        <div class="ap-icon-fs-box"><i class="icon-font-sizing"></i></div>
+        <div>Font Sizing</div>
+    </div>
+    <div class="ap-flw-outerdiv">
+        <div class="ap-fs-button">
+            Font Size
+        </div>
+        <div class="ap-lws-button">
+           Line Spacing
+        </div>
+        <div class="ap-lws-button">
+           Word Spacing
+        </div>
+    </div>
+    <div class="ap-icon-lum">
+        <i class="icon-luminance" style="font-size: 15px"></i>
+        <span style="margin-left: 15px;">High Contrast / Low Luminance Text</span>
+    </div>
+    <div class="ap-lum-outerdiv">
+        <div class="ap-hcl">
+            <div class="ap-hc1-desc">
+                {{AP_HCL.Desc}}
+            </div>
+            <div class="ap-hcl-title">
+                High Contrast 1
+            </div>
+        </div>
+        <div class="ap-hcl">
+            <div class="ap-hc2-desc">
+                {{AP_HCL.Desc}}
+            </div>
+            <div class="ap-hcl-title">
+                High Contrast 2
+            </div>
+        </div>
+        <div class="ap-hcl">
+            <div class="ap-hc3-desc">
+                {{AP_HCL.Desc}}
+            </div>
+            <div class="ap-hcl-title">
+                Low Luminance 1
+            </div>
+        </div>
+
+    </div>
+    <div class="ap-hcl">
+        <div class="ap-hc4-desc">
+            {{AP_HCL.Desc}}
+        </div>
+        <div class="ap-hcl-title">
+            Low Luminance 2
+        </div>
+    </div>
+
+    <div class="ap-mag-div">
+        <div style="padding: 10px;"><i class="icon-magnifier" style="font-size: 18px;"></i></div>
+        <div>
+            Magnifier<br>Increase & Decrease View
+        </div>
+    </div>
+    <div class="ap-mag-box">
+        <div style="padding: 10px;"><i class="icon-magnifier" style="font-size: 25px;"></i></div>
+        <div>Magnifier</div>
+    </div>
+</div>
+{% endblock %}

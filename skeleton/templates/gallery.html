@@ -13,7 +13,8 @@
     <link href="/static/css/fa/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="{% static "css/ico-style.css" %}">
+    <!--<link rel="stylesheet" href="{% static "css/ico-style.css" %}">-->
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
@@ -36,6 +37,19 @@
           href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" type="text/css"
           href="{% static 'css/main.css' %}">
+    <style>
+        .codeblock{
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: 5px;
+        }
+       
+        .componentblock{
+            background-color: #eaeaea;
+            padding: 8px;
+            border-radius: 7px;
+        }
+    </style>
 
 </head>
 
@@ -53,49 +67,113 @@
     {#    <!-- Static navbar -->#}
     {#    {% include 'path/to/html' %}#}
 
+    <h2>
+        Background - Why do we need a component gallery and what does the gallery's purpose achieve?   
+    </h2>
+    The component gallery's purpose is to show to platform developers and testers the kinds of components that make up the platform. The gallery visually showcases each component seperately in order to make it clear as to how components relate to their logical reference (name and utilisation in the code). Separation of components in the gallery allows developers to correctly refer to platform components and to enable testers to critique component implementation. Each component referenced in the component gallery is accompanied by related information as to how it can be used within the platform code and how it can be customised through the use of parameters and data. 
+    
+
+    <h2>
+        Django Templating system - How are platform components written and used?    
+    </h2>
+    The platform utilises Django's templating system so that common or repeatable sections of code can be written once in a generic template and then reused or included in a parent page. In order to include Django templates or components within a parent page we must utilise the Django include tag:
     <br>
-    <h3>
-        Navigation Bar
-        <small class="text-muted">Component Description</small>
-    </h3>
-    <!-- Static navbar -->
-    {% include 'main/../components/navbar.html' %}
+    <br>
+    <div class="codeblock">
+        {{"{% include 'pathToComponentTemplate' %}"}}
+    </div>
+    
+    
+<!--     <br>
+    and in the case of component showcase section of this Gallery for reference, there are is a parent gallery.html template file which includes  
+    <br> -->
+    
+    
+    <br>
+
+    Some components have parameters which can be utilised to customise the appearance and content. As part of the Django include statement we can use the 'with' keyword to assign a value to a component template paramter name:
+    <br>
+    <br>
+    <div class="codeblock">
+        {{"{% include 'pathToComponentTemplate' with componentParameterName=value %}"}}
+    </div>
+    <br>
+    
+    More than one parameter can be defined on the include tag which is useful if more than one parameters on a template needs to be defined:
+    <br>
+    <br>
+    <div class="codeblock">
+    {{"{% include 'pathToComponentTemplate' with componentParameterName=value anotherParameterName=secondValue %}"}}
+    </div>
+    <br>
+
+    Django Parameter values can specified as a static string or we can use a data object as passed in via the context variable of the views.py render function. This second method using the context variable is particulary useful as we can allow the template to adjust to user data such profile settings.
 
     <br>
-    <h3>
-        Secondary banner
-        <small class="text-muted">Component Description</small>
-    </h3>
-    <!-- Secondary Banner -->
-    {% include 'main/../components/banner.html' %}
-
-    <h3>
-        Secondary banner Alt
-        <small class="text-muted">Component Description</small>
-    </h3>
-    <!-- Secondary Banner -->
-    {% include 'main/../components/alt_banner.html' %}
+    <br>
+    The Django templating system also allows for the functionality of extending base templates. This is very useful as multiple components that are similar can derive from one singular template and only the differences amongst the collection of similar components need to have a separate template file. The concept of 'DRY' (Don't repeat yourself) whereby the code structure is setup and written such that code is only written once is very important as it significantly contributes to the maintainability characteristics of a software project. Because Django includes the template extension tag, it allows us to follow 'DRY' principle when writing templates.  
 
     <br>
-    <h3>
-        Jumbotron
-        <small class="text-muted">Component Description</small>
-    </h3>
-    <!-- Jumbotron -->
-    {% include 'main/../components/jumbotron.html' %}
+    <br>
+    <div class="codeblock">
+    {{"{% extends 'pathToComponentTemplate' %}"}}
+    </div>
 
     <br>
+    <br>
+    <div class="codeblock">
+        {{"{% include 'pathToComponentTemplate' %}"}}
+    </div>
+    
+    <br>
+    <br>
+    Another Django tag that allows us to follow 'DRY' principles is the for tag. Whereas the extends tag allows us to keep to DRY principles for a whole template, the for tag allows us repeat over a generic code block within a template. This allows us to reduce the size of templates as only a generic code block required than manually repeating the code block over and over in the template. The for tag is useful in scenarios such the display of a table where an array of user data can be passed into the template and the for loop will automatically loop over the data and generate a row in the table for each item in the data array. Django for loops allow us to make templates dynamic with respect to user data.
+
+    <br>
+    <br>
+    <div class="codeblock">
+        {{"{% for  %}"}}
+    </div>
+
+    <br>
+    <br>
+
+    There are other Django templating tags and features which can be found <a href="https://docs.djangoproject.com/en/3.0/ref/templates/builtins/" target="_blank">here</a>. For other Django related documentation please see <a href="https://docs.djangoproject.com/en/3.0/" target="_blank">here</a>. 
+
+    <h2>
+        Component showcase
+    </h2>
+
+
+        {% include './components/partials/gallery_panels_expand.html' with PanelData=AP_gallery_panels%}
+
+    <br>
+
+        {% include './components/partials/gallery_animated_panels_expand.html' with PanelData=AP_gallery_animated_panels%}
+
+        <br>
+
+        {% include './components/partials/gallery_navigation_expand.html' with PanelData=AP_gallery_navigation%}
+
+    <br>
+    <div class="componentblock">
     <h3>
         Newsletter Cards
-        <small class="text-muted">Component Description</small>
+        <small class="text-muted">This component organises key information and logical aspects of the page</small>
     </h3>
     <!-- Newsletter Cards -->
-    {% include 'main/../components/newsletterCards.html' %}
+    {% include './components/newsletterCards.html' %}
 
+    <h4>Template Inclusion</h4>
+
+    Template name: newsletterCards.html
+    </div>
     <br>
+
+    <div class="componentblock">
     <h3>
         User Journey Stepped Control
-        <small class="text-muted">Component Description</small>
+        <small class="text-muted">This component is a navigational feedback element. It shows to the user how many steps of a process there are, how many steps have been completed and finally the current step the user is at.</small>
     </h3>
     <!-- User Journey Stepped Control -->
     {% load userJourney %}
@@ -103,81 +181,168 @@
         {% display_user_journey request.session.activeStepper stepper %}
     </form>
 
+    <h4>Template Inclusion</h4>
+
+    {{"{% load userJourney %}"}}
+
+ 
+    
+    </div>
     <br>
+
+
+    <div class="componentblock">
     <h3>
         Newsletter Signup
         <small class="text-muted">Component Description</small>
     </h3>
     <!-- Newsletter Signup -->
-    {% include 'main/../components/newsletterSignup.html' %}
+    {% include './components/newsletterSignup.html' %}
 
+    <h4>Template Inclusion</h4>
+
+      Template name: newsletterSignup.html
+
+      </div>
     <br>
+    <br>
+
+    <div class="componentblock">
     <h3>
         Language Selector
-        <small class="text-muted">Component Description</small>
+        <small class="text-muted">This component allows the user to change the language setting of the platform</small>
     </h3>
     <!-- Language Selector -->
-    {% include 'main/../components/languageSelector.html' %}
+    {% include './components/languageSelector.html' %}
 
+    <h4>Template Inclusion</h4>
+
+    Template name: languageSelector.html
+    </div>
     <br>
+    <br>
+
+    <div class="componentblock">
     <h3>
        Defined Profile
-       <small class="text-muted">Component Description</small>
+       <small class="text-muted">This component allows a user to adjust their profile type so that the platform can best match the user's use case</small>
    </h3>
    <!-- Define profile -->
-   {% include 'main/../components/defineprofile.html' %}
+   {% include './components/defineprofile.html' %}
+   <h4>Template Inclusion</h4>
 
+   Template name: defineprofilehtml
+    </div>
    <br>
+   <br>
+
+   <div class="componentblock">
     <h3>
        User Experience Form
-       <small class="text-muted">Component Description</small>
+       <small class="text-muted">This component allows a user to create and submit with data sharing preferences their experience which they would like to share with the platform</small>
    </h3>
    <!-- User experience form -->
-   {% include 'main/../components/userexperienceform.html' %}
+   {% include './components/userexperienceform.html' %}
 
+   <h4>Template Inclusion</h4>
 
-   <style>
-    .ma_outerdiv {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
+   Template name: userexperienceform.html
+   
+    <br>
+    <br>
 
-    .ma_button {
-        background-color: red;
-        color: white;
-        border: none;
-        border-radius: 7px;
-        font-size: 20px;
-        padding: 10px 40px 10px 40px;
-        margin-left: 20px;
-    }
-
-    .ma_text {
-        padding-top: 12px;
-        margin-right: 20px;
-    }
-    </style>
+</div>
    <br>
-    <h3>
-       Modular Alert
-       <small class="text-muted">Component Description</small>
-   </h3>
-   <div class="ma_outerdiv">
-        <span class="ma_text">Timeout Save Alert Test</span>
-        <span><button class="ma_button" onclick="showModularAlert('Timeout Save', 'Inactive for 10 minutes, in 2 minutes time your event will be saved as a draft', 1)"><u>Alert</u></button></span>
-   </div>
-   <!-- Modular alerts -->
-   {% include 'main/../components/modularalerts.html' %}
 
-   <br>
+
+   <div class="componentblock">
+
    <h3>
-        Footer
-        <small class="text-muted">Component Description</small>
+        Experience Viewer Control
+        <small class="text-muted">This control allows a user to browse through their own or other's publicly shared experiences</small>
     </h3>
-    <!-- Footer -->
-    {% include 'main/../components/footer.html' %}
+    <!-- Experience Viewer Control -->
+    {% include './components/experienceviewercontrol.html' %}
+    <h4>Template Inclusion</h4>
+
+      Template name: experienceviewercontrol.html
+    <br>
+    <br>
+
+   </div>
+   <br>
+
+
+   <div class="componentblock">
+   <br>
+      <h3>
+        Community Approval Mechanism
+        <small class="text-muted"></small>
+    </h3>
+    <!-- community approval mechanism -->
+    {% include './components/communityapprovalmechanism.html' %}
+    <h4>Template Inclusion</h4>
+
+      Template name: communityapprovalmechanism.html
+    <br>
+   </div>
+
+  
+   <br>
+   <div class="componentblock">
+      <h3>
+        Moderation of New Experiences
+        <small class="text-muted">This component allows platform moderators to see an overview of how many blocked and approved user experiences their are. Moderators can use this component to filter through the available experience submissions.</small>
+    </h3>
+    <!-- Moderation of New Experiences -->
+    {% include './components/moderationofnewexperiences.html' %}
+    <h4>Template Inclusion</h4>
+
+    Template name: moderationofnewexperiences.html
+    <br>
+    <br>
+ 
+   </div>                             
+   <br>
+
+
+   <div class="componentblock">
+   <h3>
+     Documentation Viewer
+     <small class="text-muted">This component allows the user to browse for documentation about the platform</small>
+    </h3>
+    <!-- Documentation viewer -->
+        {% include './components/documentationviewer.html' with data=Documentation_data %}
+
+    <h4>Template Inclusion</h4>
+
+        Template name: documentationviewer.html
+
+   </div>    
+    <br>
+    <br>
+
+
+
+    <div class="componentblock">
+        <h3>
+          Pictorial Experience Editor
+          <small class="text-muted">This component allows the user to enter an experience using pictures. It allows a user a submit an experience in a non-verbal way.</small>
+         </h3>
+         <!-- Documentation viewer -->
+             {% include './components/pictorialexperienceeditor.html' %}
+     
+         <h4>Template Inclusion</h4>
+     
+             Template name: pictorialexperienceeditor.html
+     
+    </div>    
+         <br>
+         <br>
 
 </div> <!-- /container -->
 </body>
+
+<script type="text/javascript" src="{% static 'scripts/components/modal.js'%}"></script>
+<script type="text/javascript" src="{% static 'scripts/components/slidingpanel.js'%}"></script>
 </html>

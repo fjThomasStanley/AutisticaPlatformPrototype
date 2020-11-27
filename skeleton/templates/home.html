@@ -1,0 +1,47 @@
+
+<style>
+    .hm-ohlogin {
+        border-radius: 5px;
+        background-color: #ff815c;
+        padding: 10px 20px 10px 20px;
+        color: var(--autistica-white);
+    }
+</style>
+
+<a name=""top"></a>
+<div class="container-lg px-1">
+
+    <!-- Static navbar -->
+    {% include './components/navbar.html' %}
+
+    <!-- Secondary Banner -->
+    {% include './components/partials/banner.html' %}
+
+ <i class="icon-home" style="font-size: 25px;"></i><span>&nbsp;&nbsp;Home&nbsp;&nbsp;</span><i class="icon-label-24px"></i>
+ <span>&nbsp;Supporting Autism Research</span>
+
+ <div style="margin:15px">
+
+
+    {% include './components/partials/jumbotron.html' %}
+
+    <div class="card-deck" style="margin: 10px;">
+        {% include './components/newsletterCards.html' %}
+
+        <div class="card autistica-card my-3">
+            {% include './configure.html' %}
+        </div>
+
+        <div class="card autistica-card my-3">
+            {% include './getinvolved.html' %}
+        </div>
+    </div>
+    <div style="margin: 50px 0 0 50%;"><a href="https://www.openhumans.org/account/login/" class="hm-ohlogin">Login</a></div>
+</div>   
+      
+    <!-- Footer -->
+    {% include './components/footer.html' %}
+
+
+</div> <!-- /container -->
+

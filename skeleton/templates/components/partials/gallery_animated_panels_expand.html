@@ -1,0 +1,329 @@
+{% extends './expandingpanel.html' %}
+
+{% block PanelContent %}
+<div style="margin: 10px;">
+
+
+    <style>
+        .ma_outerdiv {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    
+        .ma_button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 20px;
+            padding: 10px 40px 10px 40px;
+            margin-left: 20px;
+        }
+    
+        .ma_text {
+            padding-top: 12px;
+            margin-right: 20px;
+        }
+        </style>
+
+
+    <div class="componentblock">
+        <h3>
+           Modular Alert
+           <small class="text-muted">Component Description</small>
+       </h3>
+       <div class="ma_outerdiv">
+            <span class="ma_text">Timeout Save Alert</span>
+            <span><button class="ma_button" onclick="showModularAlert('Timeout Save', 'Inactive for 10 minutes, in 2 minutes time your event will be saved as a draft', 1)"><u>Alert</u></button></span>
+       </div>
+       <!-- Modular alerts -->
+       {% include '../modularalerts.html' with modalID="modularAlert" %}
+       
+       <br>
+
+       <h4>Template Inclusion</h4>
+       {{"{% include 'pathToComponentTemplate' with modalID=value %}"}}
+       <br>
+       <br>
+        Template name: modularalerts.html
+       <br>
+
+       <h4>Parameters</h4>
+
+       <table>
+           <tr>
+               <th>Parameter Name</th>
+               <th>Purpose</th>
+               <th>Requirement</th>
+               <th>Value</th>
+           </tr>
+           <tr>
+               <td>ModalID</td>
+               <td>The unique ID for the component, used by javascript to select component from other components on the page</td>
+               <td>Required</td>
+               <td>String - Alphanumeric. As it is an ID, it must be unique to the component.</td>
+           </tr>
+       </table>
+       <br>
+
+       <h4>Functions</h4>
+       
+       <h5 class="descriptiveheading">showModularAlert</h5> - Shows a Modular Alert component
+
+
+
+       <table>
+        <tr>
+            <th>Function Parameter</th>
+            <th>Purpose</th>
+            <th>Data</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Title of the modular alert</td>
+            <td>String - Alphanumeric Text</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Alert text of the modular alert. The body of the modular alert</td>
+            <td>String - Alphanumeric Text</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>The type of icon displayed in the modular alert</td>
+            <td>
+                Number:
+                <br>
+                1 - Alert
+                <br>
+                2 - Warning
+                <br>
+                3 - Info
+            
+                <br>
+                Default value: Warning
+            </td>
+        </tr>
+        <tr>
+            <th colspan="3">Example - modular alert component on this page</th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                showModularAlert('Timeout Save', 'Inactive for 10 minutes, in 2 minutes time your event will be saved as a draft', 1)
+            </td>
+        </tr>
+        <tr>
+            <th colspan="3">Notes</th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                The modular alert is a typeof modal component. The modal component requires a modalID to enable the functionality of showing the modal (the modular alert component). Therefore when including the modular alert component within your template you must use the following django tag structure:
+                <br>
+                <br>
+                {{"{% include 'pathToComponentTemplate' with modalID=value %}"}}
+            </td>
+        </tr>
+       </table>
+
+    </div>
+
+
+       <br>
+    <div class="componentblock">
+
+      <h3>
+        Image Upload
+        <small class="text-muted">Component Description</small>
+    </h3>
+    <!-- Moderation of New Experiences -->
+    <div class="ui-master-div">
+        <div>
+            <button onclick="showImageUpload()">Upload</button>
+        </div>
+    </div>
+     {% include '../imageupload.html' with modalID="imageUpload"%} 
+
+    <h4>Template Inclusion</h4>
+    {{"{% include 'pathToComponentTemplate' with modalID=value %}"}}
+    <br>
+    <br>
+    Template name: imageupload.html
+    <br>
+    <h4>Parameters</h4>
+
+    <table>
+        <tr>
+            <th>Parameter Name</th>
+            <th>Purpose</th>
+            <th>Requirement</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>ModalID</td>
+            <td>The unique ID for the component, used by javascript to select component from other components on the page</td>
+            <td>Required</td>
+            <td>String - Alphanumeric. As it is an ID, it must be unique to the component.</td>
+        </tr>
+    </table>
+    <br>
+
+    <h4>Functions</h4>
+    
+    <h5 class="descriptiveheading">showModularAlert</h5> - Shows a Modular Alert component
+
+
+
+    <table>
+     <tr>
+         <th>Function Parameter</th>
+         <th>Purpose</th>
+         <th>Data</th>
+     </tr>
+     <tr>
+         <td>1</td>
+         <td>Title of the modular alert</td>
+         <td>String - Alphanumeric Text</td>
+     </tr>
+     <tr>
+         <td>2</td>
+         <td>Alert text of the modular alert. The body of the modular alert</td>
+         <td>String - Alphanumeric Text</td>
+     </tr>
+     <tr>
+         <td>3</td>
+         <td>The type of icon displayed in the modular alert</td>
+         <td>
+             Number:
+             <br>
+             1 - Alert
+             <br>
+             2 - Warning
+             <br>
+             3 - Info
+         
+             <br>
+             [Default value]: Warning
+         </td>
+     </tr>
+     <tr>
+         <th colspan="3">Example - modular alert component on this page</th>
+     </tr>
+     <tr>
+         <td colspan="3">
+             showModularAlert('Timeout Save', 'Inactive for 10 minutes, in 2 minutes time your event will be saved as a draft', 1)
+         </td>
+     </tr>
+     <tr>
+         <th colspan="3">Notes</th>
+     </tr>
+     <tr>
+         <td colspan="3">
+             The modular alert is a typeof modal component. The modal component requires a modalID to enable the functionality of showing the modal (the modular alert component). Therefore when including the modular alert component within your template you must use the following django tag structure:
+             <br>
+             <br>
+             {{"{% include 'pathToComponentTemplate' with modalID=value %}"}}
+         </td>
+     </tr>
+    </table>
+
+
+    </div>
+
+
+
+
+    <br>
+<div class="componentblock">
+    <h3>
+      Accessibility Panel
+      <small class="text-muted">Component Description</small>
+  </h3>
+  <!-- Moderation of New Experiences -->
+  <div>
+      <i class="icon-access" style="font-size: 40px;" onclick="citizenSciencePlatform_slidingpanelfunctions.OpenPanel('accessibilitypannel')"></i>
+  </div>
+  {% include '../accessibilitypanel.html' with PanelID="accessibilitypannel" Direction="left" %}
+
+
+  <h4>Template Inclusion</h4>
+  {{" {% include '../accessibilitypanel.html' with PanelID=\"accessibilitypannel\" Direction=\"left\" %}" }}
+  <br>
+  <br>
+  Template name: imageupload.html
+  <br>
+  <br>
+  If not already included, include the slidingpanel.js file from the static/scripts/components folder in your root template
+    <br>
+    <br>
+  &lt;script type="text/javascript" src="{{"{% static 'scripts/components/slidingpanel.js'%}"}}"&gt;&lt;/script&gt;
+
+  <br>
+  <h4>Parameters</h4>
+
+  <table>
+      <tr>
+          <th>Parameter Name</th>
+          <th>Purpose</th>
+          <th>Requirement</th>
+          <th>Value</th>
+      </tr>
+      <tr>
+          <td>PanelID</td>
+          <td>The unique ID for the component, used by javascript to select component from other components on the page</td>
+          <td>Required</td>
+          <td>String - Alphanumeric. As it is an ID, it must be unique to the component.</td>
+      </tr>
+      <tr>
+          <td>Direction</td>
+          <td>Controls which direction the sliding panel should appear from</td>
+          <td>Optional</td>
+          <td>
+              String (enum) -
+              <br>
+              <br>
+              Left - Appears from the left
+              <br>
+              Right - Appears from the right
+              <br>
+              [default] - Default behaviour is to appear from the right. e.g unspecified direction or value not equal to allowed options. 
+          </td>
+      </tr>
+  </table>
+  <br>
+
+  <h4>Functions</h4>
+  
+  <h5 class="descriptiveheading">showModularAlert</h5> - Shows a Modular Alert component
+
+
+
+  <table>
+  
+   <tr>
+       <th colspan="3">Example - Accessibility Panel component on this page</th>
+   </tr>
+   <tr>
+       <td colspan="3">
+        citizenSciencePlatform_slidingpanelfunctions.OpenPanel('accessibilitypannel')"
+       </td>
+   </tr>
+   <tr>
+       <th colspan="3">Notes</th>
+   </tr>
+   <tr>
+       <td colspan="3">
+           The modular alert is a typeof modal component. The modal component requires a modalID to enable the functionality of showing the modal (the modular alert component). Therefore when including the modular alert component within your template you must use the following django tag structure:
+           <br>
+           <br>
+           {{"{% include 'pathToComponentTemplate' with modalID=value %}"}}
+       </td>
+   </tr>
+  </table>
+
+</div>
+
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'components/partials/expandingpanel.html' %}
+{% block PanelStyle %}
+<style>
+    .ap-na-outerdiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .ap-div-nai {
+        border-style: solid;
+        border-color: #0082cf;
+        text-align: center;
+        font-size: 13px;
+        padding: 5px;
+        margin: 5px;
+    }
+    .ap-icon-na {
+        font-size: 40px;
+    }
+</style>
+{% endblock %}
+{% block PanelContent %}
+<div class="ap-na-outerdiv">
+    <div class="ap-div-nai">
+        <i class="icon-screen-reader ap-icon-na"></i>
+        <div>Screen Reader</div>
+    </div>
+    <div class="ap-div-nai">
+        <i class="icon-voice-text1 ap-icon-na"></i>
+        <div>Voice to Text</div>
+    </div>
+    <div class="ap-div-nai">
+        <i class="icon-voice-commands ap-icon-na"></i>
+        <div>Voice Commands</div>
+    </div>
+</div>
+{% endblock %}
