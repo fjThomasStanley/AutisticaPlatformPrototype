@@ -1,23 +1,21 @@
 # Autistica Platform Prototype
 
-This repository is linked to the [Autistica/Turing citizen science project repository](https://github.com/). It contains the code for the platform prototype. 
+## Background
 
-### Releases
+
+This repository is linked to the [Autistica citizen science project repository](https://github.com/alan-turing-institute/AutisticaCitizenScience). This repository contains the code for the platform prototype. This prototype for the Autistica Citizen Science platform has been developed utilising the Python [Django](https://www.djangoproject.com/) web development framework. 
+
+
+## Releases
 
 The most recent version of the prototype is available at: http://deplo-autis-udrg410qq9qr-1321397698.eu-west-2.elb.amazonaws.com/.
 
-## Background
 
-- What is the project
-
-    This prototype for the Autistica Citizen Science platform has been developed utilising the Python [Django](https://www.djangoproject.com/) web development framework. 
 
 
 ## Three tier application architecture
 
 ###  What is a three tier application achitecture?
-
-
 
 A three tier application achitecture refers to a concept of delivering an application to end users via three different modular layers consisting usally of:
 
@@ -64,12 +62,9 @@ Structuring code in a logical way in a project is very important as poor code st
 
 ### Why we need code structure
 
-Having an established code structure that follows software development best practice is key to ensuring the maintainability and readability of a project. Maintainability is a characteristic of a project that determines how easy it is for developers to find and fix problem code. In software development we should always strive to keep the project in a good maintainable state as this will help developers of the project to fix .
+Having an established code structure that follows software development best practice is key to ensuring the maintainability and readability of a project. Maintainability is a characteristic of a project that determines how easy it is for developers to find and fix problem code. In software development we should always strive to keep the project in a good maintainable state as this will help developers of the project to fix problems with the code.
 
-Code readibility
-
-
-
+Good code readibility is a characteristic of a maintainable software. By having readable code, software developers of different backgrounds, experience and familiarity with the codebase should be able to understand how the project code fits together and the reasoning as to why a particular piece of code is required (its purpose within the project).
 
 ### how we achieve code structure
 
@@ -90,8 +85,7 @@ Another important Component based development approach
 
 Styling CSS!!
 
-Global and Private
-To reduce the duplication of CSS within the platform 
+Global and Private - To reduce the duplication of CSS within the platform 
 
 
 **Feedback is welcome from everyone**

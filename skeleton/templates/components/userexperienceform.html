@@ -176,19 +176,55 @@
         width: 32px;
         height: 32px;
     }
+    .ui-button {
+        color: var(--autistica-white);
+        background-color: var(--autistica-mint-green);
+        border-color: var(--autistica-mint-green);
+        padding: 5px;
+        margin: 0 0 20px 80%;
+    }
+    .nv-button {
+        color: var(--autistica-white);
+        background-color: var(--autistica-mint-green);
+        border-color: var(--autistica-mint-green);
+        padding: 5px;
+        margin: 0 0 20px 90%;
+    }
  </style>
-
+<script>
+function switchNonVerbal() {
+    uef = document.getElementById("uef");
+    if (uef.style.display == "block")
+    {
+         uef.style.display = "none";
+    }
+    else
+    {
+         uef.style.display = "block";
+    }
+}
+</script>
 <body>
+    <div>
+        <span onclick="showImageUpload()" class="ui-button"><u>Upload</u></span>
+        <span onclick="switchNonVerbal()" class="nv-button"><u>Non Verbal</u></span>
+    </div>
+
+    <div id="uef" style="display: block;">
     <form>
 
         <div>
-            {% include './userexperiencecontrolbuttons.html' with darr=ueftext.0 %}
+
+            {% include './partials/userexperiencecontrolbase.html' with darr=ueftext.0 %}
         </div>
 
-
+        <div>
+            {% include './userexperiencecontrolbuttons.html' with darr=ueftext.1 %}
+        </div>
 
         <div>
-            {% include './partials/userexperiencecontrolbase.html' with darr=ueftext.1 %}
+            {% include './partials/userexperiencecontrolbase.html' with darr=ueftext.2 %}
+
         </div>
 
     </form>
@@ -213,7 +249,7 @@
             </div>
         </div>
     </form>
-
+    </div>
 <script>
     function submitButton(form) {
         audioObject = document.getElementById('submitSound')

@@ -70,7 +70,8 @@
     <h2>
         Background - Why do we need a component gallery and what does the gallery's purpose achieve?   
     </h2>
-    The component gallery is a showcase of all the visual components that make up the platform. The gallery's purpose is to show to platform testers and developers the kinds of components that make up the platform. Websites and website applications make are made up of many elements that each serve a specific purpose. , whilst the platform is in development,
+    The component gallery's purpose is to show to platform developers and testers the kinds of components that make up the platform. The gallery visually showcases each component seperately in order to make it clear as to how components relate to their logical reference (name and utilisation in the code). Separation of components in the gallery allows developers to correctly refer to platform components and to enable testers to critique component implementation. Each component referenced in the component gallery is accompanied by related information as to how it can be used within the platform code and how it can be customised through the use of parameters and data. 
+    
 
     <h2>
         Django Templating system - How are platform components written and used?    
@@ -98,26 +99,19 @@
     </div>
     <br>
     
-    More than one parameter can be defined on the include which is usefull if more than one parameters on a template need to be defined:
+    More than one parameter can be defined on the include tag which is useful if more than one parameters on a template needs to be defined:
     <br>
     <br>
     <div class="codeblock">
-    {{"{% include 'pathToComponentTemplate' with componentParameterName=value another anotherParameterName=secondValue %}"}}
+    {{"{% include 'pathToComponentTemplate' with componentParameterName=value anotherParameterName=secondValue %}"}}
     </div>
     <br>
 
-    Django Parameter values can 
-
-    Django 
-
+    Django Parameter values can specified as a static string or we can use a data object as passed in via the context variable of the views.py render function. This second method using the context variable is particulary useful as we can allow the template to adjust to user data such profile settings.
 
     <br>
     <br>
-    The Django templating system also allows for the functionality of extending base templates. This is very usefull as 
-
-    The platform this is utilised for example in the 
-
-    The platform makes use of Django template extensions
+    The Django templating system also allows for the functionality of extending base templates. This is very useful as multiple components that are similar can derive from one singular template and only the differences amongst the collection of similar components need to have a separate template file. The concept of 'DRY' (Don't repeat yourself) whereby the code structure is setup and written such that code is only written once is very important as it significantly contributes to the maintainability characteristics of a software project. Because Django includes the template extension tag, it allows us to follow 'DRY' principle when writing templates.  
 
     <br>
     <br>
@@ -131,11 +125,9 @@
         {{"{% include 'pathToComponentTemplate' %}"}}
     </div>
     
-
     <br>
     <br>
-    Django allows us to repeat over 
-    Django for tag
+    Another Django tag that allows us to follow 'DRY' principles is the for tag. Whereas the extends tag allows us to keep to DRY principles for a whole template, the for tag allows us repeat over a generic code block within a template. This allows us to reduce the size of templates as only a generic code block required than manually repeating the code block over and over in the template. The for tag is useful in scenarios such the display of a table where an array of user data can be passed into the template and the for loop will automatically loop over the data and generate a row in the table for each item in the data array. Django for loops allow us to make templates dynamic with respect to user data.
 
     <br>
     <br>
@@ -171,6 +163,10 @@
     </h3>
     <!-- Newsletter Cards -->
     {% include './components/newsletterCards.html' %}
+
+    <h4>Template Inclusion</h4>
+
+    Template name: newsletterCards.html
     </div>
     <br>
 
@@ -185,20 +181,12 @@
         {% display_user_journey request.session.activeStepper stepper %}
     </form>
 
-    "stepper": [
-    {
-        "id": 1,
-        "label": "Login"
-    },
-    {
-        "id": 2,
-        "label": "Define Profile"
-    },
-    {
-        "id": 3,
-        "label": "Add Event"
-    }
-],
+    <h4>Template Inclusion</h4>
+
+    {{"{% load userJourney %}"}}
+
+ 
+    
     </div>
     <br>
 
@@ -263,36 +251,6 @@
     <br>
     <br>
 
-   "ueftext": [
-   {
-       "rows": [
-       {
-           "qtext": "Where",
-           "qcolour": "#4d75ad",
-           "phtext": "Enter name of location or postcode...",
-           "input": "ip"
-       },
-       {
-           "qtext": "What",
-           "qcolour": "#ffbb5d",
-           "phtext": "Your experience can be entered here...",
-           "input": "ta"
-       }
-       ],
-       "maintext": "Enter your experience"
-   },
-   {
-       "rows": [
-       {
-            "qtext": "What",
-            "qcolour": "#ffbb5d",
-            "phtext": "",
-            "input": "ta"
-       }
-       ],
-           "maintext": "What would you have wished to be different?"
-   }
-   ],
 </div>
    <br>
 
@@ -310,50 +268,7 @@
       Template name: experienceviewercontrol.html
     <br>
     <br>
-    "user_exp": [
-    {
-        "id": "32097868",
-        "datetime": "Sept 18, 2019, 10:31 a.m.",
-        "user_txt": [
-            {
-                "question": "Event",
-                "text": "The air conditioning in the room where I was having a meeting was really loud and I found it really hard to concentrate."
-            },
-            {
-                "question": "What would you have liked to be different?",
-                "text": ""
-            }
-        ]
-    },
-    {
-        "id": "19279611",
-        "datetime": "Sept 17, 2019, 8:46 a.m.",
-        "user_txt": [
-            {
-                "question": "Event",
-                "text": "The tube is too loud."
-            },
-            {
-                "question": "What would you have liked to be different?",
-                "text": ""
-            }
-        ]
-    },
-    {
-        "id": "32097868",
-        "datetime": "Sept 17, 2019, 8:45 a.m.",
-        "user_txt": [
-            {
-                "question": "Event",
-                "text": "I'm at a conference today and I found people not using the microphone really difficult - it makes it much harder to concentrate on what they were saying. I was much more distracted."
-            },
-            {
-                "question": "What would you have liked to be different?",
-                "text": ""
-            }
-        ]
-    }
-],
+
    </div>
    <br>
 
@@ -386,35 +301,7 @@
     Template name: moderationofnewexperiences.html
     <br>
     <br>
-    "MONE_data": [
-            {
-                "UID": "0000001",
-                "EID": "32097868",
-                "date": "18/09/19",
-                "Event_What": "The air conditioning in the room where I was having a meeting was really loud and I found it really heard to concentrate, it was a rubbish experience.",
-                "Location_Where": "NW1 2HS",
-                "LikeToBeDifferent": "I would have liked the air conditioning to less loud to aid my concentration",
-                "Summary": "Loud Air Conditioning"
-            },
-            {
-                "UID": "0000002",
-                "EID": "32097867",
-                "date": "17/09/19",
-                "Event_What": "The tube is too loud.",
-                "Location_Where": "NW1 8NH",
-                "LikeToBeDifferent": "would have liked the tube to be less loud",
-                "Summary": "Loud Tube"
-            },
-            {
-                "UID": "0000003",
-                "EID": "32097866",
-                "date": "17/09/19",
-                "Event_What": "I'm at a conference today and I found the people not using the microphone really difficult - it makes it harder to concentrate on what they were saying. I was much more distracted.",
-                "Location_Where": "SE15 5DQ",
-                "LikeToBeDifferent": "For people in conferences to use a microphone. To aid my concentration and reduce my distraction.",
-                "Summary": "None use of microphone in conference"
-            }
-        ],
+ 
    </div>                             
    <br>
 
@@ -422,10 +309,10 @@
    <div class="componentblock">
    <h3>
      Documentation Viewer
-     <small class="text-muted">Component Description</small>
+     <small class="text-muted">This component allows the user to browse for documentation about the platform</small>
     </h3>
     <!-- Documentation viewer -->
-        {% include './components/documentationviewer.html' %}
+        {% include './components/documentationviewer.html' with data=Documentation_data %}
 
     <h4>Template Inclusion</h4>
 
@@ -435,9 +322,23 @@
     <br>
     <br>
 
-    
 
- 
+
+    <div class="componentblock">
+        <h3>
+          Pictorial Experience Editor
+          <small class="text-muted">This component allows the user to enter an experience using pictures. It allows a user a submit an experience in a non-verbal way.</small>
+         </h3>
+         <!-- Documentation viewer -->
+             {% include './components/pictorialexperienceeditor.html' %}
+     
+         <h4>Template Inclusion</h4>
+     
+             Template name: pictorialexperienceeditor.html
+     
+    </div>    
+         <br>
+         <br>
 
 </div> <!-- /container -->
 </body>

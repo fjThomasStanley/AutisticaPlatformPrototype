@@ -46,7 +46,7 @@
         padding: 8px 0 1em 1em;
     }
 </style>
-<table>
+<table style="width: 100%;">
     <thead>
         <tr>
             <th class="mone-cb"></th>
@@ -54,22 +54,20 @@
             <th>Date</th>
             <th>Doc Group</th>
             <th>Name</th>
-            <th>Page Location</th>
             <th>Version / Profile</th>
             <th>Display</th>
         </tr>
     </thead>
     <tbody>
-        {% for trow in MONE_data %}
+        {% for record in data %}
         <tr>
             <td class="mone-cb"><input type="checkbox"></td>
-            <td>{{trow.UID}}</td>
-            <td>{{trow.EID}}</td>
-            <td>{{trow.date}}</td>
-            <td>{{trow.Event_What}}</td>
-            <td>{{trow.Location_Where}}</td>
-            <td>{{trow.LikeToBeDifferent}}</td>
-            <td>{{trow.Summary}}</td>
+            <td>{{record.ID}}</td>
+            <td>{{record.Date}}</td>
+            <td>{{record.Group}}</td>
+            <td>{{record.Name}}</td>
+            <td>{{record.Version}}</td>
+            <td></td>
         </tr>
         {% endfor %}
     </tbody>
