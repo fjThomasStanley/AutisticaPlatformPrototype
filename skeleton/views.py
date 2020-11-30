@@ -822,7 +822,32 @@ def componentGallery(request):
                         "icon": "icon-no"
             }
         ],
-
+        "navlinks": [
+            {
+                "linkTitle": "Home",
+                "linkLoc": "/home",
+                "linkName": "home",
+                "template": "home.html"
+            },
+            {
+                "linkTitle": "About",
+                "linkLoc": "/about",
+                "linkName": "about",
+                "template": "about.html"
+            },
+            {
+                "linkTitle": "Share",
+                "linkLoc": "/share",
+                "linkName": "share",
+                "template": "share.html"
+            },
+            {
+                "linkTitle": "Login",
+                "linkLoc": "/login",
+                "linkName": "login",
+                "template": "login.html"
+            }
+        ],
     }
 
     stepper_object = Stepper.Stepper(request)

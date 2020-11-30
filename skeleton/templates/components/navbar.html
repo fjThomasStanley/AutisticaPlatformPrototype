@@ -15,7 +15,7 @@
         </div>
         <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
             <ul class="navbar-nav ml-auto flex-nowrap">
-                {% for link in links %}
+                {% for link in navlinks %}
                     <li class="nav-item">
                         <a href="{{link.linkLoc}}" class="nav-link m-2 menu-item {% if pagename == ''|add:link.linkName %} selected {% endif %}">
                             {{link.linkTitle}}

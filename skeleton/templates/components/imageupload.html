@@ -128,12 +128,24 @@
          color: green;
     }
 </style>
+<script>
+        citizenSciencePlatform_dropzonefunctions.attachDropzone('{{modalID}}-dz');
+        function showImageUpload() {
+        //document.getElementById("upload").style.display = "block"
+        citizenSciencePlatform_modalfunctions.ShowModal("{{modalID}}");
+    }
 
+//    function hideImageUpload() {
+ //       document.getElementById("upload").style.display = "none"
+ //   }
+
+
+</script>
 {% block componentContent %}
 <div class="ui-toptext">Upload Media (Photo or Sound)</div>
 <div class="ui-upload" id="dropzone">
     <div>
-    <form class="dropzone ui-upload-dashed-borderx needsclick" id="demo-upload" action="/upload">
+    <form class="dropzone ui-upload-dashed-borderx needsclick" id="{{modalID}}-dz" action="/upload">
         <div style="background-color: #ffe4c4;border-radius: 7px; padding: 5px;">
             <div class="ui-div-icon-upload">
                 <i class="icon-upload ui-icon-upload"></i>
@@ -160,8 +172,10 @@
 
 
 {% block componentFunctions %}
+
 <script>
-    function showImageUpload() {
+        citizenSciencePlatform_dropzonefunctions.attachDropzone('{{modalID}}-dz');
+        function showImageUpload() {
         //document.getElementById("upload").style.display = "block"
         citizenSciencePlatform_modalfunctions.ShowModal("{{modalID}}");
     }
@@ -171,32 +185,7 @@
  //   }
 
 
- var dropzone = new Dropzone('#demo-upload', {
-  previewTemplate: document.querySelector('#preview-template').innerHTML,
-  parallelUploads: 2,
-  thumbnailHeight: 120,
-  thumbnailWidth: 120,
-  maxFilesize: 3,
-  acceptedFiles: "image/jpeg,image/png,video/mpeg,audio/wav",
-  filesizeBase: 1000,
-  thumbnail: function(file, dataUrl) {
-    if (file.previewElement) {
-      file.previewElement.classList.remove("dz-file-preview");
-      var images = file.previewElement.querySelectorAll("[data-dz-thumbnail]");
-      for (var i = 0; i < images.length; i++) {
-        var thumbnailElement = images[i];
-        thumbnailElement.alt = file.name;
-        thumbnailElement.src = dataUrl;
-      }
-      setTimeout(function() { file.previewElement.classList.add("dz-image-preview"); }, 1);
-    }
-  }
-
-});
-
-
 </script>
-<script src="/static/dropzone.js"></script>
 {% endblock %}
 
 
