@@ -129,11 +129,12 @@
     }
 </style>
 <script>
-        citizenSciencePlatform_dropzonefunctions.attachDropzone('{{modalID}}-dz');
-        function showImageUpload() {
+
+        //citizenSciencePlatform_dropzonefunctions.attachDropzone('{{modalID}}-dz');
+       // function showImageUpload() {
         //document.getElementById("upload").style.display = "block"
-        citizenSciencePlatform_modalfunctions.ShowModal("{{modalID}}");
-    }
+       // citizenSciencePlatform_modalfunctions.ShowModal("{{modalID}}");
+    //}
 
 //    function hideImageUpload() {
  //       document.getElementById("upload").style.display = "none"
@@ -159,7 +160,9 @@
     </form>
 
 
-     <div id="preview-template" style="display: none;>
+
+     <div id="{{modalID}}-preview-template" style="display: none;">
+
             <DIV class="dz-preview dz-file-preview dz-image">
         <IMG data-dz-thumbnail=""></DIV>
 
@@ -174,11 +177,12 @@
 {% block componentFunctions %}
 
 <script>
-        citizenSciencePlatform_dropzonefunctions.attachDropzone('{{modalID}}-dz');
-        function showImageUpload() {
+
+        //citizenSciencePlatform_dropzonefunctions.attachDropzone('{{modalID}}-dz');
+        //function showImageUpload() {
         //document.getElementById("upload").style.display = "block"
-        citizenSciencePlatform_modalfunctions.ShowModal("{{modalID}}");
-    }
+        //citizenSciencePlatform_modalfunctions.ShowModal("{{modalID}}");
+    //}
 
 //    function hideImageUpload() {
  //       document.getElementById("upload").style.display = "none"
@@ -187,6 +191,3 @@
 
 </script>
 {% endblock %}
-
-
-

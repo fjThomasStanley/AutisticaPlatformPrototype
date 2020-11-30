@@ -1167,6 +1167,7 @@ def moderationreject(request):
 def configure(request):
     return render(request, 'configure.html')
 
+
 def getinvolved(request):
     return render(request, 'getinvolved.html')
 
@@ -1279,6 +1280,7 @@ def moderation(request):
 
 def settings(request):
     return render(request, 'settings.html')
+
 
 
 def login(request):
