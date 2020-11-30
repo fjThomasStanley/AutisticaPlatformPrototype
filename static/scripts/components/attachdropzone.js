@@ -1,3 +1,4 @@
+
 var citizenSciencePlatform_dropzonefunctions= {
 attachDropzone: function(ID) {
  var dropzone = new Dropzone('#' + ID + '-dz', {
@@ -26,4 +27,3 @@ alert(ID);
 
 }
 
-}
