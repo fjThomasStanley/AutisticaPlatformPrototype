@@ -71,7 +71,13 @@ def index(request, page="home"):
                         "qcolour": "#4d75ad",
                         "phtext": "Enter name of location or postcode...",
                         "input": "ip"
-                    },
+
+                    }
+                ],
+                "maintext": "Where..."
+            },
+            {
+                "rows": [
                     {
                         "qtext": "What",
                         "qcolour": "#ffbb5d",
@@ -468,7 +474,13 @@ def componentGallery(request):
                         "qcolour": "#4d75ad",
                         "phtext": "Enter name of location or postcode...",
                         "input": "ip"
-                    },
+
+                    }
+                ],
+                "maintext": "Where..."
+            },
+            {
+                "rows": [
                     {
                         "qtext": "What",
                         "qcolour": "#ffbb5d",
@@ -490,7 +502,7 @@ def componentGallery(request):
                 "maintext": "What would you have wished to be different?"
             }
         ],
-        "user_exp": [
+    "user_exp": [
             {
                 "id": "32097868",
                 "datetime": "Sept 18, 2019, 10:31 a.m.",
@@ -877,7 +889,12 @@ def share(request):
                 "phtext": "Enter name of location or postcode...",
                 "input": "ip"
 
-            },
+            }
+            ],
+            "maintext": "Where..."
+        },
+        {
+            "rows": [
             {
                 "qtext": "What",
                 "qcolour": "#ffbb5d",
@@ -1100,40 +1117,6 @@ def moderation(request):
 #                                 'oh_proj_page': settings.OH_PROJ_PAGE}}
 
     return render(request, 'gallery.html', context=context)
-def share(request):
-    context = {
-        "ueftext": [
-        {
-            "rows": [
-            {
-                "qtext": "Where",
-                "qcolour": "#4d75ad",
-                "phtext": "Enter name of location or postcode...",
-                "input": "ip"
-            },
-            {
-                "qtext": "What",
-                "qcolour": "#ffbb5d",
-                "phtext": "Your experience can be entered here...",
-                "input": "ta"
-            }
-            ],
-            "maintext": "Enter your experience"
-        },
-        {
-            "rows": [
-            {
-                 "qtext": "What",
-                 "qcolour": "#ffbb5d",
-                 "phtext": "",
-                 "input": "ta"
-            }
-            ],
-                "maintext": "What would you have wished to be different?"
-        }
-        ]
-    }
-    return render(request, 'share.html', context=context)
 
 def moderationreject(request):
     context = {

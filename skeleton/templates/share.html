@@ -6,19 +6,19 @@
         width: 400px;
     }
     .ui-button {
-        color: var(--autistica-white);
-        background-color: var(--autistica-mint-green);
-        border-color: var(--autistica-mint-green);
+        background-color: #58D0D0;
         padding: 5px;
-        margin: 0 0 20px 10px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
         float: right;
     }
     .nv-button {
-        color: var(--autistica-white);
-        background-color: var(--autistica-mint-green);
-        border-color: var(--autistica-mint-green);
+        background-color: #58D0D0;
         padding: 5px;
-        margin: 0 0 20px 10px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
         float: right;
     }
 </style>
@@ -54,17 +54,21 @@
             <div>Talk about any experience in your daily life</div>
         </div>
     </div>
+        <br>
     <div>
         <span onclick="citizenSciencePlatform_modalfunctions.ShowModal('shareimage')" class="ui-button"><u>Upload</u></span>
         <span onclick="switchNonVerbal()" class="nv-button"><u>Non Verbal</u></span>
     </div>
+        <br><br>
     <!-- User experience form -->
     <div id="uef" style="display: block;">
     {% include 'main/../components/userexperienceform.html' %}
     </div>
+
     <div id="peed" style="display: none;">
     {% include './components/pictorialexperienceeditor.html' %}
     </div>
+    {% include './components/sharesettings.html' %}
     {% include './components/imageupload.html' with modalID="shareimage"%}
 
     <!-- Footer -->

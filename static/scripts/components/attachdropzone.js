@@ -23,7 +23,8 @@ var dropzone = new Dropzone('#' + ID + '-dz', {
     }
   }
 });
-alert(ID);
+//alert(ID);
+}
 }
 
 
