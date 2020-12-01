@@ -1,9 +1,9 @@
 
 var citizenSciencePlatform_dropzonefunctions= {
 attachDropzone: function(ID) {
-var dropzone = new Dropzone('#' + ID + '-dz', {
+
+ var dropzone = new Dropzone('#' + ID + '-dz', {
   previewTemplate: document.querySelector('#' + ID + '-preview-template').innerHTML,
-  //previewTemplate: document.querySelector('preview-template').innerHTML,
   parallelUploads: 2,
   thumbnailHeight: 120,
   thumbnailWidth: 120,
@@ -26,6 +26,3 @@ var dropzone = new Dropzone('#' + ID + '-dz', {
 //alert(ID);
 }
 }
-
-
-

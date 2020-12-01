@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
 
     url(r'^gallery/?$', views.componentGallery, name='gallery'),
+    url(r'^split/?$', views.split, name='split'),
     #   url(r'^home/?$', views.home, name='home'),
     #   url(r'^about/?$', views.about, name='about'),
     #   url(r'^share/?$', views.share, name='share'),
@@ -44,6 +45,9 @@ urlpatterns = [
     path('make_research/<oh_file_id>/<file_uuid>/',
          views.make_research,
          name='make_research'),
+    path('split/<page>/',
+         views.split,
+         name='split'),     
     path('<page>/',
          views.index,
          name='index'),

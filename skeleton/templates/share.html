@@ -30,11 +30,13 @@
     {
         uef.style.display = "none";
         peed.style.display = "block";
+        document.getElementById("nonVerbalSwitchBtn").innerHTML = "Experience Form"
    }
     else
     {
         uef.style.display = "block";
         peed.style.display = "none";
+        document.getElementById("nonVerbalSwitchBtn").innerHTML = "Non Verbal"
     }
 }
 </script>
@@ -54,10 +56,11 @@
             <div>Talk about any experience in your daily life</div>
         </div>
     </div>
-        <br>
-    <div>
-        <span onclick="citizenSciencePlatform_modalfunctions.ShowModal('shareimage')" class="ui-button"><u>Upload</u></span>
-        <span onclick="switchNonVerbal()" class="nv-button"><u>Non Verbal</u></span>
+
+    <div style="margin: 20px; height:5px;">
+        <span onclick="citizenSciencePlatform_modalfunctions.ShowModal('shareimage')" style="background-color: var(--autistica-mint-green); padding: 10px; border-radius: 5px; color: white; float:right; cursor: pointer">Upload</span>
+        <span onclick="switchNonVerbal()" id="nonVerbalSwitchBtn" style="background-color: var(--autistica-mint-green); padding: 10px; border-radius: 5px; color: white; float: right; margin-right: 10px; cursor: pointer">Non Verbal</span>
+
     </div>
         <br><br>
     <!-- User experience form -->
