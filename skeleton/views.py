@@ -499,34 +499,40 @@ def split(request, page="home"):
             }
         ],
         "ueftext": [
+        {
+            "rows": [
             {
-                "rows": [
-                    {
-                        "qtext": "Where",
-                        "qcolour": "#4d75ad",
-                        "phtext": "Enter name of location or postcode...",
-                        "input": "ip"
-                    },
-                    {
-                        "qtext": "What",
-                        "qcolour": "#ffbb5d",
-                        "phtext": "Your experience can be entered here...",
-                        "input": "ta"
-                    }
-                ],
-                "maintext": "Enter your experience"
-            },
-            {
-                "rows": [
-                    {
-                        "qtext": "What",
-                        "qcolour": "#ffbb5d",
-                        "phtext": "",
-                        "input": "ta"
-                    }
-                ],
-                "maintext": "What would you have wished to be different?"
+                "qtext": "Where",
+                "qcolour": "#4d75ad",
+                "phtext": "Enter name of location or postcode...",
+                "input": "ip"
+
             }
+            ],
+            "maintext": "Where..."
+        },
+        {
+            "rows": [
+            {
+                "qtext": "What",
+                "qcolour": "#ffbb5d",
+                "phtext": "Your experience can be entered here...",
+                "input": "ta"
+            }
+            ],
+            "maintext": "Enter your experience"
+        },
+        {
+            "rows": [
+            {
+                 "qtext": "What",
+                 "qcolour": "#ffbb5d",
+                 "phtext": "",
+                 "input": "ta"
+            }
+            ],
+                "maintext": "What would you have wished to be different?"
+        }
         ],
         "user_exp": [
             {
