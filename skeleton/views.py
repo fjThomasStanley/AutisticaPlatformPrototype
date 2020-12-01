@@ -455,25 +455,25 @@ def split(request, page="home"):
         "navlinks": [
             {
                 "linkTitle": "Home",
-                "linkLoc": "/home",
+                "linkLoc": "/split/home",
                 "linkName": "home",
                 "template": "home.html"
             },
             {
                 "linkTitle": "About",
-                "linkLoc": "/about",
+                "linkLoc": "/split/about",
                 "linkName": "about",
                 "template": "about.html"
             },
             {
                 "linkTitle": "Share",
-                "linkLoc": "/share",
+                "linkLoc": "/split/share",
                 "linkName": "share",
                 "template": "share.html"
             },
             {
                 "linkTitle": "Login",
-                "linkLoc": "/login",
+                "linkLoc": "/split/login",
                 "linkName": "login",
                 "template": "login.html"
             }
