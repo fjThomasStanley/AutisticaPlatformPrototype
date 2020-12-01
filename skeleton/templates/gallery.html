@@ -37,6 +37,7 @@
           href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" type="text/css"
           href="{% static 'css/main.css' %}">
+    <link href="/static/css/dropzone.css" type="text/css" rel="stylesheet">
     <style>
         .codeblock{
             background-color: lightgray;
@@ -247,7 +248,7 @@
    </h3>
    <!-- User experience form -->
    {% include './components/userexperienceform.html' %}
-
+   {% include './components/sharesettings.html' %}
    <h4>Template Inclusion</h4>
 
    Template name: userexperienceform.html
@@ -351,7 +352,7 @@
 
 
 <script  src="/static/dropzone.js"></script>
-<script type="text/javascript">Dropzone.autoDiscover = false;</script>
+<script type="text/javascript"> Dropzone.autoDiscover = false;</script>
 <script type="text/javascript" src="{% static 'scripts/components/modal.js'%}"></script>
 <script type="text/javascript" src="{% static 'scripts/components/slidingpanel.js'%}"></script>
 <script onload="citizenSciencePlatform_dropzonefunctions.attachDropzone('shareimage')" type="text/javascript" src="{% static 'scripts/components/attachdropzone.js'%}"></script>

@@ -6,19 +6,19 @@
         width: 400px;
     }
     .ui-button {
-        color: var(--autistica-white);
-        background-color: var(--autistica-mint-green);
-        border-color: var(--autistica-mint-green);
+        background-color: #58D0D0;
         padding: 5px;
-        margin: 0 0 20px 10px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
         float: right;
     }
     .nv-button {
-        color: var(--autistica-white);
-        background-color: var(--autistica-mint-green);
-        border-color: var(--autistica-mint-green);
+        background-color: #58D0D0;
         padding: 5px;
-        margin: 0 0 20px 10px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
         float: right;
     }
 </style>
@@ -56,17 +56,22 @@
             <div>Talk about any experience in your daily life</div>
         </div>
     </div>
-    <div style="margin: 20px; height:45px;">
+
+    <div style="margin: 20px; height:5px;">
         <span onclick="citizenSciencePlatform_modalfunctions.ShowModal('shareimage')" style="background-color: var(--autistica-mint-green); padding: 10px; border-radius: 5px; color: white; float:right; cursor: pointer">Upload</span>
         <span onclick="switchNonVerbal()" id="nonVerbalSwitchBtn" style="background-color: var(--autistica-mint-green); padding: 10px; border-radius: 5px; color: white; float: right; margin-right: 10px; cursor: pointer">Non Verbal</span>
+
     </div>
+        <br><br>
     <!-- User experience form -->
     <div id="uef" style="display: block;">
     {% include 'main/../components/userexperienceform.html' %}
     </div>
+
     <div id="peed" style="display: none;">
     {% include './components/pictorialexperienceeditor.html' %}
     </div>
+    {% include './components/sharesettings.html' %}
     {% include './components/imageupload.html' with modalID="shareimage"%}
 
     <!-- Footer -->
