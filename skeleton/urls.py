@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
 
     url(r'^gallery/?$', views.componentGallery, name='gallery'),
+    url(r'^split/?$', views.split, name='split'),
     #   url(r'^home/?$', views.home, name='home'),
     #   url(r'^about/?$', views.about, name='about'),
     #   url(r'^share/?$', views.share, name='share'),
