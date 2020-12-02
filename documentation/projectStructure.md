@@ -1,7 +1,7 @@
 
 # projectStructure
 
-This file refers to the 1st level structure of the repository [root](../)
+This file refers to the 1st level structure of the repository [root](/../../)
 
 ## Folders
 
