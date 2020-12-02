@@ -1,0 +1,77 @@
+<style>
+    .sgs-form {
+        background-color: #f5f7f8;
+    }
+    .sgs-sp-text {
+        color: #6e7071;
+        line-height: 40px;
+        width: 200px;
+    }
+    .sgs-sp-userdata {
+        color: #353535;
+        border: solid;
+        background-color: white;
+        border-radius: 5px;
+        border-width: 1px;
+        border-color: #d2d4d5;
+        padding: 10px;
+        width: 230px;
+    }
+    .sgs-submit-button {
+        color: #f5f7f8;
+        background-color: var(--autistica-mint-green);
+        font-size: 24px;
+        padding: 10px 40px 10px 40px;
+        border-radius: 5px;
+        border: none;
+     }
+    .sgs-views-button {
+        color: var(--autistica-mint-green);
+        font-size: 24px;
+        padding: 8px 38px 8px 38px;
+        border-style: solid;
+        border-radius: 5px;
+        border-width: 2px;
+        border-color: var(--autistica-mint-green);
+    }
+    .sgs-h3 {
+        color: var(--autistica-mint-green) !important;
+        font-size: 24px;
+    }
+    .sgs-div-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10px 0 10px;
+        margin-top: 10px;
+    }
+    .sgs-div-inner:last-of-type {
+        margin-top: 50px;
+        padding: 0 150px 0 150px;
+    }
+    .sgs-checkb {
+        width: 32px;
+        height: 32px;
+    }
+</style>
+    <form class="sgs-form">
+        <h3 class="sgs-h3">Sharing Settings</h3>
+        <div>
+            <div class="sgs-div-inner">
+                <span class="sgs-sp-text">Can be used for Research</span>
+                    <span><input type="checkbox" class="sgs-checkb"></span>
+                    <span class="sgs-sp-userdata">Experience ID: 0118092019</span>
+            </div>
+            <div class="sgs-div-inner">
+                <span class="sgs-sp-text">Is viewable by others</span>
+                <span><input type="checkbox" class="sgs-checkb"></span>
+                <span class="sgs-sp-userdata">Date: {% now "d-m-Y H:m" %}</span>
+            </div>
+            <div class="sgs-div-inner">
+                 <span>&nbsp;</span>
+                <audio id="submitSound" src="http://www.soundjay.com/button/beep-07.wav"></audio>
+                 <span class="sgs-submit-button" onclick="submitButton(this.form)">Submit</span>
+                 <span class="sgs-views-button" onclick="views()">Views</span>
+            </div>
+        </div>
+    </form>

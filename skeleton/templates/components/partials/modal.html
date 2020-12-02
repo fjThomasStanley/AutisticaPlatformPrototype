@@ -31,16 +31,17 @@
         display: flex;
     /* flex-direction: row; */
     width: 100%;
-    margin-top: -5px;
-    margin-right: -5px;
+    margin-top: 30px;
+    margin-left: 10px;
     justify-content: flex-end;
     transform: translate(-4px, 6px);
     line-height: 24px;
     }
 
     .ma_close_button {
-     /* height: 30px; */
-    /* width: 30px; */
+    position: absolute;
+    top: 0;
+    right: 0;
     font-size: 24px;
     border: none;
     background-color: rgba(0, 0, 0, 0);
@@ -63,11 +64,9 @@
 
 <div class="ma-div-screen" id="{{modalID}}">
     <div class="ma-divts">
-        <div class="ma-div-cb">
             <span class="ma_close_button" onclick="citizenSciencePlatform_modalfunctions.HideModal('{{modalID}}')">
                 <i class="fas fa-times"></i>
             </span>
-        </div>
         {% block componentContent %}
         {% endblock %}
     </div>
