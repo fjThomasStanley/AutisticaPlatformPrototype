@@ -4,14 +4,12 @@ Django settings for oh_app_demo project.
 
 import os
 from django.utils.translation import ugettext_lazy
-from dotenv import load_dotenv
 
 # import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-load_dotenv(os.path.join(BASE_DIR, '.env'))
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Customization for Heroku-specific settings
@@ -22,7 +20,7 @@ ON_HEROKU = os.getenv('ON_HEROKU', 'false').lower() == 'true'
 SECRET_KEY = os.getenv('SECRET_KEY', 'whopsthereshouldbeone')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True # if os.getenv('DEBUG', '').lower() == 'true' else False
+DEBUG = True ##if os.getenv('DEBUG', '').lower() == 'true' else False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -57,7 +55,7 @@ ROOT_URLCONF = 'main_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'skeleton/templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -163,7 +161,7 @@ LOGGING = {
 # Configure these with .env/environment variables
 
 # After log in, send users to the overview page.
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'overview'
 
 # Project's page on Open Humans
 OH_PROJ_PAGE = os.getenv(

@@ -14,11 +14,10 @@ urlpatterns = [
     #   url(r'^settings/?$', views.settings, name='settings'),
     #   url(r'^login/?$', views.login, name='login'),
     #   url(r'^logout/?$', views.logout_user, name='logout'),
-     url(r'^moderationreject/?$', views.moderationreject, name='moderationreject',
+    url(r'^moderationreject/?$', views.moderationreject, name='moderationreject'),
     url(r'^configure/?$', views.configure, name='configure'),
     url(r'^getinvolved/?$', views.getinvolved, name='getinvolved'),
     url(r'^moderation/?$', views.moderation, name='moderation'),
-
     url(r'^pictorialexperienceeditor/?$', views.pictorialexperienceeditor, name='peed'),
     url(r'^moderationreject/?$', views.moderationreject, name='moderationreject'),
     url(r'^configure/?$', views.configure, name='configure'),
