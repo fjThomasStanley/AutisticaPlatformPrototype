@@ -6,4 +6,4 @@ This project makes use of the Python Django framework to deliver the web applica
 
 ## Project structure
 
-Please refer to the [ProjectStructure.md]
+Please refer to the [ProjectStructure.md](./projectSructure.md)
