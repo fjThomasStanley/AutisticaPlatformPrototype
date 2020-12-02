@@ -39,22 +39,14 @@
           href="{% static 'css/main.css' %}">
 
 </head>
-
 <body>
-<a name="top"></a>
-<div class="container-lg px-1">
-
-    <!-- Static navbar -->
-    {% include './components/navbar.html' %}
-
-    <!-- Secondary Banner -->
-    {% include './components/partials/banner.html' %}
-
- <a href="/home"><i class="icon-home" style="font-size: 25px;"></i></a><span>&nbsp;&nbsp;Login&nbsp;&nbsp;</span><i class="icon-label-24px"></i>
- <span>&nbsp;Where the user can login to OpenHumans</span>
-    <!-- Footer -->
-    {% include './components/footer.html' %}
-
-</div> <!-- /container -->
+<!-- all content must go inside the container -->
+<div class="container-lg px-0">
+    {% include "components/navbar.html" %}
+    {% include "components/banner.html" %}
+    {% block content %}
+        <p> This block content will be replaced. </p>
+    {% endblock %}
+</div>
 </body>
 </html>
