@@ -36,9 +36,63 @@ Template name: imageupload.html
 | ModalID | The unique ID for the component, used by javascript to select component from other components on the page | Required | String - Alphanumeric. As it is an ID, it must be unique to the component. |
 
 ### Functions
-| Function Parameter   |  Purpose | Data |
-| :-------------   | :---------- | :-------------  |
-| ModalID | The unique ID for the component, used by javascript to select component from other components on the page | Required |
+
+
+<table>
+        <tr>
+            <th>Function Parameter</th>
+            <th>Purpose</th>
+            <th>Data</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Title of the modular alert</td>
+            <td>String - Alphanumeric Text</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Alert text of the modular alert. The body of the modular alert</td>
+            <td>String - Alphanumeric Text</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>The type of icon displayed in the modular alert</td>
+            <td>
+                Number:
+                <br>
+                1 - Alert
+                <br>
+                2 - Warning
+                <br>
+                3 - Info
+                <br>
+                Default value: Warning
+            </td>
+        </tr>
+        <tr>
+            <th colspan="3">Example - modular alert component on this page</th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                showModularAlert('Timeout Save', 'Inactive for 10 minutes, in 2 minutes time your event will be saved as a draft', 1)
+            </td>
+        </tr>
+        <tr>
+            <th colspan="3">Notes</th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                The modular alert is a typeof modal component. The modal component requires a modalID to enable the functionality of showing the modal (the modular alert component). Therefore when including the modular alert component within your template you must use the following django tag structure:
+                <br>
+                <br>
+                {{"{% include 'pathToComponentTemplate' with modalID=value %}"}}
+            </td>
+        </tr>
+</table>
+
+
+
+
 
 
 ## Image Upload
