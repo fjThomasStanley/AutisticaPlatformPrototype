@@ -499,34 +499,40 @@ def split(request, page="home"):
             }
         ],
         "ueftext": [
+        {
+            "rows": [
             {
-                "rows": [
-                    {
-                        "qtext": "Where",
-                        "qcolour": "#4d75ad",
-                        "phtext": "Enter name of location or postcode...",
-                        "input": "ip"
-                    },
-                    {
-                        "qtext": "What",
-                        "qcolour": "#ffbb5d",
-                        "phtext": "Your experience can be entered here...",
-                        "input": "ta"
-                    }
-                ],
-                "maintext": "Enter your experience"
-            },
-            {
-                "rows": [
-                    {
-                        "qtext": "What",
-                        "qcolour": "#ffbb5d",
-                        "phtext": "",
-                        "input": "ta"
-                    }
-                ],
-                "maintext": "What would you have wished to be different?"
+                "qtext": "Where",
+                "qcolour": "#4d75ad",
+                "phtext": "Enter name of location or postcode...",
+                "input": "ip"
+
             }
+            ],
+            "maintext": "Where..."
+        },
+        {
+            "rows": [
+            {
+                "qtext": "What",
+                "qcolour": "#ffbb5d",
+                "phtext": "Your experience can be entered here...",
+                "input": "ta"
+            }
+            ],
+            "maintext": "Enter your experience"
+        },
+        {
+            "rows": [
+            {
+                 "qtext": "What",
+                 "qcolour": "#ffbb5d",
+                 "phtext": "",
+                 "input": "ta"
+            }
+            ],
+                "maintext": "What would you have wished to be different?"
+        }
         ],
         "user_exp": [
             {
@@ -1604,10 +1610,7 @@ def view(request):
             }
         ],
     }
-    stepper_object = Stepper.Stepper(request)
-
-    stepper_object.update()
-    return render(request, 'view.html', context=context)
+    return render(request, 'moderation.html', context=context)
 
 
 def mydata(request):
@@ -1693,7 +1696,7 @@ def moderation(request):
     }
     return render(request, 'moderation.html', context=context)
 
-def accessibility_settings(request):
+def settings(request):
     return render(request, 'settings.html')
 
 
@@ -1708,7 +1711,7 @@ def overview(request):
         context = {'oh_id': oh_member.oh_id,
                    'oh_member': oh_member,
                    'oh_proj_page': settings.OH_PROJ_PAGE}
-        return render(request, 'overview.html', context=context)
+        return render(request, 'main/overview.html', context=context)
     return redirect('index')
 
 
@@ -1914,7 +1917,7 @@ def logout_user(request):
     """
     Logout user
     """
-    if request.method == 'GET':
+    if request.method == 'POST':
         logout(request)
     return redirect('index')
 
@@ -1955,7 +1958,6 @@ def upload(request):
                     experience_id=experience_id)
         return redirect('index')
     else:
-
         # if request.user.is_authenticated:
         return render(request, 'main/upload.html')
     return redirect('index')
@@ -1964,7 +1966,7 @@ def upload(request):
 def list_files(request):
     if request.user.is_authenticated:
         context = {'files': request.user.openhumansmember.list_files()}
-        return render(request, 'list.html',
+        return render(request, 'main/list.html',
                       context=context)
     return redirect('index')
 
@@ -1973,7 +1975,7 @@ def list_public_experiences(request):
     experiences = PublicExperience.objects.filter(approved='approved')
     return render(
         request,
-        'public_experiences.html',
+        'main/public_experiences.html',
         context={'experiences': experiences})
 
 
@@ -1981,7 +1983,7 @@ def moderate_public_experiences(request):
     experiences = PublicExperience.objects.filter(approved='not reviewed')
     return render(
         request,
-        'old/moderate_public_experiences.html',
+        'main/moderate_public_experiences.html',
         context={'experiences': experiences})
 
 
