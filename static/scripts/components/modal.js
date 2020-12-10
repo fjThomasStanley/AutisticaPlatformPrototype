@@ -2,9 +2,10 @@ var citizenSciencePlatform_modalfunctions = {
   ShowModal: function (modalID) {
     document.getElementById(modalID).style.display = "block";
 
-    var height = document.getElementById("showImageUpload").getAttribute("data-height");
+    var height = document.getElementById(modalID).getAttribute("data-height");
 
-    var width = document.getElementById("showImageUpload").getAttribute('data-width');
+    var width = document.getElementById(modalID).getAttribute('data-width');
+
     if (height == "")
     {
         height = "250";
