@@ -217,10 +217,10 @@
 
     <div style="display: inline-block; " id="container">
     <div style="background-color: #1b77db; padding-top: 30px; cursor: pointer;" id="item">
-        <div style="background-color: white; cursor: default;">
+        <div style="background-color: var(--autistica-light-green); cursor: default;">
         <div class="peed-outerdiv">
             <div style="width: 100%;">
-                <table style="width: 100%;">
+                <table style="width: 100%; border: none;">
                     <colgroup>
                         <col width="75px">
                         <col width="*">
@@ -229,7 +229,7 @@
 
                     </colgroup>
                     <tr>
-                        <td>
+                        <td style="border: none;">
                             <span class="peed-div-home icon-button">
                                 <div>
                                     <i class="icon-home peed-icon-home icon-button"></i>
@@ -237,7 +237,7 @@
 
                             </span>
                         </td>
-                        <td>
+                        <td style="border: none;">
                             <span class="peed-clear icon-button">
                                 <div class="peed-span-ta">
                                     <span class="peed-span-clear">
@@ -247,7 +247,7 @@
 
                             </span>
                         </td>
-                        <td>
+                        <td style="border: none;">
                             <span class="peed-play icon-button">
                                 <span class="peed-play-ispan">
                                     <i class="icon-play_arrow peed-play-icon icon-button"></i>
@@ -255,7 +255,7 @@
 
                             </span>
                         </td>
-                        <td>
+                        <td style="border: none;">
                             <span class="peed-play">
                                 <span class="peed-play-ispan ">
                                     <i class="icon-share peed-play-icon icon-button"></i>
@@ -272,24 +272,24 @@
 
 
                     <tr>
-                        <td>
+                        <td style="border: none;">
                             <div class="peed-text-home">
                                 <!-- <span class=""></span> -->
                                 Home
                             </div>
                         </td>
-                        <td>
+                        <td style="border: none;">
                             <div class="peed-exp-div">
                                 <span class="peed-exp-text">1. Enter your experiences</span>
                                 <span class="peed-clear-text">Clear</span>
                             </div>
                         </td>
-                        <td>
+                        <td style="border: none;">
                             <div class="peed-play-text">
                                 Play
                             </div>
                         </td>
-                        <td>
+                        <td style="border: none;">
                             <div class="peed-play-text">
                                 Share
                             </div>
@@ -301,12 +301,13 @@
 
 
 
+
         <div class="peed1-outerdiv">
-            <table>
+            <table style="border: none;">
                 {% for rw in peed_ele_row %}
                 <tr>
                     {% for cl in rw.peed_ele_col %}
-                    <td>
+                    <td style="border: none;">
                         <span class="peed1-span-item card-button">
                             <span class="peed1-span-itext">{{cl.text}}</span>
                             <span class="peed1-span-iicon"><i class="{{cl.icon}} peed1-icon" id="i{{cl.icon}}"></i></span>

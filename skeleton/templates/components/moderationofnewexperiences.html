@@ -1,15 +1,15 @@
 <style>
-    td, th {
+    .mone-td, .mone-th {
         border: 1px solid grey;
     }
-    td {
+    .mone-td {
         color: grey;
     }
-    thead {
+    .mone-thead {
         color: white;
         background-color: navy;
     }
-    table {
+    .mone-table {
         border-collapse: collapse;
     }
     .mone-tick {
@@ -46,39 +46,39 @@
         padding: 8px 0 1em 1em;
     }
 </style>
-<table>
-    <thead>
+<table class="mone-table">
+    <thead class="mone-thead">
         <tr>
-            <th class="mone-cb"></th>
-            <th>User ID</th>
-            <th>Event ID</th>
-            <th>Date</th>
-            <th>Event(What)
-            <th>Location (Where)</th>
-            <th>Liked to be Different</th>
-            <th>Summary</th>
-            <th colspan="2">Moderation</th>
+            <th class="mone-cb mone-th"></th>
+            <th class="mone-th">User ID</th>
+            <th class="mone-th">Event ID</th>
+            <th class="mone-th">Date</th>
+            <th class="mone-th">Event(What)
+            <th class="mone-th">Location (Where)</th>
+            <th class="mone-th">Liked to be Different</th>
+            <th class="mone-th">Summary</th>
+            <th class="mone-th" colspan="2">Moderation</th>
         </tr>
     </thead>
     <tbody>
         {% for trow in MONE_data %}
         <tr>
-            <td class="mone-cb"><input type="checkbox"></td>
-            <td>{{trow.UID}}</td>
-            <td>{{trow.EID}}</td>
-            <td>{{trow.date}}</td>
-            <td>{{trow.Event_What}}</td>
-            <td>{{trow.Location_Where}}</td>
-            <td>{{trow.LikeToBeDifferent}}</td>
-            <td>{{trow.Summary}}</td>
-            <td>
+            <td class="mone-cb mone-td"><input type="checkbox"></td>
+            <td class="mone-td">{{trow.UID}}</td>
+            <td class="mone-td">{{trow.EID}}</td>
+            <td class="mone-td">{{trow.date}}</td>
+            <td class="mone-td">{{trow.Event_What}}</td>
+            <td class="mone-td">{{trow.Location_Where}}</td>
+            <td class="mone-td">{{trow.LikeToBeDifferent}}</td>
+            <td class="mone-td">{{trow.Summary}}</td>
+            <td> class="mone-td"
                 <div class="mone-mod">
                     <span class="fas fa-check mone-tick"><input type="radio" name="{{trow.EID}}"></span>
                     <span class="mone-resp"><a href="#">Respond</a></span>
                     <span class="mone-bs"><button type="button" class="mone-butsub">Submit</button></span>
                 </div>
             </td>
-            <td>
+            <td class="mone-td">
                 <div class="mone-mod">
                     <span class="fas fa-times mone-cross"><input type="radio" name="{{trow.EID}}"></span>
                     <span class="mone-resp mone-respbb"> <a href="#">Respond</a></spanclass>
