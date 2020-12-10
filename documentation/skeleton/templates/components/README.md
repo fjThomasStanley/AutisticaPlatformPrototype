@@ -24,7 +24,8 @@ These components are animated using javascript to show and hide them. They are c
 
 ### Template Inclusion
 
-Template name: imageupload.html 
+Template name: [modularalerts.html](/./skeleton/templates/components/modularalerts.html) 
+
 ```
 {% include 'pathToComponentTemplate' with modalID=value %} 
 ```
