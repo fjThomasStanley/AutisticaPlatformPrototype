@@ -1,5 +1,5 @@
-<style>
-// From gallery_animal_panels_exapnd.html
+
+/* From gallery_animal_panels_exapnd.html */
 
         .ma_outerdiv {
             display: flex;
@@ -22,7 +22,7 @@
             margin-right: 20px;
         }
 
-// from modal.html
+/* from modal.html */
 
         .ma-div-screen {
         width: 100%;
@@ -83,7 +83,7 @@
         background-color: #f71919b3;
     }
 
-//from slidingpanel.html
+/* from slidingpanel.html */
 
    .sliding-panel {
         position: fixed;
@@ -112,7 +112,7 @@
         margin-left: 380px;
      }
 
-// accessibilitypanel.html
+/* accessibilitypanel.html */
 
     .ap-outerdiv {
         border-style: solid;
@@ -156,7 +156,7 @@
         border-color: var(--autistica-mint-green);
     }
 
-// from colouradjustment.html
+/* from colouradjustment.html */
 
     .ap-div-cc {
         display: flex;
@@ -358,7 +358,7 @@
         outline: none;
     }
 
-// from communityapprovalmechanism.html
+/* from communityapprovalmechanism.html */
 
     .cam-span {
         color: grey;
@@ -430,7 +430,7 @@
         color: grey;
     }
 
-// from contentadjustment.html
+/* from contentadjustment.html */
 
     .ap-fs-outerdiv {
         display: flex;
@@ -531,7 +531,7 @@
         text-align: center;
     }
 
-// from defineprofile.html
+/* from defineprofile.html */
 
     .dp-icon-home {
         color: black;
@@ -574,7 +574,7 @@
     div.dp-questions > label {
         display: inline-block;
         margin: 0 0 0 -10px;
-        padding 0 0 20px 0;
+        padding: 0 0 20px 0;
         height: 20px;
         width: 150px;
     }
@@ -598,7 +598,7 @@
         background-size: 24px 24px;
     }
 
-//  from experienceviewercontrol.html
+/* from experienceviewercontrol.html */
 
     .evc-id {
         display: block;
@@ -623,7 +623,7 @@
         margin: 3.3em 1em 0 0;
     }
 
-// from footer.html
+/* from footer.html */
 
 .footer-top {
     background-color: var(--autistica-dark-green) !important;
@@ -647,7 +647,7 @@
     color: var(--autistica-light-green);
 }
 
-// from imageupload.html
+/* from imageupload.html */
 
     .ui-master-div {
         position: relative;
@@ -776,7 +776,7 @@
          color: green;
     }
 
-// from languageSelector.html
+/* from languageSelector.html */
 
     .btn-autisica {
         color: grey;
@@ -785,7 +785,7 @@
     }
 
     .dropdown-toggle::after {
-    {#border-color: var(--autistica-blue-light);#}
+        /* {#border-color: var(--autistica-blue-light);#} */
         border-bottom-color: var(--autistica-blue-secondary);
         border-bottom-style: none;
         border-bottom-width: 0px;
@@ -796,13 +796,13 @@
         border-right-style: solid;
         border-right-width: 7px;
         border-top-color: var(--autistica-blue-secondary);
-        {#border-top-color: var(--autistica-blue-secondary);#}
+        /* {#border-top-color: var(--autistica-blue-secondary);#} */
         border-top-style: solid;
         border-top-width: 7px;
         vertical-align: 0.13em !important;
     }
 
-// from moderationofnewexperiences.html
+/* from moderationofnewexperiences.html */
 
     .mone-td, .mone-th {
         border: 1px solid grey;
@@ -851,7 +851,7 @@
         padding: 8px 0 1em 1em;
     }
 
-// from modularalerts.html
+/* from modularalerts.html */
 
     .ma_alert {
         color: red;
@@ -877,7 +877,7 @@
         padding: 20px;
     }
 
-// from navadjustment.html
+/* from navadjustment.html */
 
     .ap-na-outerdiv {
         display: flex;
@@ -896,7 +896,7 @@
         font-size: 40px;
     }
 
-// from newsletterCards.html
+/* from newsletterCards.html */
 
   mark {
     background-color: var(--autistica-bright-green);
@@ -917,7 +917,7 @@
   color: var(--autistica-dark-green);
   }
 
-// from newsletterSignup.html
+/* from newsletterSignup.html */
 
     .card-footer {
         background-color: transparent !important;
@@ -928,7 +928,7 @@
         padding-bottom: 15px;
     }
 
-// from pictorialexperienceeditor.html
+/* from pictorialexperienceeditor.html */
 
        /*   .peed-outerdiv {
                        display: flex;
@@ -1145,7 +1145,7 @@
             opacity: 1;
         } */
 
-//  sharesettings.html
+/* sharesettings.html */
 
     .sgs-form {
         background-color: #f5f7f8;
@@ -1202,7 +1202,7 @@
         height: 32px;
     }
 
-// from userexperienceform.html
+/* from userexperienceform.html */
 
     textarea:focus,
     input:focus {
@@ -1325,7 +1325,7 @@
     float: right;
     }
 
-// from configure.html
+/* from configure.html */
 
     .cfg-icon {
         font-size: 40px;
@@ -1337,7 +1337,9 @@
     .cfg-outerdiv {
 
     }
- // from gallery.html
+
+
+ /* from gallery.html */
 
          .codeblock{
             background-color: lightgray;
@@ -1351,7 +1353,7 @@
             border-radius: 7px;
         }
 
-// from getinvolved.html
+/* from getinvolved.html */
 
     .gi-icon {
         font-size: 40px;
@@ -1365,7 +1367,7 @@
 
     }
 
-// from home.html
+/* from home.html */
 
     .hm-ohlogin {
         border-radius: 5px;
@@ -1374,7 +1376,7 @@
         color: var(--autistica-white);
     }
 
-// from modersationreject.html
+/* from modersationreject.html */
 
     .mr-top-box {
         background-color: var(--autistica-mint-green);
@@ -1437,7 +1439,7 @@
         padding: 5px;
     }
 
-// from share.html
+/* from share.html */
 
     .sh-outerdiv {
         display: flex;
@@ -1461,5 +1463,3 @@
         cursor: pointer;
         float: right;
     }
-
-</style>
