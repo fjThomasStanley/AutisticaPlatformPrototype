@@ -14,7 +14,7 @@ In the platform prototype project good Code structure is achieved by maintaing a
 
 This project is based on the web framework of Python Django and because of this the project inherits the base code structure that Django creates when a project is initiated using the Django CLI (Command Line Interface) tooling. 
 
-This file refers to the 1st level structure of the repository [root](/../)
+This file refers to the 1st level structure of the repository [root](/)
 
 
 ### Folders
