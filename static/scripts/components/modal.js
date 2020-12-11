@@ -20,8 +20,8 @@ var citizenSciencePlatform_modalfunctions = {
     document.documentElement.style.setProperty("--md-width", width + "px");
     document.documentElement.style.setProperty("--md-top", "-" + (parseInt(height) / 2).toString() + "px");
     document.documentElement.style.setProperty("--md-left", "-" + (parseInt(width) / 2).toString() + "px");
-  },
-
+    document.documentElement.style.setProperty("--dz-width", (parseInt(width) - 20).toString() + "px");
+    },
   HideModal: function (modalID) {
     document.getElementById(modalID).style.display = "none";
   }
