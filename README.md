@@ -56,37 +56,6 @@ Different kinds of technologies and platforms are used at each tier of the web a
 - Database - [Open Humans](https://www.openhumans.org/)
 
 
-## Code Structure
-
-Structuring code in a logical way in a project is very important as poor code structuring can very quickly lead to a completely unmanagemable mess. When we talk about Code Structuring we are simply referring to how code (or any kind of resource that makes up a project) is stored and constructed. For example code structuring will define what kinds of files make up a project, where these files should be located based on their individual purpose within the project and finally how the files should be written. 
-
-### Why we need code structure
-
-Having an established code structure that follows software development best practice is key to ensuring the maintainability and readability of a project. Maintainability is a characteristic of a project that determines how easy it is for developers to find and fix problem code. In software development we should always strive to keep the project in a good maintainable state as this will help developers of the project to fix problems with the code.
-
-Good code readibility is a characteristic of a maintainable software. By having readable code, software developers of different backgrounds, experience and familiarity with the codebase should be able to understand how the project code fits together and the reasoning as to why a particular piece of code is required (its purpose within the project).
-
-### how we achieve code structure
-
-In the platform prototype project good Code structure is achieved by maintaing a hierachy of files and folders. 
-
-This project is based on the web framework of Python Django and because of this the project inherits the base code structure that Django creates when a project is initiated using the Django CLI (Command Line Interface) tooling. 
-
-- Root
-    - locale
-    - main_app
-    - skeleton (the root of the entry django app)
-    - static (Website resources such as images and styling files - CSS)
-
-
-
-Another important Component based development approach
-
-
-Styling CSS!!
-
-Global and Private - To reduce the duplication of CSS within the platform 
-
 
 **Feedback is welcome from everyone**
 

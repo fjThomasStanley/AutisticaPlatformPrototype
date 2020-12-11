@@ -1,60 +1,57 @@
-<html lang='en'>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% load static %}
+<html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+      {% load static %}
+  
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>{{ config.project_title |default:"My Open Humans Project" }}</title>
+      <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <link href="/static/css/fa/all.min.css" rel="stylesheet" />
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  
+      <!-- Bootstrap -->
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous"
+      />
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"
+      ></script>
+  
+      <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+    </head>
+    <body>
 
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>{{ config.project_title |default:"My Open Humans Project" }}</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-    <link href="/static/css/fa/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap"
-          rel="stylesheet">
-    <!--<link rel="stylesheet" href="{% static "css/ico-style.css" %}">-->
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-<!--    <script src="https://kit.fontawesome.com/e8821c0857.js" crossorigin="anonymous"></script>-->
-
-    <link rel="icon" type="image/png"
-          href="{% static 'favicon.ico' %}">
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'css/main.css' %}">
-    <link href="/static/css/dropzone.css" type="text/css" rel="stylesheet">
-    <style>
-        .codeblock{
-            background-color: lightgray;
-            padding: 5px;
-            border-radius: 5px;
-        }
-       
-        .componentblock{
-            background-color: #eaeaea;
-            padding: 8px;
-            border-radius: 7px;
-        }
-    </style>
-
-</head>
-
-<body>
 <a name=""top"></a>
 <div class="container-lg px-1">
 
@@ -69,7 +66,7 @@
     {#    {% include 'path/to/html' %}#}
 
     <h2>
-        Background - Why do we need a component gallery and what does the gallery's purpose achieve?   
+        Background - Why do we need a component gallery and what does the gallery's purpose achieve?
     </h2>
     The component gallery's purpose is to show to platform developers and testers the kinds of components that make up the platform. The gallery visually showcases each component seperately in order to make it clear as to how components relate to their logical reference (name and utilisation in the code). Separation of components in the gallery allows developers to correctly refer to platform components and to enable testers to critique component implementation. Each component referenced in the component gallery is accompanied by related information as to how it can be used within the platform code and how it can be customised through the use of parameters and data. 
     
@@ -157,6 +154,7 @@
 
         {% include './components/partials/gallery_navigation_expand.html' with PanelData=AP_gallery_navigation%}
 
+
     <br>
     <div class="componentblock">
     <h3>
@@ -164,6 +162,7 @@
         <small class="text-muted">This component organises key information and logical aspects of the page</small>
     </h3>
     <!-- Newsletter Cards -->
+
     {% include './components/newsletterCards.html' %}
 
     <h4>Template Inclusion</h4>
@@ -199,6 +198,7 @@
         <small class="text-muted">Component Description</small>
     </h3>
     <!-- Newsletter Signup -->
+
     {% include './components/newsletterSignup.html' %}
 
     <h4>Template Inclusion</h4>
@@ -215,6 +215,7 @@
         <small class="text-muted">This component allows the user to change the language setting of the platform</small>
     </h3>
     <!-- Language Selector -->
+
     {% include './components/languageSelector.html' %}
 
 
@@ -318,6 +319,7 @@
      Documentation Viewer
      <small class="text-muted">This component allows the user to browse for documentation about the platform</small>
     </h3>
+    
     <!-- Documentation viewer -->
         {% include './components/documentationviewer.html' with data=Documentation_data %}
 
@@ -348,14 +350,9 @@
          <br>
 
 </div> <!-- /container -->
-</body>
 
+    </body>
 
-<script  src="/static/dropzone.js"></script>
-<script type="text/javascript"> Dropzone.autoDiscover = false;</script>
-<script type="text/javascript" src="{% static 'scripts/components/modal.js'%}"></script>
-<script type="text/javascript" src="{% static 'scripts/components/slidingpanel.js'%}"></script>
-<script onload="citizenSciencePlatform_dropzonefunctions.attachDropzone('shareimage')" type="text/javascript" src="{% static 'scripts/components/attachdropzone.js'%}"></script>
 
 
 </html>
