@@ -2,10 +2,11 @@
 {% endblock %}
 <div class="ap-navadjust-outerdiv">
     <span class="ap-navadjust-text">{{PanelData.Title}}</span>
+    <span style="height: 20px; width: 20px; background-color: green" id="{{PanelData.arrow}}" onclick="show_hideExpandingPanel('{{PanelData.ID}}', '{{PanelData.arrow}}')">Click to expand</span>
     <i class="icon-keyboard_arrow_right ap-arrow-right" id="{{PanelData.arrow}}" onclick="show_hideExpandingPanel('{{PanelData.ID}}', '{{PanelData.arrow}}')"></i>
     <div class="ap-navadjust-expand" id="{{PanelData.ID}}">
         {% block PanelContent %}
-            {{PanelContent}}
+            {{PanelData.content}}
         {% endblock %}
      </div>
 </div>

@@ -16,12 +16,13 @@ from StepperComponent import Stepper
 logger = logging.getLogger(__name__)
 
 
-def index(request, page="home"):
+def index(request, viewStyle="index", page="home",):
     """
     Starting page for app.
     """
 
     context = {
+        "viewstyle": viewStyle,
         "navpage": page,
         "navlinks": [
             {
@@ -218,7 +219,7 @@ def index(request, page="home"):
                 "ID": "blankexpanel",
                 "arrow": "arrow_expandingpanel_bep",
                 "content": "Content that can be replaced"
-        },
+            },
         'AP_gallery_panels':
             {
                 "Title": "Panel Components - These components are based on core Bootstap components and form the core structural elements of the platform.",
@@ -447,7 +448,7 @@ def index(request, page="home"):
 #    if(page == "error"):
 #        raise Http404("page does not exist: error")
 #    else:
-    return render(request, 'index.html', context=context)
+    return render(request, 'application.html', context=context)
 
 
 

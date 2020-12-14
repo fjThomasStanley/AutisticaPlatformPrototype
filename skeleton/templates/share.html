@@ -46,6 +46,8 @@
     <!-- Static navbar -->
     {% include './components/navbar.html' %}
 
+    <!-- Secondary Banner -->
+    {% include './components/partials/banner.html' %}
 
     <span>&nbsp;&nbsp;Share&nbsp;&nbsp;</span><i class="icon-label-24px"></i>
     <span>&nbsp;Where users can enter their experiences</span>
@@ -58,7 +60,8 @@
     </div>
 
     <div style="margin: 20px; height:5px;">
-        <span onclick="citizenSciencePlatform_modalfunctions.ShowModal('shareimage')" style="background-color: var(--autistica-mint-green); padding: 10px; border-radius: 5px; color: white; float:right; cursor: pointer">Upload</span>
+        <span onclick="citizenSciencePlatform_modalfunctions.ShowModal('shareimage')" id="showImageUpload" data-height="400" data-width="600" style="background-color: var(--autistica-mint-green); padding: 10px; border-radius: 5px; color: white; float:right; cursor: pointer">Upload</span>
+<!--        <span onclick="citizenSciencePlatform_modalfunctions.ShowModal('shareimage')" id="showImageUpload" style="background-color: var(--autistica-mint-green); padding: 10px; border-radius: 5px; color: white; float:right; cursor: pointer">Upload</span>-->
         <span onclick="switchNonVerbal()" id="nonVerbalSwitchBtn" style="background-color: var(--autistica-mint-green); padding: 10px; border-radius: 5px; color: white; float: right; margin-right: 10px; cursor: pointer">Non Verbal</span>
 
     </div>
@@ -72,7 +75,7 @@
     {% include './components/pictorialexperienceeditor.html' %}
     </div>
     {% include './components/sharesettings.html' %}
-    {% include './components/imageupload.html' with modalID="shareimage"%}
+    {% include './components/imageupload.html' with modalID="shareimage" Width="600" Height="400"%}
 
     <!-- Footer -->
     {% include './components/footer.html' %}
