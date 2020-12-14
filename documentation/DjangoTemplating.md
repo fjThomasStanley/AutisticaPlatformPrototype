@@ -21,7 +21,7 @@ More than one parameter can be defined on the include tag which is useful if mor
 {% include 'pathToComponentTemplate' with componentParameterName=value anotherParameterName=secondValue %}
 ```
 
-Django Parameter values can specified as a static string or we can use a data object as passed in via the context variable of the views.py render function. This second method using the context variable is particulary useful as we can allow the template to adjust to user data such profile settings.  
+Django Parameter values can be specified as a static string or we can use a data object as passed in via the context variable of the views.py render function. This second method using the context variable is particulary useful as we can allow the template to adjust to user data such as profile settings.  
 
 ## Extends
 

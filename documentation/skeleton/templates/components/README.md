@@ -4,21 +4,90 @@ Components description
 # Panel Components
 These components are based on core Bootstap components and form the core structural elements of the platform.
 
+
+
+
+
 ## Secondary banner
 This component is used to display a tagline to the user, it provides a short description about what the page is about and how the user should be expected to interact with the page
 
+### Template Inclusion
+
+Template name: [banner.html](/./skeleton/templates/components/partials/banner.html) 
+
+```
+{% include 'pathToComponentTemplate' %} 
+```
+
+To customise the banner message systemwide please refer to the django.po file in the locale folder. Please adjust the msgstr value that corresponds with the msgid of 'Tagline'.
+
+
+
+
 ## Jumbotron
-This component is used to show key and important information
+This component is used to show key and important information. This component is created using the Bootstrap library
+
+### Template inclusion
+Template name: [jumbotron.html](/./skeleton/templates/components/partials/jumbotron.html) 
+
+```
+{% include 'pathToComponentTemplate' %} 
+```
+
+To customise the jumbotron
+
+
 
 
 ## Card
-This component is used to show key and important information. 
+This component is used to show key and important information. This component 
+
+
+### Template inclusion
+
+Template name: []
+
+
+```HTML
+<div class="card autistica-card" style="width: 40rem;">
+    <div class="card-body">
+      <h4 class="card-title hiw-heading">Title</h4>
+      <div class="hiw-body">
+        Card Body
+      </div>
+    </div>
+</div>
+```
 
 ## Expanding Panel
 This component is used to contain content in an expandable and collapsible panel. The expanding panel allows the user to hide specific elements of the page if there is too much content being shown.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Animated Panel Components
 These components are animated using javascript to show and hide them. They are core structural elements of the platform.
+
+
+
 
 ## Modular Alert 
 
@@ -98,7 +167,21 @@ Template name: [modularalerts.html](/./skeleton/templates/components/modularaler
 
 ## Image Upload
 
+
+
+
+
+
+
 ## Accessibility Panel
+
+
+
+
+
+
+
+
 
 
 
@@ -106,3 +189,63 @@ Template name: [modularalerts.html](/./skeleton/templates/components/modularaler
 # Navigation Components
 These components are used for platform navigation, they allow the platform user to move around the available sections/pages of the platform and to other related content.
 
+
+
+## Navigation Bar
+
+
+
+
+
+## Footer
+
+
+
+
+
+# Interactive form components
+
+
+
+## User Journey Stepped Control
+
+
+
+
+
+--------------------------
+
+
+## Newsletter Cards
+
+
+
+## Newsletter Signup
+
+
+## Language Selector
+
+
+## Defined Profile
+
+
+
+## User Experience Form
+
+
+
+## Experience Viewer Control
+
+
+
+## Community Approval Mechanism
+
+
+## Moderation of New Experiences
+
+
+
+## Documentation Viewer
+
+
+## Pictorial Experience Editor
