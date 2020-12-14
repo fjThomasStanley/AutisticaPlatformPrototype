@@ -715,8 +715,9 @@
         border-style: dashed;
         border-radius: 5px;
         border-color: #0070d1;
-        width: 650px;
-        height: 330px;
+/*        width: 650px; */
+        width: var(--dz-width);
+        height: 330px;*/
         overflow-y: auto;
         overflow-x: hidden;
     }

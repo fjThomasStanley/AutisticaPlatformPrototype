@@ -4,28 +4,6 @@
 <div style="margin: 10px;">
 
 
-    <style>
-        .ma_outerdiv {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-    
-        .ma_button {
-            background-color: red;
-            color: white;
-            border: none;
-            border-radius: 7px;
-            font-size: 20px;
-            padding: 10px 40px 10px 40px;
-            margin-left: 20px;
-        }
-    
-        .ma_text {
-            padding-top: 12px;
-            margin-right: 20px;
-        }
-        </style>
 
 
     <div class="componentblock">
@@ -139,10 +117,10 @@
     <!-- Moderation of New Experiences -->
     <div class="ui-master-div">
         <div>
-            <button onclick="showImageUpload()">Upload</button>
+            <button onclick="citizenSciencePlatform_modalfunctions.ShowModal('shareimag')" id="showImagUpload">Upload</button>
         </div>
     </div>
-
+    {% include '../imageupload.html' with modalID="shareimag" Width="600" Height="400"%}
      <!-- {% include '../imageupload.html' with modalID="imageUpload"%}  -->
 
 
