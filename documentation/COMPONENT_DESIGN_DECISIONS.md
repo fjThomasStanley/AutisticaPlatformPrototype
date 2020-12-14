@@ -10,7 +10,7 @@ This document is based on content from
 
 ![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/1_comp.png)
 
-This content has been presented in this .md file for the community. The style guide, restyled componets and design decisions is combined with the linkage to the Prototype Code, which is shown first.
+This content has been presented in this .md file for the community. The style guide, restyled components and design decisions is combined with the linkage to the Prototype Code, which is shown first.
 
 **Linkage between Wireframes Components & Prototype Code (html/css)**
 
@@ -18,72 +18,58 @@ The platform prototype code (templates .html & .css) for the project can be acce
 
 **Skeleton Folder** 
 https://github.com/alan-turing-institute/AutisticaPlatformPrototype/tree/master/skeleton
-
 Skeleton Folder Image:
-![alt text] (https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/cl-5-skeleton.png)
 
 This folder shows the templates 
 https://github.com/alan-turing-institute/AutisticaPlatformPrototype/tree/master/skeleton/templates
 Which holds the main and the components .html files. 
 
-**Main Folder **
-
+**Main Folder**
 Image: Overview of .html files location  - Main Templates
-![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/cl-0-templates-main.png)
-
 **Component Folder**
 
-The Component Folder is also shown
+The Component Folder is also shown</br>
 https://github.com/alan-turing-institute/AutisticaPlatformPrototype/tree/master/skeleton/templates/components
 
-Image of Components 
-
-![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/cl-0-templates-components-main.png)
-
+Image of Components: 
 Overview of .html files location - Components
-Image: 
-![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/cl-1-templates-components.png)
 
 This image shows the individual Components. Each component has been developed as its own Hyper Text Mark Up Language .html file. as the components folder shows. 
 
 **Navigation Bar Component Example**
 
-Reference Navigation Bar Component Example
-Image:
-![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/cl-2-temp-com-navbar-html.png)
-
 Reference Navigation Bar Component - navbar.html
-Image: 
-![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/cl-2-temp-com-navbar-html.png)
-
 Related .css to navbar.html from main.css
-Image:
-![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/cl-6-navbar-style.png)
-
 
 **.css**
 
-The Cascading Style Sheet .css is also separated in the same way for each component and can be found in the related prototype folder. (ref Paul Update with link). 
+The Cascading Style Sheet .css is also separated in the same way for each component and can be found in the related prototype folder. (ref Paul Update with link when pushed to main repo). </br>
+https://github.com/pgc007/AutisticaPlatformPrototype/tree/paul-MFT/static/css
 
-The .css for these components is accessed via  
+The .css for these components is accessed via</br>  
 https://github.com/alan-turing-institute/AutisticaPlatformPrototype/tree/master/static/css
-
 .CSS Location 
-![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/cl-3-static-css.png)
+
 
 **Main.css Reference** 
-
 Overview of .css files - main.css 
-Image: 
-![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/cl-4-main-css.png)
-
 Example Reference to Navigation Bar Component Related .css - navbar.html / main.css - Styling
-![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/cl-6-navbar-style.png)
 
-Review of the code structure shows components elements are clearly labelled and 
-related .css styles are suitability named. The .css can be altered to alter the style of the given components within this style sheet.
+Review of the code structure shows components elements are clearly labelled and related .css styles are suitability named. The .css can be altered to alter the style of the given components within this style sheet.
+
+**Additon of Location Tables** 
+
+Tables are presented for each component which, indicates the name of the given component, and its description, its location is defined as a link to the .html file, related to the .css classes to the given component and there location 
+
+1. Components Name & Description 
+2. .html Location of Component
+3. .css Classes Related to Component
+ 
 
 
+Name & Description | .html & Location  | .css Classes & Location
+------------ | ------------- | ------------- 
+Content Cell 1 | Content Cell 2 | [Class Location](/../../static/css/main.css#L2-L23)
 
 **CSP Style Guide Introduction**
 
@@ -106,7 +92,6 @@ Wire framing, Tool Axure RP8 used for the project.
 A 60% discount to nonprofits for the software can be requested by a contacting sales@axure.com
 
 **Logo**
-
 
 ![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/sg-2-logo.png)
 
@@ -144,35 +129,35 @@ The project icon set has been built as a bespoke set using icomoon.[https://icom
 Series of dated wireframe links to project components:
 
 **0. Navigation**
-[VIEW](https://mlfmen.axshare.com/)
+[VIEW](https://mlfmen.axshare.com/) / 
 [DOWNLOAD](https://github.com/alan-turing-institute/AutisticaCitizenScience/blob/master/platform-designs/wireframes/0-NAVIGATION.rp)
 
 **1. Final Prototype**
-[VIEW](https://yc4dy8.axshare.com/)
+[VIEW](https://yc4dy8.axshare.com/) /
 [DOWNLOAD](https://github.com/alan-turing-institute/AutisticaCitizenScience/blob/master/platform-designs/wireframes/1-PROTOTYPE.rp)
 
 **2. Community Presentation 26082020**
-[VIEW](https://1qdm60.axshare.com/)
+[VIEW](https://1qdm60.axshare.com/) /
 [DOWNLOAD](https://github.com/alan-turing-institute/AutisticaCitizenScience/blob/master/platform-designs/wireframes/2-PRESENTATION.rp)
 
 **3. Sprints 1 - 6 Feedback Oct / Sept 2020 Issues**
-[VIEW](https://3x8tbq.axshare.com/)
+[VIEW](https://3x8tbq.axshare.com/) /
 [DOWNLOAD](https://github.com/alan-turing-institute/AutisticaCitizenScience/blob/master/platform-designs/wireframes/3-SPRINT6FEEDBACK-OCT-ISSUES.rp)
 
 **Live**
-[VIEW](https://v8e02q.axshare.com/)
+[VIEW](https://v8e02q.axshare.com/) /
 [DOWNLOAD](https://github.com/alan-turing-institute/AutisticaCitizenScience/blob/master/platform-designs/wireframes/3-SPRINT6FEEDBACK-OCT-LIVE.rp)
 
 **Research**
-[VIEW](https://cex2zm.axshare.com/)
+[VIEW](https://cex2zm.axshare.com/) /
 [DOWNLOAD](https://github.com/alan-turing-institute/AutisticaCitizenScience/blob/master/platform-designs/wireframes/3-SPRINT6FEEDBACK-OCT-RESEARCH.rp)
 
 **4.Prototype Sept 2020**
-[VIEW](https://vgk1m3.axshare.com/)
+[VIEW](https://vgk1m3.axshare.com/) /
 [DOWNLOAD](https://github.com/alan-turing-institute/AutisticaCitizenScience/blob/master/platform-designs/wireframes/4-PROTOTYPE-SEPT.rp)
 
 **5.Early Wireframes June 2020**
-[VIEW](https://r0f7cs.axshare.com/)
+[VIEW](https://r0f7cs.axshare.com/) /
 [DOWNLOAD](https://github.com/alan-turing-institute/AutisticaCitizenScience/blob/master/platform-designs/wireframes/5-EARLY-WIREFRAMES.rp)
 
 **Research**
@@ -221,27 +206,18 @@ This extended style guide was provided to the development team, who implemented 
 ![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/sgext_9.png)
 
 **Page Layouts Extended**
-
+</br>
+Primary</br>
 ![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/sgext_10.png)
-</b>Primary</b>
+</br>
+Secondary with Footer</br>
 ![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/sgext_12.png)
-</b>Secondary with Footer</b>
+</br>
 
 **Mobile Navigation**
 
 ![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/sgext_5.png)
 
-
-
-
-** [Restyled Components Wireframe](https://va2y2z.axshare.com) including Design Decision Content**
-
-![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/1_comp.png)
-
-
-Coded Prototype alongside restyled components to the new style guide and the addition of design decisions as drop downs within column as image.
-
-Review of design decisions linked to restyled wireframe components. 
 
 **Core Page Components**
 
@@ -275,11 +251,13 @@ The Contrast Ratio is 4.69:1 using webaim.org  contrast checker for the mint gre
 
 
 **Sub-Headers**
+</br>
 
 **Sub-Header 1**![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/4_sub_header_1.png)
-
+</br>
+</br>
 **Sub-Header 2**![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/5_sub_header_2.png)
-
+</br>
 
 **Sub-Header**
 
@@ -431,8 +409,9 @@ The page provides simple instructions for the user in the page introduction, des
 Presents a series of steps.
 
 **Content Boxes / Accordions**
+</br>
 
-![alt text] (https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/18_accordian.png)
+![alt text](https://github.com/alan-turing-institute/AutisticaPlatformPrototype/blob/documentation/images/18_accordian.png)
 
 The layout is consistent, the content boxes and the accordions help to break down the content into small blocks of digestible information, with a focus on hierarchy - CTA (login to begin) - Followed by a series of accordions.
 
@@ -620,7 +599,6 @@ Full page width strip, the dark green (#00444F) strip has a height of 102px. Thi
 **Bottom Footer**
 
 Full page width strip, the dark grey (#1D1D1D) strip has a height 54px along the bottom and contains a centred copyright notice in Acumin Pro 14px light blue colour (#DDF9FF).
-
 
 **Return to the top icon**
 
