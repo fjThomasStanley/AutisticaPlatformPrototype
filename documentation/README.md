@@ -8,8 +8,9 @@ This project makes use of the Python Django framework to deliver the web applica
 
 Please refer to the [ProjectStructure.md](./projectStructure.md)
 
-## Data
+## Platform Data
 
+To populate and correctly render the Django templates, the views.py render function makes use of a context variable
 
 
 ## Open Humans integration

@@ -13,8 +13,8 @@
 
 | FileName       | Purpose      | 
 | :------------- | :----------  |
-| admin&#46;py   |  Sets up the configuration of the Django administration site|
-| apps&#46;py    |  |
-| models&#46;py  |  |
-| urls&#46;py    |  |
-| views&#46;py   |  |
+| admin&#46;py   |  Sets up the configuration of the Django administration site |
+| apps&#46;py    |  Sets up the code in the current directory as a Django app |
+| models&#46;py  |  Specifies the Django models required by the Django app |
+| urls&#46;py    |  Specifies the available URL that can be used by the Django app |
+| views&#46;py   |  Specifies the Django view functions that are accessed by via the URLs&#46;py to render the Django templates|

@@ -27,25 +27,25 @@ def index(request, viewStyle="index", page="home",):
         "navlinks": [
             {
                 "linkTitle": "Home",
-                "linkLoc": "/home",
+                "linkLoc": "/" + viewStyle + "/home",
                 "linkName": "home",
                 "template": "home.html"
             },
             {
                 "linkTitle": "About",
-                "linkLoc": "/about",
+                "linkLoc": "/" + viewStyle + "/about",
                 "linkName": "about",
                 "template": "about.html"
             },
             {
                 "linkTitle": "Share",
-                "linkLoc": "/share",
+                "linkLoc":  "/" + viewStyle + "/share",
                 "linkName": "share",
                 "template": "share.html"
             },
             {
                 "linkTitle": "Login",
-                "linkLoc": "/login",
+                "linkLoc":  "/" + viewStyle + "/login",
                 "linkName": "login",
                 "template": "login.html"
             }
@@ -232,7 +232,7 @@ def index(request, viewStyle="index", page="home",):
                 "ID": "gal_expanel_animated_panel",
                 "arrow": "arrow_expandingpanel_bep"
         },
-            'AP_gallery_navigation':
+        'AP_gallery_navigation':
             {
                 "Title": "Navigation Components - These components are used for platform navigation, they allow the platform user to move around the available sections/pages of the platform and to other related content.",
                 "ID": "gal_expanel_navigation",

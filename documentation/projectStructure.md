@@ -64,6 +64,10 @@ Styling CSS!!
 Global and Private - To reduce the duplication of CSS within the platform 
 
 
+The project manages styling in a global platform wide perspective as well as on a per component basis. The global styling is managed in the main.css 
+
+Where the project relies on CSS for third party dependencies such as bootstrap, these CSS files are also kept in the /static/css folder.
+
 
 
 
