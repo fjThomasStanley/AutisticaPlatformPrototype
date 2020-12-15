@@ -15,7 +15,7 @@ The most recent version of the prototype is available at: http://deplo-autis-udr
 
 To understand the full reasoning and justification behind the design decisions for the platform, please refer to the [Design Decisions Document](./documentation/COMPONENT_DESIGN_DECISIONS.md). 
 
-This application uses a three tier achitecture for delivery. To read more technical information about what three tier archticture is and why this project utilises it, please read the [Three Tier Architecture Document]()
+This application uses a three tier achitecture for delivery. To read more technical information about what three tier archticture is and why this project utilises it, please read the [Three Tier Architecture Document](./documentation/three_tier_architecture.md)
 
 **Feedback is welcome from everyone**
 
