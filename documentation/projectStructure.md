@@ -10,7 +10,7 @@ Good code readibility is a characteristic of a maintainable software. By having 
 
 ## How is code structure implemented in this project
 
-In the platform prototype project good Code structure is achieved by maintaing a hierachy of files and folders. 
+In the platform prototype project good code structure is achieved by maintaing a hierachy of files and folders. 
 
 This project is based on the web framework of Python Django and because of this the project inherits the base code structure that Django creates when a project is initiated using the Django CLI (Command Line Interface) tooling. 
 
@@ -51,9 +51,32 @@ This file refers to the 1st level structure of the repository [root](/./)
 | README&#46;md | Project description file. Human readable to explain |
 
 
+### Templating structure
 
+The platform application is generated from multiple Django template files are a stitched together by the Django framework to generate the full web application. There are different kinds of templates that each solve a specific logical purpose when building the platform web application.
 
-
+<table>
+        <tr>
+            <th>Template Type</th>
+            <th>Purpose</th>
+            <th>Location in the project structure</th>
+        </tr>
+        <tr>
+            <td>Page</td>
+            <td>Page templates include component templates; effectively stitching individual component templates together into one page</td>
+            <td>Root of a Django app<td>
+        </tr>
+        <tr>
+            <td>Component</td>
+            <td>Component templates define the structure and content of a particular logical component. They may extend a partial template so that it inherits the structure of a generic template.</td>
+            <td>Root of a Django app/components<td>
+        </tr>
+        <tr>
+            <td>Partial</td>
+            <td>Partial templates define generic templates that can be extended. Generic templates are usefull where the common structure of different types of components can be defined once in a generic file so that it reduces code duplication</td>
+            <td>Root of a Django app/components/partials<td>
+        </tr>
+</table>
 
 ### Styling
 
