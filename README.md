@@ -82,3 +82,6 @@ To confirm which docker applications (containers) are running on your machine pl
 docker ps -a
 ```
 
+## Technical Documentation
+
+For technical documentation regarding the platform development, please refer the the [/documentation/README.md](./documentation/README.md)
