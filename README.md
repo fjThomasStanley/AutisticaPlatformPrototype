@@ -84,4 +84,4 @@ docker ps -a
 
 ## Technical Documentation
 
-For technical documentation regarding the platform development, please refer the [/documentation/README.md](./documentation/README.md)
+For technical documentation regarding the platform development, please refer to the [/documentation/README.md](./documentation/README.md)
