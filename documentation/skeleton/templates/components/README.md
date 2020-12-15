@@ -84,6 +84,11 @@ This component only needs to be included once in the web application
 {% include 'pathToComponentTemplate' with modalID=value %} 
 ```
 
+This component is driven by javascript, please ensure the related javascript files are include in the application root template (views.py render page). For multiple instances of the component only one instance of the javascript files are required as they globally generic. 
+
+- /static/scripts/components/modal.js
+
+
 ### Parameters
 
 | Parameter Name   |  Purpose | Requirment | Value |
@@ -155,9 +160,17 @@ This component allows the user to upload media into the platform. A typical use 
 
 ### Template Inclusion
 
+
+
 Template name: [imageupload.html](/./skeleton/templates/components/imageupload.html) 
 
 
+
+This component is driven by javascript, please ensure the related javascript files are include in the application root template (views.py render page). For multiple instances of the component only one instance of the javascript files are required as they globally generic. 
+
+- /static/scripts/components/modal.js
+- /static/scripts/components/attachdropzone.js
+- /static/scripts/dropzone.js
 
 
 
@@ -169,6 +182,9 @@ This component allows the user to adjust accessibility settings so that platform
 Template name: [accessibilitypanel.html](/./skeleton/templates/components/accessibilitypanel.html) 
 
 
+This component is driven by javascript, please ensure the related javascript files are include in the application root template (views.py render page). For multiple instances of the component only one instance of the javascript files are required as they globally generic. 
+
+- /static/scripts/components/slidingpanel.js
 
 ## Expanding Panel
 This component is used to contain content in an expandable and collapsible panel. The expanding panel allows the user to hide specific elements of the page if there is too much content being shown.
@@ -266,7 +282,7 @@ The navigation bar allows the user to navigate between the different pages and a
 ### Template Inclusion
 
 
-Template name: [navigationbar.html](/./skeleton/templates/components/navbar.html) 
+Template name: [navbar.html](/./skeleton/templates/components/navbar.html) 
 
 The context variable in the views.py requires a property called navlinks which should contain an array of NavLink objects. Each navlink object defined in navlinks will add a navigatable link to the navigation bar.
 

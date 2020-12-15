@@ -22,11 +22,11 @@ msgstr ""
 
 #: main/templates/components/banner.html:4
 msgid "Tagline"
-msgstr "building a better world for autistic people"
+msgstr "Building a better world for autistic people"
 
 #: main/templates/components/alt_banner.html:4
 msgid "TaglineAlt"
-msgstr "creating accessible environments"
+msgstr "Creating accessible environments"
 
 #: main/templates/components/languageSelector.html:31
 msgid "Langauge"
